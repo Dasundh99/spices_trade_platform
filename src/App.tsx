@@ -1,11 +1,13 @@
-import './App.css'
+import Navbar from './components/layout/NavBar'
+import Hero from './pages/Home'
 
 function App() {
 
   return (
     <>
-      <div className='bg-gray-200 h-screen flex items-center justify-center'>
-        <h1 className=' text-amber-300 font-bold text-8xl'>Hello</h1>
+      <div className="font-sans">
+        <Navbar />
+        <Hero />
       </div>
     </>
   )
