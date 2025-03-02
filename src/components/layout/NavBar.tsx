@@ -16,9 +16,10 @@ const Navbar: React.FC = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
           <a href="#home" className="hover:text-green-200 transition">Home</a>
-          <a href="#products" className="hover:text-green-200 transition">Products</a>
           <a href="#about" className="hover:text-green-200 transition">About</a>
-          <a href="#contact" className="hover:text-green-200 transition">Contact</a>
+          <a href="#products" className="hover:text-green-200 transition">Products</a>
+          <a href="#clients" className="hover:text-green-200 transition">Our Clients</a>
+          <a href="#contact" className="hover:text-green-200 transition">Contact Us</a>
         </div>
 
         {/* Mobile Hamburger */}
@@ -42,8 +43,9 @@ const Navbar: React.FC = () => {
       {isOpen && (
         <div className="md:hidden mt-4 flex flex-col space-y-4">
           <a href="#home" className="hover:text-green-200 transition" onClick={toggleMenu}>Home</a>
-          <a href="#products" className="hover:text-green-200 transition" onClick={toggleMenu}>Products</a>
           <a href="#about" className="hover:text-green-200 transition" onClick={toggleMenu}>About</a>
+          <a href="#products" className="hover:text-green-200 transition" onClick={toggleMenu}>Products</a>
+          <a href="#clients" className="hover:text-green-200 transition" onClick={toggleMenu}>Our Clients</a>
           <a href="#contact" className="hover:text-green-200 transition" onClick={toggleMenu}>Contact</a>
         </div>
       )}
