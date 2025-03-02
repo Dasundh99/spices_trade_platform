@@ -18,8 +18,8 @@ const Navbar: React.FC = () => {
           <a href="#home" className="hover:text-green-200 transition">Home</a>
           <a href="#about" className="hover:text-green-200 transition">About</a>
           <a href="#exports" className="hover:text-green-200 transition">Exports</a>
-          <a href="#clients" className="hover:text-green-200 transition">Our Clients</a>
-          <a href="#contact" className="hover:text-green-200 transition">Contact Us</a>
+          <a href="#ourClients" className="hover:text-green-200 transition">Our Clients</a>
+          <a href="#contactUs" className="hover:text-green-200 transition">Contact Us</a>
         </div>
 
         {/* Mobile Hamburger */}
@@ -45,8 +45,8 @@ const Navbar: React.FC = () => {
           <a href="#home" className="hover:text-green-200 transition" onClick={toggleMenu}>Home</a>
           <a href="#about" className="hover:text-green-200 transition" onClick={toggleMenu}>About</a>
           <a href="#products" className="hover:text-green-200 transition" onClick={toggleMenu}>Products</a>
-          <a href="#clients" className="hover:text-green-200 transition" onClick={toggleMenu}>Our Clients</a>
-          <a href="#contact" className="hover:text-green-200 transition" onClick={toggleMenu}>Contact</a>
+          <a href="#ourClients" className="hover:text-green-200 transition" onClick={toggleMenu}>Our Clients</a>
+          <a href="#contactUs" className="hover:text-green-200 transition" onClick={toggleMenu}>Contact</a>
         </div>
       )}
     </nav>

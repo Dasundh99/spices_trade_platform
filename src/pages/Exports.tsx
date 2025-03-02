@@ -23,14 +23,14 @@ const Exports: React.FC = () => {
           {images.map((image) => (
             <div 
               key={image.id}
-              className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-500 group"
             >
               <img
                 src={image.src}
                 alt={`Export product ${image.id}`}
-                className="w-full h-72 object-cover transform hover:scale-105 transition-transform duration-300"
+                className="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-green-800/40 to-transparent flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-t from-green-800/50 to-transparent flex items-center justify-center">
                 <p className="text-white text-xl font-bold">{image.text}</p>
               </div>
             </div>

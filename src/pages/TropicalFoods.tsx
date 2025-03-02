@@ -1,6 +1,6 @@
 import React from "react";
 
-const Tea: React.FC = () => {
+const TropicalFoods: React.FC = () => {
   return (
     <section id="tea" className="bg-green-50 min-h-screen flex items-center pt-16">
     
@@ -8,4 +8,4 @@ const Tea: React.FC = () => {
   );
 };
 
-export default Tea;
+export default TropicalFoods;
