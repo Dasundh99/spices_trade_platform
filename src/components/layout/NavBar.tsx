@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex space-x-6">
           <a href="#home" className="hover:text-green-200 transition">Home</a>
           <a href="#about" className="hover:text-green-200 transition">About</a>
-          <a href="#products" className="hover:text-green-200 transition">Products</a>
+          <a href="#exports" className="hover:text-green-200 transition">Exports</a>
           <a href="#clients" className="hover:text-green-200 transition">Our Clients</a>
           <a href="#contact" className="hover:text-green-200 transition">Contact Us</a>
         </div>
