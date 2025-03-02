@@ -3,7 +3,7 @@ import vegetables from '../assets/vegetables.jpg'
 
 const Hero: React.FC = () => {
   return (
-    <section className="bg-green-50 min-h-screen flex items-center pt-16">
+    <section id="home" className="bg-green-50 min-h-screen flex items-center pt-16">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
