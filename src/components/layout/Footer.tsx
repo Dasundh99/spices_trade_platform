@@ -1,5 +1,5 @@
 // import myImage from "../assets/images/home/logo-footer.png";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaInstagram, FaTiktok, FaFacebook, FaCcVisa, FaCcMastercard, FaCcPaypal, FaGlobe } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaInstagram, FaTiktok, FaFacebook, FaGlobe } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
