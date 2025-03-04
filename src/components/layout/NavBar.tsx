@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="bg-green-700 text-white p-4 fixed w-full top-0 z-10 shadow-md">
+    <nav className="text-green-700 p-4 w-full top-0 z-10">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold">

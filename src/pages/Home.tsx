@@ -1,34 +1,27 @@
 import React from 'react';
-import vegetables from '../assets/vegetables.jpg'
+import heroVideo from '../assets/hero-video.mp4'
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="bg-green-50 min-h-screen flex items-center pt-16">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
-        {/* Text Content */}
-        <div className="md:w-1/2 text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
+    <section id="home" className="relative min-h-screen flex items-center px-[40px]">
+      <video poster="/assets/hero-image.jpg" autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover z-[-1] rounded-b-[50px]">
+        <source src={heroVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/10 to-black/0"></div>
+      <div className="container mx-auto flex md:flex-row items-center px-16">
+        <div className="text-center md:text-left text-white justify-center">
+          <h1 className="text-4xl md:text-8xl font-bold mb-4 mt-[30px]">
             Fresh, Organic Food Delivered to You
           </h1>
-          <p className="text-lg text-gray-600 mb-6">
+          <p className="text-lg mb-6">
             Discover the best in organic produce, sustainably sourced and packed with flavor.
           </p>
-          <a
-            href="#shop"
-            className="bg-green-600 text-white py-3 px-6 rounded-full hover:bg-green-700 transition"
-          >
+          <a href="#shop" className="bg-green-600 text-white py-3 px-6 rounded-full hover:bg-green-700 transition">
             Shop Now
           </a>
         </div>
-
-        {/* Image */}
-        <div className="md:w-1/2 mt-8 md:mt-0">
-          <img
-            src={vegetables}
-            alt="Organic Food"
-            className="w-full max-w-md mx-auto rounded-lg shadow-lg"
-          />
-        </div>
+       
       </div>
     </section>
   );

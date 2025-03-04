@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactUs: React.FC = () => {
   return (
-    <section id="contactUs" className="bg-green-50 min-h-screen flex items-center pt-16">
+    <section id="contact" className="bg-green-50 min-h-screen flex items-center pt-16">
       <div className="max-w-4xl mx-auto text-center px-4">
         {/* Title */}
         <h2 className="text-4xl font-bold text-green-700 mb-6">
