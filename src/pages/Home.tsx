@@ -1,5 +1,4 @@
 import React from 'react';
-import vegetables from '../assets/vegetables.jpg'
 import heroVideo from '../assets/hero-video.mp4'
 
 const Hero: React.FC = () => {
