@@ -13,13 +13,13 @@ const Exports: React.FC = () => {
   ];
 
   return (
-    <section id="exports" className="bg-green-50 min-h-screen flex items-center py-16">
+    <section id="exports" className="bg-green-50 min-h-screen flex items-center py-16 z-0">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-green-700 mb-6 text-center">
           Exports
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
           {images.map((image) => (
             <div 
               key={image.id}
