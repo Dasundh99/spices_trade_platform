@@ -17,11 +17,7 @@ const Hero: React.FC = () => {
           <p className="text-lg mb-6">
             From the diverse soils of Ceylon to the world, we bring you the finest agricultural products, nurtured with care and tradition.
           </p>
-          <a href="#shop" className="bg-green-600 text-white py-4 px-8 rounded-full hover:bg-green-700 transition text-2xl">
-            Shop Now
-          </a>
         </div>
-       
       </div>
     </section>
   );
