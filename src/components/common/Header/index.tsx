@@ -1,4 +1,3 @@
-'use client';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import styles from './style.module.scss';
 import { useLocation } from 'react-router-dom';
