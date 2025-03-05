@@ -12,16 +12,16 @@ const Hero: React.FC = () => {
       <div className="container mx-auto flex md:flex-row items-center px-16">
         <div className="text-center md:text-left text-white justify-center">
           <h1 className="text-4xl md:text-8xl font-bold mb-4 mt-[30px]">
-            Fresh, Organic Food Delivered to You
+            To global markets with quality and integrity.
           </h1>
           <p className="text-lg mb-6">
-            Discover the best in organic produce, sustainably sourced and packed with flavor.
+            From the diverse soils of Ceylon to the world, we bring you the finest agricultural products, nurtured with care and tradition.
           </p>
-          <a href="#shop" className="bg-green-600 text-white py-3 px-6 rounded-full hover:bg-green-700 transition">
+          {/* <a href="#shop" className="bg-green-600 text-white py-3 px-6 rounded-full hover:bg-green-700 transition">
             Shop Now
-          </a>
+          </a> */}
         </div>
-       
+
       </div>
     </section>
   );
