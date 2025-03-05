@@ -3,8 +3,8 @@ import heroVideo from '../assets/hero-video.mp4'
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center px-[40px]">
-      <video poster="/assets/hero-image.jpg" autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover z-[-1] rounded-b-[50px]">
+    <section id="home" className="relative min-h-[120vh] flex items-center px-[40px] rounded-b-[px]">
+      <video poster="/assets/hero-image.jpg" autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
         <source src={heroVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
           <p className="text-lg mb-6">
             Discover the best in organic produce, sustainably sourced and packed with flavor.
           </p>
-          <a href="#shop" className="bg-green-600 text-white py-3 px-6 rounded-full hover:bg-green-700 transition">
+          <a href="#shop" className="bg-green-600 text-white py-4 px-8 rounded-full hover:bg-green-700 transition text-2xl">
             Shop Now
           </a>
         </div>
