@@ -12,23 +12,23 @@ import { useLocation } from 'react-router-dom';
 const navItems = [
   {
     title: "Home",
-    href: "/",
+    href: "/#",
   },
   {
     title: "About",
-    href: "#about",
+    href: "/#about",
   },
   {
     title: "Exports",
-    href: "#exports",
+    href: "/#exports",
   },
   {
     title: "Clients",
-    href: "#clients",
+    href: "/#clients",
   },
   {
     title: "Contact",
-    href: "#contact",
+    href: "/#contact",
   },
 ]
 
