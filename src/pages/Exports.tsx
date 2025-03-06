@@ -9,7 +9,7 @@ const Exports: React.FC = () => {
   const navigate = useNavigate(); 
 
   const images = [
-    { id: 1, src: img1, text: "Tropical Foods", path: "/tropical" },
+    { id: 1, src: img1, text: "Tropical Foods", path: "/foods" },
     { id: 2, src: img2, text: "Tropical vegetables", path: "/vegetables" },
     { id: 3, src: img3, text: "Spices", path: "/spices" },
     { id: 4, src: img4, text: "Tea", path: "/tea" },

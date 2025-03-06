@@ -8,7 +8,7 @@ const OurClients: React.FC = () => {
           <h2 className="text-4xl font-bold text-green-700 mb-6">
             Our Clients
           </h2>
-        /</div>
+        </div>
     
     </section>
   );
