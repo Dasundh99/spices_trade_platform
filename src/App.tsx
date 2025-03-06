@@ -10,13 +10,14 @@ import Clients from './pages/OurClients';
 import ContactUs from './pages/ContactUs';
 import Footer from './components/layout/Footer';
 import Header from './components/common/Header';
+import TropicalFoods from './pages/TropicalFoods';
 
 function App() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 2.0, 
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
-      orientation: 'vertical', 
+      duration: 2.0,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
       touchMultiplier: 2,
@@ -47,6 +48,7 @@ function App() {
             <ContactUs />
           </main>
         } />
+        <Route path='/tropical' element={<TropicalFoods />} />
       </Routes>
       <Footer />
     </BrowserRouter>

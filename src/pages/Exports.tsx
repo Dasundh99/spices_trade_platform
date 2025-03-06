@@ -1,15 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; 
 import img1 from '../assets/bon-vivant-Ooj1c6fhdFM-unsplash.jpg';
 import img2 from '../assets/sri-lanka-KSa66AYiqnk-unsplash.jpg';
 import img3 from '../assets/zahrin-lukman-VSNoQdimlQQ-unsplash.jpg';
 import img4 from '../assets/pritindra-das-hIY-acW8e3w-unsplash.jpg';
 
 const Exports: React.FC = () => {
+  const navigate = useNavigate(); 
+
   const images = [
-    { id: 1, src: img1, text: "Tropical Foods" },
-    { id: 2, src: img2, text: "Tropical vegetables" },
-    { id: 3, src: img3, text: "Spices" },
-    { id: 4, src: img4, text: "Tea" },
+    { id: 1, src: img1, text: "Tropical Foods", path: "/tropical" },
+    { id: 2, src: img2, text: "Tropical vegetables", path: "/vegetables" },
+    { id: 3, src: img3, text: "Spices", path: "/spices" },
+    { id: 4, src: img4, text: "Tea", path: "/tea" },
   ];
 
   return (
@@ -19,11 +22,12 @@ const Exports: React.FC = () => {
           Exports
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {images.map((image) => (
             <div 
               key={image.id}
-              className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-500 group"
+              className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-500 group cursor-pointer"
+              onClick={() => navigate(image.path)}
             >
               <img
                 src={image.src}

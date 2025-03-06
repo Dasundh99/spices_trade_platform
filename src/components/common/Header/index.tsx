@@ -8,6 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Rounded from '../../common/RoundedButton';
 import Magnetic from '../../common/Magnetic';
 import Nav from './nav';
+import { HashLink } from 'react-router-hash-link';
 
 export default function index() {
     const header = useRef(null);
@@ -15,75 +16,75 @@ export default function index() {
     const pathname = useLocation();
     const button = useRef(null);
 
-    useEffect( () => {
-      if(isActive) setIsActive(false)
+    useEffect(() => {
+        if (isActive) setIsActive(false)
     }, [pathname])
 
-    useLayoutEffect( () => {
+    useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
         gsap.to(button.current, {
             scrollTrigger: {
                 trigger: document.documentElement,
                 start: 0,
                 end: window.innerHeight,
-                onLeave: () => {gsap.to(button.current, {scale: 1, duration: 0.25, ease: "power1.out"})},
-                onEnterBack: () => {gsap.to(button.current, {scale: 0, duration: 0.25, ease: "power1.out", onComplete: () => setIsActive(false)})}
+                onLeave: () => { gsap.to(button.current, { scale: 1, duration: 0.25, ease: "power1.out" }) },
+                onEnterBack: () => { gsap.to(button.current, { scale: 0, duration: 0.25, ease: "power1.out", onComplete: () => setIsActive(false) }) }
             }
         })
     }, [])
 
     return (
         <>
-        <div ref={header} className={styles.header}>
-            <div className={styles.logo}>
-                <p className={styles.copyright}>©</p>
-                <div className={styles.name}>
-                    <p className={styles.codeBy}>GSGreen</p>
-                    {/* <p className={styles.dennis}>private</p> */}
-                    <p className={styles.snellenberg}>Private LTD</p>
+            <div ref={header} className={styles.header}>
+                <div className={styles.logo}>
+                    <p className={styles.copyright}>©</p>
+                    <div className={styles.name}>
+                        <p className={styles.codeBy}>GSGreen</p>
+                        {/* <p className={styles.dennis}>private</p> */}
+                        <p className={styles.snellenberg}>Private LTD</p>
+                    </div>
+                </div>
+                <div className={styles.nav}>
+                    <Magnetic>
+                        <div className={styles.el}>
+                            <HashLink to='/#hero' smooth={true}>Home</HashLink>
+                            <div className={styles.indicator}></div>
+                        </div>
+                    </Magnetic>
+                    <Magnetic>
+                        <div className={styles.el}>
+                            <HashLink to='/#about' smooth={true}>About</HashLink>
+                            <div className={styles.indicator}></div>
+                        </div>
+                    </Magnetic>
+                    <Magnetic>
+                        <div className={styles.el}>
+                            <HashLink to='/#exports' smooth={true}>Exports</HashLink>
+                            <div className={styles.indicator}></div>
+                        </div>
+                    </Magnetic>
+                    <Magnetic>
+                        <div className={styles.el}>
+                            <HashLink to='/#clients' smooth={true}>Clients</HashLink>
+                            <div className={styles.indicator}></div>
+                        </div>
+                    </Magnetic>
+                    <Magnetic>
+                        <div className={styles.el}>
+                            <HashLink to='/#contact' smooth={true}>Contact</HashLink>
+                            <div className={styles.indicator}></div>
+                        </div>
+                    </Magnetic>
                 </div>
             </div>
-            <div className={styles.nav}>
-                <Magnetic>
-                    <div className={styles.el}>
-                        <a href='#hero'>Home</a>
-                        <div className={styles.indicator}></div>
-                    </div>
-                </Magnetic>
-                <Magnetic>
-                    <div className={styles.el}>
-                        <a href='#about'>About</a>
-                        <div className={styles.indicator}></div>
-                    </div>
-                </Magnetic>
-                <Magnetic>
-                    <div className={styles.el}>
-                        <a href='#exports'>Exports</a>
-                        <div className={styles.indicator}></div>
-                    </div>
-                </Magnetic>
-                <Magnetic>
-                    <div className={styles.el}>
-                        <a href='#clients'>Clients</a>
-                        <div className={styles.indicator}></div>
-                    </div>
-                </Magnetic>
-                <Magnetic>
-                    <div className={styles.el}>
-                        <a href='#contact'>Contact</a>
-                        <div className={styles.indicator}></div>
-                    </div>
-                </Magnetic>
+            <div ref={button} className={styles.headerButtonContainer}>
+                <Rounded onClick={() => { setIsActive(!isActive) }} className={`${styles.button}`}>
+                    <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
+                </Rounded>
             </div>
-        </div>
-        <div ref={button} className={styles.headerButtonContainer}>
-            <Rounded onClick={() => {setIsActive(!isActive)}} className={`${styles.button}`}>
-                <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
-            </Rounded>
-        </div>
-        <AnimatePresence mode="wait">
-            {isActive && <Nav />}
-        </AnimatePresence>
+            <AnimatePresence mode="wait">
+                {isActive && <Nav />}
+            </AnimatePresence>
         </>
     )
 }
