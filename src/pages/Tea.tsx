@@ -7,7 +7,7 @@ import SideNavigator from "../components/exportNav/exportNav";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Sample image data (expanded for three columns) 
+// Sample image data (expanded for three columns)
 const galleryImages = [
   [
     { src: "https://plus.unsplash.com/premium_photo-1675731118342-1544e274b633?q=80&w=2127&auto=format&fit=crop", caption: "Organic Mangoes" },
@@ -26,7 +26,7 @@ const galleryImages = [
   ],
 ];
 
-const TropicalFoods: React.FC = () => {
+const Tea: React.FC = () => {
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -87,7 +87,7 @@ const TropicalFoods: React.FC = () => {
       >
         <div className="container mt-[100px] mx-auto px-6 md:px-12 lg:px-20">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-[100px] text-center">
-          Tropical Foods
+            Tea
           </h2>
           <div className="gallery-container grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {galleryImages.map((columnImages, colIndex) => (
@@ -130,4 +130,4 @@ const TropicalFoods: React.FC = () => {
   );
 };
 
-export default TropicalFoods;
+export default Tea

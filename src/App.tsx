@@ -11,6 +11,9 @@ import ContactUs from './pages/ContactUs';
 import Footer from './components/layout/Footer';
 import Header from './components/common/Header';
 import TropicalFoods from './pages/TropicalFoods';
+import TropicalVegetables from './pages/TropicalVegetables';
+import Spices from './pages/Spices';
+import Tea from './pages/Tea';
 
 function App() {
   useEffect(() => {
@@ -48,7 +51,10 @@ function App() {
             <ContactUs />
           </main>
         } />
-        <Route path='/tropical' element={<TropicalFoods />} />
+        <Route path='/foods' element={<TropicalFoods />} />
+        <Route path='/vegetables' element={<TropicalVegetables />} />
+        <Route path='/spices' element={<Spices />} />
+        <Route path='/tea' element={<Tea />} />
       </Routes>
       <Footer />
     </BrowserRouter>
