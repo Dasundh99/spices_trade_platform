@@ -80,12 +80,13 @@ const TropicalVegetables: React.FC = () => {
 
   return (
     <>
-      <SideNavigator />
+      
       <section
         id="tropical"
         className="bg-black min-h-screen pt-16 pb-16 overflow-hidden"
       >
         <div className="container mt-[100px] mx-auto px-6 md:px-12 lg:px-20">
+        <SideNavigator />
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-[100px] text-center">
           Tropical Vegetables
           </h2>
