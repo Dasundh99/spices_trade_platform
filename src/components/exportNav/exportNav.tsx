@@ -1,9 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
-  { path: "/foods", label: "Foods" },
-  { path: "/vegetables", label: "Vegetables" },
-  { path: "/spices", label: "Spices" },
+  { path: "/fruits", label: "Tropical Fruits" },
+  { path: "/vegetables", label: "Tropical Vegetables" },
+  { path: "/spices", label: "Spices and Oil" },
   { path: "/tea", label: "Tea" },
 ];
 
@@ -20,7 +20,7 @@ const SideNavigator = () => {
               <li key={item.path} className="flex justify-center">
                 <Link to={item.path} className="group relative block">
                   <div
-                    className={`w-32 h-16 flex items-center justify-center rounded-lg shadow-md transition-colors duration-200 
+                    className={`w-42 h-16 flex items-center justify-center rounded-lg shadow-md transition-colors duration-200 
                       ${
                         isActive
                           ? "bg-green-500 text-white"

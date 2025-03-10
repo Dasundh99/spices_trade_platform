@@ -87,7 +87,7 @@ const Spices: React.FC = () => {
         <div className="container mt-[100px] mx-auto px-6 md:px-12 lg:px-20">
         <SideNavigator />
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-[100px] text-center">
-            Spices
+            Spices and Oil
           </h2>
           <div className="gallery-container grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {galleryImages.map((columnImages, colIndex) => (
