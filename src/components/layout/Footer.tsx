@@ -4,8 +4,8 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-green-900 text-gray-300 p-10">
-      <div className="flex flex-wrap gap-10">
+    <footer className="bg-white text-gray-300 p-10 text-black">
+      <div className="flex flex-wrap gap-10 text-black">
         <div className="flex-1 w-full sm:w-auto">
           <div className="flex gap-5">
             <div className="flex-1">
@@ -36,7 +36,7 @@ const Footer = () => {
             </div>
             <div className="flex-1">
               <div className="pl-10">
-                <h3 className="text-[18px] text-white">Top Clients</h3>
+                <h3 className="text-[18px] text-black">Top Clients</h3>
                 <div className="flex gap-x-5 mt-3 w-full ">
                   <ul className="flex flex-col space-y-2 text-xs">
                     <li><a href="#" className="hover:text-gray-300 text-gray-400">Germany</a></li>
@@ -64,7 +64,7 @@ const Footer = () => {
           <div className="flex gap-5">
             <div className="flex-1">
               <div className="">
-                <h3 className="text-[18px] text-white">Information</h3>
+                <h3 className="text-[18px] text-black">Information</h3>
                 <ul className="mt-3 space-y-2 text-xs">
                   <li>
                     <a href="#" className="hover:text-gray-300 text-gray-400">
@@ -93,7 +93,7 @@ const Footer = () => {
               <div className="h-full pl-10">
                 <div className="flex flex-col gap-y-3">
                   <div className="flex-1">
-                    <h3 className="text-[18px] text-white">Follow Us</h3>
+                    <h3 className="text-[18px] text-black">Follow Us</h3>
                     <div className="flex gap-2 mt-3">
                       <FaInstagram size={20} />
                       <FaTiktok size={20} />
@@ -110,7 +110,7 @@ const Footer = () => {
                     </div> */}
                   </div>
                   <div className="flex">
-                    <div className="flex items-center text-white border border-white px-2 py-2 rounded-lg gap-2">
+                    <div className="flex items-center text-black border border-black px-2 py-2 rounded-lg gap-2">
                       <FaGlobe className="text-l" />
                       <h3 className="text-[12px]">English | USD</h3>
                     </div>
@@ -122,7 +122,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-8 border-t border-gray-700 pt-4 text-center text-xs">
-        <p>
+        <p className="text-gray-400">
           Copyright © {new Date().getFullYear()} GSGreen Lanka. All Rights Reserved.
         </p>
       </div>

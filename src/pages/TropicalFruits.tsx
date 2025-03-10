@@ -73,7 +73,7 @@ const TropicalFruits: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Tropical Fruits
+          TROPICAL FRUITS
         </motion.h2>
         
         <div className="columns-1 sm:columns-2 md:columns-3 gap-4 md:gap-6 space-y-4 md:space-y-6">
