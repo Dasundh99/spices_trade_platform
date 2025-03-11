@@ -1,4 +1,4 @@
-// import myImage from "../assets/images/home/logo-footer.png";
+import img4 from "../../assets/GSGreenLogo.png";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaInstagram, FaTiktok, FaFacebook, FaGlobe } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -10,18 +10,19 @@ const Footer = () => {
           <div className="flex gap-5">
             <div className="flex-1">
               <div>
-                {/* <img
-                  src={myImage}
+                <img
+                  className="pl-5"
+                  src={img4}
                   alt="Logo"
-                  style={{ width: "150px", height: "auto" }}
-                /> */}
-                <p className="mt-4 text-xs">
+                  style={{ width: "100px", height: "auto" }}
+                />
+                {/* <p className="mt-4 text-xs">
                   Simply about what you do!
-                </p>
+                </p> */}
                 <div className="mt-4 text-xs space-y-2">
                   <p className="flex items-center">
                     <FaMapMarkerAlt className="mr-2 text-l" />
-                    Galle Road, Hikkaduwa
+                    123/2B, Colombo
                   </p>
                   <p className="flex items-center">
                     <FaPhoneAlt className="mr-2 text-l" />

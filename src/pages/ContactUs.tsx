@@ -17,7 +17,7 @@ const ContactUs: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 w-full flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
         {/* Left Column: Lottie Animation Section */}
         <div className="flex-col flex justify-center items-center">
-          <h1 className="text-3xl sm:text-4xl font-bold text-black uppercase tracking-wider opacity-80">
+          <h1 className="text-6xl sm:text-7xl font-bold text-black uppercase tracking-wider opacity-80">
             CONTACT
           </h1>
 
@@ -85,6 +85,7 @@ const ContactUs: React.FC = () => {
             </button>
           </form>
         </div>
+        
       </div>
     </section>
   );
