@@ -11,10 +11,10 @@ const Hero: React.FC = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/10 to-black/0"></div>
       <div className="container mx-auto flex md:flex-row items-center px-10">
         <div className="text-center md:text-left text-white justify-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[5rem] font-bold text-white uppercase tracking-wider text-left pl-2.5 opacity-50">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[5rem] font-bold text-green-100 uppercase tracking-wider text-left pl-2.5 opacity-60">
             To global markets with quality and integrity.
           </h1>
-          <p className="text-lg mb-6">
+          <p className="text-lg mb-6 text-green-100 opacity-60">
             From the diverse soils of Ceylon to the world, we bring you the finest agricultural products, nurtured with care and tradition.
           </p>
         </div>

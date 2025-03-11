@@ -1,26 +1,35 @@
 import React from "react";
+import Lottie from "react-lottie";
+import animationData from "../assets/Animation - 1741614740822.json";
 
 const ContactUs: React.FC = () => {
+  const lottieOptions = {
+    loop: true,
+    autoplay: true, // Autoplay the animation
+    animationData: animationData, // The animation file
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   return (
-    <section id="contact" className="bg-black min-h-screen flex items-center">
-      <div className="max-w-7xl mx-auto px-0 w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        {/* Title Section */}
-        <div className="text-left">
-          <h2 className="text-9xl sm:text-10xl font-bold text-white uppercase tracking-wider opacity-20">
+    <section id="contact" className="bg-white min-h-screen flex items-center py-16">
+      <div className="max-w-7xl mx-auto px-4 w-full flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
+        {/* Left Column: Lottie Animation Section */}
+        <div className="flex-col flex justify-center items-center">
+          <h1 className="text-3xl sm:text-4xl font-bold text-black uppercase tracking-wider opacity-80">
             CONTACT
-          </h2>
-          <p className="text-white text-lg sm:text-xl mt-4 opacity-30">
-          Get in touch with us for any inquiries,
-           support, or feedback. We're here to help!
-          </p>
+          </h1>
+
+          <Lottie options={lottieOptions} height={400} width={400} />
         </div>
 
-        {/* Contact Form Section */}
-        <div className="bg-black p-8 rounded-lg shadow-lg">
+        {/* Right Column: Contact Form Section */}
+        <div className="flex-1 bg-white p-8 rounded-lg shadow-lg">
           <form action="#" method="POST" className="space-y-6">
             <div className="flex gap-4">
               <div className="flex-1">
-                <label htmlFor="firstName" className="block text-sm font-medium text-gray-300">
+                <label htmlFor="firstName" className="block text-sm font-medium text-gray-500">
                   First Name
                 </label>
                 <input
@@ -32,7 +41,7 @@ const ContactUs: React.FC = () => {
                 />
               </div>
               <div className="flex-1">
-                <label htmlFor="lastName" className="block text-sm font-medium text-gray-300">
+                <label htmlFor="lastName" className="block text-sm font-medium text-gray-500">
                   Last Name
                 </label>
                 <input
@@ -40,12 +49,12 @@ const ContactUs: React.FC = () => {
                   id="lastName"
                   name="lastName"
                   required
-                  className="w-full mt-1 p-3 border border-gray-700 bg-green-100 opacity-50 text-white rounded-lg focus:ring-2 focus:ring-green-500"
+                  className="w-full mt-1 p-3 border border-gray-700 bg-green-100 opacity-50 text-black rounded-lg focus:ring-2 focus:ring-green-500"
                 />
               </div>
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-300">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-500">
                 Email Address
               </label>
               <input
@@ -53,11 +62,11 @@ const ContactUs: React.FC = () => {
                 id="email"
                 name="email"
                 required
-                className="w-full mt-1 p-3 border border-gray-700 bg-green-100 opacity-50 text-white rounded-lg focus:ring-2 focus:ring-green-500"
+                className="w-full mt-1 p-3 border border-gray-700 bg-green-100 opacity-50 text-black rounded-lg focus:ring-2 focus:ring-green-500"
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-300">
+              <label htmlFor="message" className="block text-sm font-medium text-gray-500">
                 Message
               </label>
               <textarea
@@ -65,7 +74,7 @@ const ContactUs: React.FC = () => {
                 name="message"
                 rows={4}
                 required
-                className="w-full mt-1 p-3 border border-gray-700 bg-green-100 opacity-50 text-white rounded-lg focus:ring-2 focus:ring-green-500"
+                className="w-full mt-1 p-3 border border-gray-700 bg-green-100 opacity-50 text-black rounded-lg focus:ring-2 focus:ring-green-500"
               />
             </div>
             <button
