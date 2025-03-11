@@ -63,12 +63,12 @@ const TropicalVegetables: React.FC = () => {
   return (
     <section
       id="tropical"
-      className="bg-black min-h-screen pt-16 pb-16 overflow-hidden"
+      className="bg-white min-h-screen pt-16 pb-16 overflow-hidden"
     >
       <div className="container mt-[100px] mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
         <SideNavigator />
         <motion.h2 
-          className="text-4xl md:text-5xl font-bold text-white mb-12 text-center"
+          className="text-4xl md:text-5xl font-bold text-black mb-12 text-center"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
