@@ -1,15 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; 
-import img1 from '../assets/bon-vivant-Ooj1c6fhdFM-unsplash.jpg';
-import img2 from '../assets/sri-lanka-KSa66AYiqnk-unsplash.jpg';
-import img3 from '../assets/zahrin-lukman-VSNoQdimlQQ-unsplash.jpg';
-import img4 from '../assets/pritindra-das-hIY-acW8e3w-unsplash.jpg';
+import img1 from '../assets/debora-cardenas-BIj5FAFQ_rk-unsplash.jpg';
+import img2 from '../assets/ibuki-tsubo-OUTKKo3lHuM-unsplash (1).jpg';
+import img3 from '../assets/andy-holmes-mTqGgeYkfaY-unsplash (1).jpg';
+import img4 from '../assets/ramakrishnan-nataraj-ptMFONhgVho-unsplash.jpg';
 
 const Exports: React.FC = () => {
   const navigate = useNavigate(); 
 
   const images = [
-    { id: 1, src: img1, text: "Tropical Foods", path: "/foods" },
+    { id: 1, src: img1, text: "Tropical Fruits", path: "/fruits" },
     { id: 2, src: img2, text: "Tropical vegetables", path: "/vegetables" },
     { id: 3, src: img3, text: "Spices", path: "/spices" },
     { id: 4, src: img4, text: "Tea", path: "/tea" },

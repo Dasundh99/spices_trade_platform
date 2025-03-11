@@ -10,7 +10,7 @@ import Clients from './pages/OurClients';
 import ContactUs from './pages/ContactUs';
 import Footer from './components/layout/Footer';
 import Header from './components/common/Header';
-import TropicalFoods from './pages/TropicalFoods';
+import TropicalFruits from './pages/TropicalFruits';
 import TropicalVegetables from './pages/TropicalVegetables';
 import Spices from './pages/Spices';
 import Tea from './pages/Tea';
@@ -51,7 +51,7 @@ function App() {
             <ContactUs />
           </main>
         } />
-        <Route path='/foods' element={<TropicalFoods />} />
+        <Route path='/fruits' element={<TropicalFruits />} />
         <Route path='/vegetables' element={<TropicalVegetables />} />
         <Route path='/spices' element={<Spices />} />
         <Route path='/tea' element={<Tea />} />
