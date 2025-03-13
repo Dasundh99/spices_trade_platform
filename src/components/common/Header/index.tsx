@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import styles from './style.module.scss';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 import gsap from 'gsap';
@@ -14,14 +14,15 @@ export default function index() {
     const header = useRef(null);
     const [isActive, setIsActive] = useState(false);
     const pathname = useLocation();
+    const navigate = useNavigate();
     const button = useRef(null);
 
     useEffect(() => {
-        if (isActive) setIsActive(false)
-    }, [pathname])
+        if (isActive) setIsActive(false);
+    }, [pathname]);
 
     useLayoutEffect(() => {
-        gsap.registerPlugin(ScrollTrigger)
+        gsap.registerPlugin(ScrollTrigger);
         gsap.to(button.current, {
             scrollTrigger: {
                 trigger: document.documentElement,
@@ -30,8 +31,8 @@ export default function index() {
                 onLeave: () => { gsap.to(button.current, { scale: 1, duration: 0.25, ease: "power1.out" }) },
                 onEnterBack: () => { gsap.to(button.current, { scale: 0, duration: 0.25, ease: "power1.out", onComplete: () => setIsActive(false) }) }
             }
-        })
-    }, [])
+        });
+    }, []);
 
     return (
         <>
@@ -40,7 +41,6 @@ export default function index() {
                     <p className={styles.copyright}>©</p>
                     <div className={styles.name}>
                         <p className={styles.codeBy}>GSGreen</p>
-                        {/* <p className={styles.dennis}>private</p> */}
                         <p className={styles.snellenberg}>Private LTD</p>
                     </div>
                 </div>
@@ -51,12 +51,7 @@ export default function index() {
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>
-                    <Magnetic>
-                        <div className={styles.el}>
-                            <HashLink to='/#about' smooth={true}>About</HashLink>
-                            <div className={styles.indicator}></div>
-                        </div>
-                    </Magnetic>
+                    
                     <Magnetic>
                         <div className={styles.el}>
                             <HashLink to='/#exports' smooth={true}>Exports</HashLink>
@@ -70,8 +65,14 @@ export default function index() {
                         </div>
                     </Magnetic>
                     <Magnetic>
-                        <div className={styles.el}>
-                            <HashLink to='/#contact' smooth={true}>Contact</HashLink>
+                        <div className={styles.el} onClick={() => navigate('/about')}>
+                            <p className="cursor-pointer">About</p>
+                            <div className={styles.indicator}></div>
+                        </div>
+                    </Magnetic>
+                    <Magnetic>
+                        <div className={styles.el} onClick={() => navigate('/contact')}>
+                            <p className="cursor-pointer">Contact</p>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>
@@ -86,5 +87,5 @@ export default function index() {
                 {isActive && <Nav />}
             </AnimatePresence>
         </>
-    )
+    );
 }

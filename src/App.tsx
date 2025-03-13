@@ -45,12 +45,14 @@ function App() {
         <Route path='/' element={
           <main>
             <Hero />
-            <About />
+            {/* <About /> */}
             <Exports />
             <Clients />
-            <ContactUs />
+            {/* <ContactUs /> */}
           </main>
         } />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<ContactUs />} />
         <Route path='/fruits' element={<TropicalFruits />} />
         <Route path='/vegetables' element={<TropicalVegetables />} />
         <Route path='/spices' element={<Spices />} />

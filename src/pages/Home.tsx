@@ -4,7 +4,7 @@ import { FaHandshake, FaLeaf, FaSeedling } from 'react-icons/fa';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative min-h-[120vh] flex items-center px-[0px] rounded-b-[px] bg-gradient-to-b from-transparent to-black">
+    <section id="home" className="relative min-h-[100vh] flex items-center px-[0px] rounded-b-[px] bg-gradient-to-b from-transparent to-black">
       <video poster="/assets/hero-image.jpg" autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
         <source src={heroVideo} type="video/mp4" />
         Your browser does not support the video tag.
@@ -20,24 +20,24 @@ const Hero: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className="absolute bottom-0 w-full flex justify-center gap-20 pb-40 items-center">
+      <div className="absolute bottom-0 w-full flex justify-center lg:gap-50 md:gap-40 gap-25 pb-12 items-center p-5">
         <div className="flex flex-col items-center">
           <div className="rounded-full border-2 border-green-500 p-4">
-            <FaSeedling size={50} color="#2ecc71" />
+            <FaSeedling size={18} color="#2ecc71" />
           </div>
-          <p className="text-sm text-white opacity-60">Farming Roots</p>
+          <p className="text-xs text-white opacity-40 pt-2">Farming Roots</p>
         </div>
         <div className="flex flex-col items-center">
           <div className="rounded-full border-2 border-green-500 p-4">
-            <FaLeaf size={50} color="#2ecc71" />
+            <FaLeaf size={18} color="#2ecc71" />
           </div>
-          <p className="text-sm text-white opacity-60">Sustainability</p>
+          <p className="text-xs text-white opacity-40 pt-2">Sustainability</p>
         </div>
         <div className="flex flex-col items-center">
           <div className="rounded-full border-2 border-green-500 p-4">
-            <FaHandshake size={50} color="#2ecc71" />
+            <FaHandshake size={18} color="#2ecc71" />
           </div>
-          <p className="text-sm text-white opacity-60">Reliability</p>
+          <p className="text-xs text-white opacity-40 pt-2">Reliability</p>
         </div>
       </div>
     </section>
