@@ -4,7 +4,7 @@ import { FaHandshake, FaLeaf, FaSeedling } from 'react-icons/fa';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative min-h-[100vh] flex items-center px-[0px] rounded-b-[px] bg-gradient-to-b from-transparent to-black">
+    <section id="home" className="relative min-h-[90vh] flex items-center px-[0px] rounded-b-[px] bg-gradient-to-b from-transparent to-black">
       <video poster="/assets/hero-image.jpg" autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
         <source src={heroVideo} type="video/mp4" />
         Your browser does not support the video tag.

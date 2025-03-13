@@ -14,6 +14,7 @@ import TropicalFruits from './pages/TropicalFruits';
 import TropicalVegetables from './pages/TropicalVegetables';
 import Spices from './pages/Spices';
 import Tea from './pages/Tea';
+import ProductDetails from './pages/ProductDetails';
 
 function App() {
   useEffect(() => {
@@ -57,6 +58,7 @@ function App() {
         <Route path='/vegetables' element={<TropicalVegetables />} />
         <Route path='/spices' element={<Spices />} />
         <Route path='/tea' element={<Tea />} />
+        <Route path="/fruit/:name" Component={ProductDetails} />
       </Routes>
       <Footer />
     </BrowserRouter>
