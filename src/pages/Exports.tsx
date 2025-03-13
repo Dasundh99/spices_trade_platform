@@ -46,7 +46,7 @@ const MyPage: React.FC = () => {
               className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
             />
             {/* Always Visible Image Name */}
-            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white text-lg font-semibold text-center py-2">
+            <div className="absolute bottom-0 left-0 right-0 bg-green-100 bg-opacity-20 text-green-500 text-lg font-semibold text-center py-2">
               {image.text}
             </div>
           </div>
