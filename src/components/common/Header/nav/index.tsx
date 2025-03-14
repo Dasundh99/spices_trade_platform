@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import styles from './style.module.scss';
 import { motion } from 'framer-motion';
-import { HashLink } from 'react-router-hash-link';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const menuSlide = {
@@ -13,17 +12,17 @@ const menuSlide = {
 const navItems = [
   {
     title: "Home",
-    href: "/#hero",
+    sectionId: "home",
     isHash: true
   },
   {
     title: "Exports",
-    href: "/#exports",
+    sectionId: "exports",
     isHash: true
   },
   {
     title: "Clients",
-    href: "/#clients",
+    sectionId: "clients",
     isHash: true
   },
   {
@@ -39,15 +38,46 @@ const navItems = [
 ]
 
 export default function Nav() {
-  const location = useLocation();
+  const { pathname } = useLocation();
   const navigate = useNavigate();
-  const [selectedIndicator, setSelectedIndicator] = useState(location.pathname);
+  const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 
-  const handleNavigation = (href: string, isHash: boolean, title: string) => {
-    if (isHash) {
-      return <HashLink to={href} smooth={true} className={styles.link}>{title}</HashLink>
+  const scrollToSection = (sectionId: string) => {
+    if (pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     } else {
-      return <div onClick={() => navigate(href)} className={styles.link}>{title}</div>
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  const handleNavigation = (item: { title: string; sectionId: string; isHash: boolean; href?: undefined; } | { title: string; href: string; isHash: boolean; sectionId?: undefined; }) => {
+    if (item.isHash) {
+      return (
+        <div 
+          onClick={() => item.sectionId && scrollToSection(item.sectionId)} 
+          className={`${styles.link} cursor-pointer`}
+        >
+          {item.title}
+        </div>
+      );
+    } else {
+      return (
+        <div 
+          onClick={() => item.href && navigate(item.href)} 
+          className={`${styles.link} cursor-pointer`}
+        >
+          {item.title}
+        </div>
+      );
     }
   }
 
@@ -61,19 +91,19 @@ export default function Nav() {
     >
       <div className={styles.body}>
         <div 
-          onMouseLeave={() => setSelectedIndicator(location.pathname)} 
+          onMouseLeave={() => setSelectedIndicator(pathname)} 
           className={styles.nav}
         >
           {navItems.map((item, index) => (
             <div 
               key={index} 
               className={styles.linkWrapper}
-              onMouseEnter={() => setSelectedIndicator(item.href)}
+              onMouseEnter={() => setSelectedIndicator(item.isHash ? `/#${item.sectionId}` : (item.href || pathname))}
             >
-              {handleNavigation(item.href, item.isHash, item.title)}
+              {handleNavigation(item)}
               <div 
                 className={styles.indicator} 
-                style={{ opacity: selectedIndicator === item.href ? 1 : 0 }}
+                style={{ opacity: selectedIndicator === (item.isHash ? `/#${item.sectionId}` : item.href) ? 1 : 0 }}
               />
             </div>
           ))}

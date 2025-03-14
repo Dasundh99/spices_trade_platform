@@ -60,7 +60,7 @@
             }
 
             .name {
-                padding-right: 30px;
+                padding-right: (-10px);
 
                 .codeBy {
                     transform: translateX(-100%);
@@ -91,11 +91,11 @@
             background: rgba(255, 255, 255, 0.7);
             border-radius: 20px;
             margin: 0 10px;
-            transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+            // transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
 
             &:hover {
                 background: rgba(255, 255, 255, 1);
-                transform: translateY(-5px);
+                // transform: translateY(-5px);
 
                 .indicator {
                     transform: scale(1);
@@ -184,5 +184,5 @@
             transform: rotate(-45deg);
             top: 0px;
         }
-    }
+    }  
 }
