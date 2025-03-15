@@ -150,7 +150,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Feature Highlights */}
-      <div className="absolute bottom-0 flex w-full items-center justify-center gap-15 p-5 pb-12 md:gap-20 lg:gap-32">
+      <div className="absolute bottom-0 flex w-full items-center justify-center gap-4 p-5 pb-12 md:gap-20 lg:gap-32">
         {features.map((feature, index) => (
           <div 
             key={index} 

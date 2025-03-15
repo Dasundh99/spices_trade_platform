@@ -4,10 +4,10 @@ import ExportNavigator from "../components/exportNav/exportNav";
 
 // Refined Greenish Color Palette
 const colors = {
-  deepGreen: "#3B8C5E",
-  sageGreen: "#C8E0C5",
-  mutedGreen: "#F5FBF5",
-  accentGreen: "#8CC089",
+  deepGreen: "#22C55E",    // A lively, lighter deep green for text and accents
+  sageGreen: "#DCFCE7",    // A bright, cheerful sage green for backgrounds and highlights
+  mutedGreen: "#F5FBF5",   // An ultra-light, almost glowing green for section backgrounds
+  accentGreen: "#8CC089",  // A vivid yet soft green for hover states and accents
 };
 
 // Gallery data - Reduced to 3 items for one row

@@ -12,10 +12,10 @@ gsap.registerPlugin(ScrollTrigger);
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [isInHomeSection, setIsInHomeSection] = useState(true);
     const headerRef = useRef(null);
     const location = useLocation();
 
-    // Handle scroll behavior
     useEffect(() => {
         const lenis = new Lenis({
             duration: 1.2,
@@ -35,15 +35,15 @@ const Header = () => {
             const st = window.scrollY || document.documentElement.scrollTop;
             if (st > 100) {
                 setScrolled(true);
+                setIsInHomeSection(false);
                 if (st > lastScrollTop) {
-                    // Scrolling down - hide header
                     gsap.to(headerRef.current, { y: -100, duration: 0.3 });
                 } else {
-                    // Scrolling up - show header
                     gsap.to(headerRef.current, { y: 0, duration: 0.3 });
                 }
             } else {
                 setScrolled(false);
+                setIsInHomeSection(location.pathname === '/' && st <= 100);
                 gsap.to(headerRef.current, { y: 0, duration: 0.3 });
             }
             lastScrollTop = st <= 0 ? 0 : st;
@@ -51,115 +51,110 @@ const Header = () => {
 
         window.addEventListener('scroll', handleScroll);
 
+        setIsInHomeSection(location.pathname === '/' && (window.scrollY || document.documentElement.scrollTop) <= 100);
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [location.pathname]);
 
-    // Handle body overflow when menu is open
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = '';
         }
-
         return () => {
-            document.body.style.overflow = ''; // Ensure cleanup on unmount
+            document.body.style.overflow = '';
         };
     }, [isOpen]);
 
     const toggleMenu = () => {
         setIsOpen((prev) => !prev);
-        console.log('Menu toggled, isOpen:', !isOpen); // Debug log
     };
 
-    // Simplified menu variants
     const menuVariants = {
         initial: { x: '100%' },
         animate: { x: 0, transition: { duration: 0.3, ease: 'easeOut' } },
         exit: { x: '100%', transition: { duration: 0.3, ease: 'easeIn' } },
     };
 
-    // Determine the background color based on location
-    const getBackgroundColorClass = () => {
-        if (scrolled) {
-            return 'bg-[rgb(41,41,41)]';
+    const getHeaderStyles = () => {
+        if (isInHomeSection && !scrolled) {
+            return {
+                background: 'transparent',
+                textColor: 'text-white'
+            };
         }
-
-        switch (location.pathname) {
-            case '/about':
-            case '/fruits':
-            case '/vegetables':
-            case '/spices':
-            case '/tea':
-            case '/contact':
-                return 'bg-[rgb(41,41,41)]';
-            default:
-                return 'bg-transparent';
-        }
+        return {
+            background: 'bg-white',
+            textColor: 'text-black'
+        };
     };
+
+    const headerStyles = getHeaderStyles();
 
     return (
         <header
             ref={headerRef}
-            className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${getBackgroundColorClass()}`}
+            className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${headerStyles.background}`}
         >
-            <div className="container mx-auto px-4 xl:px-30 py-3 flex justify-between items-center">
-                {/* Company Logo/Name */}
-                <div className="text-white font-bold text-xl sm:text-sm md:text-xl">
+            {/* Reduced padding from py-3 to py-2 */}
+            <div className="container mx-auto px-4 xl:px-20 py-2 flex justify-between items-center">
+                {/* Reduced text size from xl to md, sm:text-sm to sm:text-xs, md:text-xl to md:text-base */}
+                <div className={`${headerStyles.textColor} text-md sm:text-md md:text-base`}>
                     <HashLink smooth to="/#hero" className="flex flex-col md:block">
                         GS GREEN PVT LTD
                     </HashLink>
                 </div>
 
-                {/* Desktop Navigation */}
-                <nav className="hidden md:flex items-center space-x-8 md:text-2xl font-bold">
+                {/* Desktop Navigation - reduced text size from md:text-2xl to md:text-lg */}
+                <nav className="hidden md:flex items-center space-x-8 md:text-lg">
                     <Magnetic>
                         <div className="group flex flex-col relative z-[1] p-[15px] cursor-pointer">
-                            <HashLink smooth to="/#hero" className="text-white">
+                            <HashLink smooth to="/#home" className={headerStyles.textColor}>
                                 Home
                             </HashLink>
-                            <div className="absolute w-2.5 h-2.5 top-[55px] left-1/2 bg-white rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100"></div>
+                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${isInHomeSection && !scrolled ? 'bg-white' : 'bg-black'}`}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
                         <div className="group flex flex-col relative z-[1] p-[15px] cursor-pointer">
-                            <HashLink smooth to="/#exports" className="text-white">
+                            <HashLink smooth to="/#exports" className={headerStyles.textColor}>
                                 Exports
                             </HashLink>
-                            <div className="absolute w-2.5 h-2.5 top-[55px] left-1/2 bg-white rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100"></div>
+                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${isInHomeSection && !scrolled ? 'bg-white' : 'bg-black'}`}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
                         <div className="group flex flex-col relative z-[1] p-[15px] cursor-pointer">
-                            <HashLink smooth to="/#clients" className="text-white">
+                            <HashLink smooth to="/#clients" className={headerStyles.textColor}>
                                 Clients
                             </HashLink>
-                            <div className="absolute w-2.5 h-2.5 top-[55px] left-1/2 bg-white rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100"></div>
+                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${isInHomeSection && !scrolled ? 'bg-white' : 'bg-black'}`}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
                         <div className="group flex flex-col relative z-[1] p-[15px] cursor-pointer">
-                            <HashLink smooth to="/about" className="text-white">
+                            <HashLink smooth to="/about" className={headerStyles.textColor}>
                                 About
                             </HashLink>
-                            <div className="absolute w-2.5 h-2.5 top-[55px] left-1/2 bg-white rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100"></div>
+                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${isInHomeSection && !scrolled ? 'bg-white' : 'bg-black'}`}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
                         <div className="group flex flex-col relative z-[1] p-[15px] cursor-pointer">
-                            <HashLink smooth to="/contact" className="text-white">
+                            <HashLink smooth to="/contact" className={headerStyles.textColor}>
                                 Contact
                             </HashLink>
-                            <div className="absolute w-2.5 h-2.5 top-[55px] left-1/2 bg-white rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100"></div>
+                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${isInHomeSection && !scrolled ? 'bg-white' : 'bg-black'}`}></div>
                         </div>
                     </Magnetic>
                 </nav>
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-white focus:outline-none"
+                    className={`md:hidden ${headerStyles.textColor} focus:outline-none`}
                     onClick={toggleMenu}
                     aria-label="Toggle menu"
                 >
@@ -179,11 +174,11 @@ const Header = () => {
                 </button>
             </div>
 
-            {/* Mobile Menu */}
+            {/* Mobile Menu - reduced text size from text-4xl to text-2xl for main items and text-base to text-sm for submenu */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        className="fixed min-h-[100vh] w-full top-0 right-0 bottom-0 bg-[rgb(41,41,41)] z-40 md:hidden overflow-y-auto"
+                        className="fixed min-h-[100vh] w-full top-0 right-0 bottom-0 bg-white z-40 md:hidden overflow-y-auto"
                         initial="initial"
                         animate="animate"
                         exit="exit"
@@ -191,7 +186,7 @@ const Header = () => {
                     >
                         <div className="flex justify-end p-4">
                             <button
-                                className="text-white focus:outline-none bg-[rgb(51,51,51)] p-2 rounded-full hover:bg-[rgb(61,61,61)] transition-colors"
+                                className="text-black focus:outline-none bg-gray-100 p-2 rounded-full hover:bg-gray-200 transition-colors"
                                 onClick={toggleMenu}
                                 aria-label="Close menu"
                             >
@@ -206,33 +201,27 @@ const Header = () => {
                                 </svg>
                             </button>
                         </div>
-                        <div className="text-[rgb(153,153,153)] border-b mx-20 border-[rgb(153,153,153)] uppercase text-[11px] mb-[15px]">
+                        <div className="text-gray-600 border-b mx-20 border-gray-600 uppercase text-[11px] mb-[15px]">
                             <p>Navigation</p>
                         </div>
                         <div className="px-20 py-4 space-y-4">
                             <HashLink
                                 smooth
                                 to="/#hero"
-                                className="block text-white py-2 font-bold text-4xl"
-                                onClick={() => {
-                                    setIsOpen(false);
-                                    console.log('Navigated to Home, closing menu');
-                                }}
+                                className="block text-black py-2 text-2xl"
+                                onClick={() => setIsOpen(false)}
                             >
                                 Home
                             </HashLink>
 
-                            {/* Mobile Export Submenu */}
                             <div className="relative py-2">
                                 <button
                                     onClick={(e) => {
                                         e.preventDefault();
                                         const submenu = e.currentTarget.nextElementSibling;
-                                        if (submenu) {
-                                            submenu.classList.toggle('hidden');
-                                        }
+                                        if (submenu) submenu.classList.toggle('hidden');
                                     }}
-                                    className="flex items-center justify-between w-full text-white text-4xl font-bold mb-2"
+                                    className="flex items-center justify-between w-full text-black text-2xl mb-2"
                                 >
                                     Export
                                     <svg
@@ -249,44 +238,32 @@ const Header = () => {
                                     <HashLink
                                         smooth
                                         to="/fruits"
-                                        className="block text-white py-2 text-base hover:text-green-300"
-                                        onClick={() => {
-                                            setIsOpen(false);
-                                            console.log('Navigated to Tropical Fruits, closing menu');
-                                        }}
+                                        className="block text-black py-2 text-sm hover:text-gray-700"
+                                        onClick={() => setIsOpen(false)}
                                     >
                                         Tropical Fruits
                                     </HashLink>
                                     <HashLink
                                         smooth
                                         to="/vegetables"
-                                        className="block text-white py-2 text-base hover:text-green-300"
-                                        onClick={() => {
-                                            setIsOpen(false);
-                                            console.log('Navigated to Tropical Vegetables, closing menu');
-                                        }}
+                                        className="block text-black py-2 text-sm hover:text-gray-700"
+                                        onClick={() => setIsOpen(false)}
                                     >
                                         Tropical Vegetables
                                     </HashLink>
                                     <HashLink
                                         smooth
                                         to="/spices"
-                                        className="block text-white py-2 text-base hover:text-green-300"
-                                        onClick={() => {
-                                            setIsOpen(false);
-                                            console.log('Navigated to Spices and Oils, closing menu');
-                                        }}
+                                        className="block text-black py-2 text-sm hover:text-gray-700"
+                                        onClick={() => setIsOpen(false)}
                                     >
                                         Spices and Oils
                                     </HashLink>
                                     <HashLink
                                         smooth
                                         to="/tea"
-                                        className="block text-white py-2 text-base hover:text-green-300"
-                                        onClick={() => {
-                                            setIsOpen(false);
-                                            console.log('Navigated to Tea, closing menu');
-                                        }}
+                                        className="block text-black py-2 text-sm hover:text-gray-700"
+                                        onClick={() => setIsOpen(false)}
                                     >
                                         Tea
                                     </HashLink>
@@ -296,33 +273,24 @@ const Header = () => {
                             <HashLink
                                 smooth
                                 to="/#clients"
-                                className="block text-white py-2 text-4xl font-bold hover:text-green-300"
-                                onClick={() => {
-                                    setIsOpen(false);
-                                    console.log('Navigated to Clients, closing menu');
-                                }}
+                                className="block text-black py-2 text-2xl hover:text-gray-700"
+                                onClick={() => setIsOpen(false)}
                             >
                                 Clients
                             </HashLink>
                             <HashLink
                                 smooth
                                 to="/about"
-                                className="block text-white py-2 text-4xl font-bold hover:text-green-300"
-                                onClick={() => {
-                                    setIsOpen(false);
-                                    console.log('Navigated to About, closing menu');
-                                }}
+                                className="block text-black py-2 text-2xl hover:text-gray-700"
+                                onClick={() => setIsOpen(false)}
                             >
                                 About
                             </HashLink>
                             <HashLink
                                 smooth
                                 to="/contact"
-                                className="block text-white py-2 text-4xl font-bold hover:text-green-300"
-                                onClick={() => {
-                                    setIsOpen(false);
-                                    console.log('Navigated to Contact, closing menu');
-                                }}
+                                className="block text-black py-2 text-2xl hover:text-gray-700"
+                                onClick={() => setIsOpen(false)}
                             >
                                 Contact
                             </HashLink>
