@@ -23,14 +23,14 @@ const ExportNavigator = () => {
         className="backdrop-blur-lg shadow-xxl p-2 rounded-xl mb-10"
         style={{ backgroundColor: colors.mutedGreen }}
       >
-        <ul className="flex flex-row lg:gap-4 gap-2">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path;
             return (
               <li key={item.path} className="flex justify-center">
                 <Link to={item.path} className="group relative block">
                   <div
-                    className={`w-28 lg:w-42 h-10 flex items-center justify-center rounded-lg shadow-xl transition-colors duration-200 sm:text-xs text-xs`}
+                    className={`w-28 h-10 flex items-center justify-center rounded-lg shadow-xl transition-colors duration-200 sm:text-xs text-xs`}
                     style={{
                       backgroundColor: isActive ? colors.deepGreen : "white",
                       color: isActive ? "white" : colors.deepGreen,

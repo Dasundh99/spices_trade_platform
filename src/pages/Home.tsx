@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative flex min-h-[90vh] items-center rounded-b-none bg-gradient-to-b from-transparent to-green-800/90 px-0"
+      className="relative flex min-h-[90vh] items-center rounded-b-none bg-gradient-to-b from-transparent to-green-800/70 px-0"
     >
       {/* Slideshow Background */}
       <div className="absolute left-0 top-0 z-[-1] h-full w-full overflow-hidden">
