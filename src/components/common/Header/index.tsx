@@ -103,7 +103,7 @@ const Header = () => {
             <div className="container mx-auto px-4 xl:px-20 py-2 flex justify-between items-center">
                 {/* Reduced text size from xl to md, sm:text-sm to sm:text-xs, md:text-xl to md:text-base */}
                 <div className={`${headerStyles.textColor} text-md sm:text-md md:text-base`}>
-                    <HashLink smooth to="/#hero" className="flex flex-col md:block">
+                    <HashLink smooth to="/#home" className="flex flex-col md:block">
                         GS GREEN PVT LTD
                     </HashLink>
                 </div>
