@@ -9,12 +9,12 @@ import Exports from './pages/Exports';
 import Clients from './pages/OurClients';
 import ContactUs from './pages/ContactUs';
 import Footer from './components/layout/Footer';
-import Header from './components/common/Header';
 import TropicalFruits from './pages/TropicalFruits';
 import TropicalVegetables from './pages/TropicalVegetables';
 import Spices from './pages/Spices';
 import Tea from './pages/Tea';
 import ProductDetails from './pages/ProductDetails';
+import Header from './components/common/Header';
 
 function App() {
   useEffect(() => {
