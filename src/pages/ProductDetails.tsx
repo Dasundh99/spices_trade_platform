@@ -10,10 +10,10 @@ interface ImageData {
 
 // Refined Greenish Color Palette
 const colors = {
-  deepGreen: "#355E3B",    // Deep, elegant green for text and accents
-  sageGreen: "#A9BDA8",    // Soft sage green for backgrounds and highlights
-  mutedGreen: "#E8F0E8",   // Very light green for section background
-  accentGreen: "#6B8E6B",  // Subtle accent green for buttons and hover states
+  deepGreen: "#3B8C5E",    // A lively, lighter deep green for text and accents
+  sageGreen: "#C8E0C5",    // A bright, cheerful sage green for backgrounds and highlights
+  mutedGreen: "#F5FBF5",   // An ultra-light, almost glowing green for section backgrounds
+  accentGreen: "#8CC089",  // A vivid yet soft green for hover states and accents
 };
 
 /**

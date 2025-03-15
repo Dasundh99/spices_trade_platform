@@ -17,18 +17,18 @@ const ContactUs: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 w-full flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 p-4">
         {/* Left Column: Lottie Animation Section */}
         <div className="flex-col flex justify-center items-center">
-          <h1 className="ext-4xl md:text-6xl text-green-700 tracking-wide font-light opacity-40">
+          <h1 className="text-4xl md:text-6xl text-green-600 tracking-wide font-light opacity-50">
             Contact us
           </h1>
           <Lottie options={lottieOptions} height={300} width={300} />
         </div>
 
         {/* Right Column: Contact Form Section */}
-        <div className="flex-1 bg-green-100 p-6">
+        <div className="flex-1 bg-green-50 p-6 rounded-lg">
           <form action="#" method="POST" className="space-y-4">
             <div className="flex gap-3">
               <div className="flex-1">
-                <label htmlFor="firstName" className="block text-sm font-medium text-gray-500">
+                <label htmlFor="firstName" className="block text-sm font-medium text-green-700">
                   First Name
                 </label>
                 <input
@@ -36,11 +36,11 @@ const ContactUs: React.FC = () => {
                   id="firstName"
                   name="firstName"
                   required
-                  className="w-full mt-1 p-1 bg-white text-black rounded-md focus:outline-none"
+                  className="w-full mt-1 p-2 bg-white text-gray-900 border border-green-200 rounded-md focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-green-400"
                 />
               </div>
               <div className="flex-1">
-                <label htmlFor="lastName" className="block text-sm font-medium text-gray-500">
+                <label htmlFor="lastName" className="block text-sm font-medium text-green-700">
                   Last Name
                 </label>
                 <input
@@ -48,12 +48,12 @@ const ContactUs: React.FC = () => {
                   id="lastName"
                   name="lastName"
                   required
-                  className="w-full mt-1 p-1 bg-white text-black rounded-md focus:outline-none"
+                  className="w-full mt-1 p-2 bg-white text-gray-900 border border-green-200 rounded-md focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-green-400"
                 />
               </div>
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-500">
+              <label htmlFor="email" className="block text-sm font-medium text-green-700">
                 Email Address
               </label>
               <input
@@ -61,11 +61,11 @@ const ContactUs: React.FC = () => {
                 id="email"
                 name="email"
                 required
-                className="w-full mt-1 p-1 bg-white text-black rounded-md focus:outline-none"
+                className="w-full mt-1 p-2 bg-white text-gray-900 border border-green-200 rounded-md focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-green-400"
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-500">
+              <label htmlFor="message" className="block text-sm font-medium text-green-700">
                 Message
               </label>
               <textarea
@@ -73,12 +73,12 @@ const ContactUs: React.FC = () => {
                 name="message"
                 rows={3}
                 required
-                className="w-full mt-1 p-1 bg-white text-black rounded-md focus:outline-none"
+                className="w-full mt-1 p-2 bg-white text-gray-900 border border-green-200 rounded-md focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-green-400"
               />
             </div>
             <button
               type="submit"
-              className="w-full py-2 bg-green-500 text-white rounded-md hover:bg-green-700 transition duration-300"
+              className="w-full py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2 transition duration-300"
             >
               Submit
             </button>

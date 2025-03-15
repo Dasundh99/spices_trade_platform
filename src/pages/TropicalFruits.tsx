@@ -5,46 +5,45 @@ import ExportNavigator from "../components/exportNav/exportNav";
 
 // Refined Greenish Color Palette
 const colors = {
-  deepGreen: "#355E3B",    // Deep, elegant green for text and accents
-  sageGreen: "#A9BDA8",    // Soft sage green for backgrounds and highlights
-  mutedGreen: "#E8F0E8",   // Very light green for section background
-  accentGreen: "#6B8E6B",  // Subtle accent green for hover states
+  deepGreen: "#3B8C5E",    // A lively, lighter deep green for text and accents
+  sageGreen: "#C8E0C5",    // A bright, cheerful sage green for backgrounds and highlights
+  mutedGreen: "#F5FBF5",   // An ultra-light, almost glowing green for section backgrounds
+  accentGreen: "#8CC089",  // A vivid yet soft green for hover states and accents
 };
 
 // Gallery data
 const galleryImages = [
-  {
-    src: "https://plus.unsplash.com/premium_photo-1675731118342-1544e274b633?q=80&w=2127&auto=format&fit=crop",
-    caption: "Organic Mangoes",
-    describe: "Fresh and organic mangoes from Sri Lanka's fertile soil.",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1624843994317-541c71718272?w=600&auto=format&fit=crop",
-    caption: "Juicy Coconuts",
-    describe: "Juicy coconuts grown along Sri Lanka's pristine beaches.",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1649960861739-113b8588eaf8?w=600&auto=format&fit=crop",
-    caption: "Fresh Pineapples",
-    describe: "Sweet pineapples from Sri Lanka's sunny climes.",
-  },
-  {
-    src: "https://plus.unsplash.com/premium_photo-1675639895212-696149c275f9?w=600&auto=format&fit=crop",
-    caption: "Exotic Papayas",
-    describe: "Vibrant papayas from Sri Lanka's tropical farms.",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1620036924477-c3d6e9ce36fc?w=600&auto=format&fit=crop",
-    caption: "Sweet Bananas",
-    describe: "Naturally sweet bananas, a Sri Lankan staple.",
-  },
-  {
-    src: "https://plus.unsplash.com/premium_photo-1675731118342-1544e274b633?q=80&w=2127&auto=format&fit=crop",
-    caption: "Organic Mangoes",
-    describe: "Fresh and organic mangoes from Sri Lanka's fertile soil.",
-  },
+    {
+      src: "https://images.unsplash.com/photo-1623497718131-46ace0d4d707?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      caption: "Mango",
+      describe: "Premium mango varieties from Sri Lanka's tropical regions.",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1572859704906-ab0716da285f?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      caption: "Pineapple",
+      describe: "Sweet and juicy pineapples from Sri Lanka's plantations.",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1609123079242-086695c6ff09?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      caption: "Rambutan",
+      describe: "Exotic rambutan with sweet, juicy flesh from Sri Lanka.",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1543218024-57a70143c369?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      caption: "Banana",
+      describe: "Unique wood apples with a distinctive tangy flavor.",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1627998398537-0cbff2cee742?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      caption: "Mangosteen",
+      describe: "Delicious mangosteen, the queen of tropical fruits.",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1596626233681-39f5eb87d501?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      caption: "Jackfruit",
+      describe: "Versatile jackfruit varieties from Sri Lanka's tropics.",
+    }
 ];
-
 /**
  * TropicalFruits Component
  * A professional gallery of tropical fruits with smooth scrolling

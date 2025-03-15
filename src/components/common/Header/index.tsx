@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Rounded from '../../common/RoundedButton';
+// import Rounded from '../../common/RoundedButton';
 import Magnetic from '../../common/Magnetic';
 import Nav from './nav';
 
@@ -118,11 +118,11 @@ export default function Index() {
                     </Magnetic>
                 </div>
             </div>
-            <div ref={button} className={styles.headerButtonContainer}>
+            {/* <div ref={button} className={styles.headerButtonContainer}>
                 <Rounded onClick={() => { setIsActive(!isActive) }} className={`${styles.button}`}>
                     <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
                 </Rounded>
-            </div>
+            </div> */}
             <AnimatePresence mode="wait">
                 {isActive && <Nav />}
             </AnimatePresence>
