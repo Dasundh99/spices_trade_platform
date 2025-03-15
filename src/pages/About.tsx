@@ -10,8 +10,8 @@ const About: React.FC = () => {
         {/* Left Side: Text Content */}
         <div className="w-full space-y-5">
           {/* Separate Title Section */}
-          <div className="w-full flex justify-center pb-8">
-            <h2 className="text-4xl md:text-6xl text-green-700 tracking-wide font-light opacity-40 pt-15">
+          <div className="w-full flex justify-center pb-4">
+            <h2 className="text-4xl md:text-6xl text-green-700 tracking-wide font-light opacity-40 lg:pt-15 pt-5">
               About Us
             </h2>
           </div>

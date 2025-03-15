@@ -23,20 +23,17 @@ const ContactUs: React.FC = () => {
 
   return (
     <section id="contact" className={sectionStyles}>
-      <div className="max-w-7xl mx-auto pt-20 ">
+      <div className="max-w-7xl mx-auto lg:pt-20 md:pt-15  sm:pt-10 pt-5">
         {/* Header */}
         <div className="text-center mb-6">
           <h1 className="text-4xl md:text-6xl text-green-700 tracking-wide font-light opacity-40">
-            Get in Touch
+           Contact us
           </h1>
-          <p className="mt-2 text-base text-green-600 opacity-50 max-w-2xl mx-auto">
-            We’re here to assist you with inquiries or support needs.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {/* Contact Information Section */}
-          <div className="bg-green-50 p-6 rounded-xl shadow-md">
+          <div className="bg-green-50 p-6">
             <h2 className="text-xl font-semibold text-green-600 mb-4">
               Contact Information
             </h2>
@@ -72,7 +69,7 @@ const ContactUs: React.FC = () => {
           </div>
 
           {/* Contact Form Section */}
-          <div className="bg-green-50 p-6 rounded-xl shadow-md">
+          <div className="bg-green-50 p-6">
             <h2 className="text-xl font-semibold text-green-600 mb-4">
               Send Us a Message
             </h2>

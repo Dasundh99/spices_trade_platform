@@ -3,8 +3,8 @@ import { FaCheckCircle, FaHandshake, FaShieldAlt } from 'react-icons/fa';
 import '../pages/Home.css';
 
 import welcomeImage from '../assets/felipe-vieira-RXnLDj2WBgY-unsplash.jpg';
-import fruitImage from '../assets/bon-vivant-Ooj1c6fhdFM-unsplash (1).jpg';
-import VegetableImage from '../assets/nathan-dumlao-bRdRUUtbxO0-unsplash.jpg';
+import fruitImage from '../assets/mitchell-luo-OfLc6ozzXnI-unsplash.jpg';
+import VegetableImage from '../assets/matilda-bellman-bEnSMaiHeX0-unsplash.jpg';
 import SpiceImage from '../assets/ratul-ghosh-NPrWYa69Mz0-unsplash.jpg';
 import teaImage from '../assets/rashid-New8EgKnSds-unsplash.jpg';
 
