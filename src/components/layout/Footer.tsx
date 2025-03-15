@@ -43,13 +43,13 @@ const Footer = () => {
                     <li><a href="#" className="hover:text-gray-300 text-gray-400">Germany</a></li>
                     <li><a href="#" className="hover:text-gray-300 text-gray-400">England</a></li>
                     <li><a href="#" className="hover:text-gray-300 text-gray-400">India</a></li>
-                    <li><a href="#" className="hover:text-gray-300 text-gray-400">Kurunegala</a></li>
+                    <li><a href="#" className="hover:text-gray-300 text-gray-400">France</a></li>
                     {/* <li><a href="#" className="hover:text-gray-300 text-gray-400">Netherlands</a></li>
                     <li><a href="#" className="hover:text-gray-300 text-gray-400">Hungary</a></li> */}
                   </ul>
                   <ul className="flex flex-col space-y-2 text-xs">
                     <li><a href="#" className="hover:text-gray-300 text-gray-400">Maldives</a></li>
-                    <li><a href="#" className="hover:text-gray-300 text-gray-400">United Arab Emirates</a></li>
+                    <li><a href="#" className="hover:text-gray-300 text-gray-400">UAE</a></li>
                     <li><a href="#" className="hover:text-gray-300 text-gray-400">Bangladesh</a></li>
                     <li><a href="#" className="hover:text-gray-300 text-gray-400">Malaysia</a></li>
                     {/* <li><a href="#" className="hover:text-gray-300 text-gray-400">Kenya</a></li>
