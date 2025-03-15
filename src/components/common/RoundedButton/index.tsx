@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react'
 import { useEffect, useRef } from 'react';
-import styles from './style.module.scss';
 import gsap from 'gsap';
 import Magnetic from '../Magnetic';
 
@@ -34,11 +33,9 @@ export default function index({children, backgroundColor="#165b03", ...attribute
 
   return (
     <Magnetic>
-      <div className={styles.roundedButton} style={{overflow: "hidden"}} onMouseEnter={() => {manageMouseEnter()}} onMouseLeave={() => {manageMouseLeave()}} {...attributes}>
-          {
-            children
-          }
-        <div ref={circle} style={{backgroundColor}} className={styles.circle}></div>
+      <div className="relative z-10 transition-colors duration-400 ease-linear group-hover:text-white" style={{overflow: "hidden"}} onMouseEnter={() => {manageMouseEnter()}} onMouseLeave={() => {manageMouseLeave()}} {...attributes}>
+          {children}
+        <div ref={circle} style={{backgroundColor}} className=" h-[150%] absolute rounded-full top-full"></div>
       </div>
     </Magnetic>
   )

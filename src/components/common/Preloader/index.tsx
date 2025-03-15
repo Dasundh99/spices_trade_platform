@@ -1,5 +1,5 @@
 'use client';
-import styles from './style.module.scss';
+
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { opacity, slideUp } from './anim';
@@ -36,12 +36,12 @@ export default function Index() {
     }
 
     return (
-        <motion.div variants={slideUp} initial="initial" exit="exit" className={styles.introduction}>
+        <motion.div variants={slideUp} initial="initial" exit="exit" className='w-full h-[100vw] bg-[#141516] flex justify-center items-center fixed z-99'>
             {dimension.width > 0 && 
             <>
-                <motion.p variants={opacity} initial="initial" animate="enter"><span></span>{words[index]}</motion.p>
-                <svg>
-                    <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
+                <motion.p className='flex text-white text-[42px] items-center absolute z-1' variants={opacity} initial="initial" animate="enter"><span className='block w-2.5 h-2.5 bg-white rounded-full mr-2.5'></span>{words[index]}</motion.p>
+                <svg className='absolute top-0 w-full h-[calc(100%+300px)]' viewBox={`0 0 ${dimension.width} ${dimension.height + 300}`}>
+                    <motion.path className=" fill-[#141516]" variants={curve} initial="initial" exit="exit" fill="black"/>
                 </svg>
             </>
             }
