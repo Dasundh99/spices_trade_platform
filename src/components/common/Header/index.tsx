@@ -117,7 +117,7 @@ const Header = () => {
                 <nav className="hidden md:flex items-center space-x-8 md:text-2xl font-bold">
                     <Magnetic>
                         <div className="group flex flex-col relative z-[1] p-[15px] cursor-pointer">
-                            <HashLink to="/#hero" className="text-white" smooth={true}>
+                            <HashLink smooth to="/#hero" className="text-white">
                                 Home
                             </HashLink>
                             <div className="absolute w-2.5 h-2.5 top-[55px] left-1/2 bg-white rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100"></div>

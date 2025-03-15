@@ -100,15 +100,16 @@ const Hero: React.FC = () => {
       <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-b from-black/20 to-black/10" />
 
       {/* Main Content with Smooth Transition */}
-      <div className="container mx-auto flex flex-col items-center px-10 md:flex-row">
-        <div className="space-y-4 text-left text-white" key={currentIndex}>
+      <div className="container mx-auto flex flex-col items-center justify-center h-full text-center px-4">
+        <div className="space-y-4" key={currentIndex}>
           <h1 
             className="
               text-green-100 
+              font-bold
               text-3xl 
               sm:text-4xl 
               md:text-5xl 
-              lg:text-6xl 
+              lg:text-7xl 
               tracking-tight 
               leading-tight 
               opacity-90 
@@ -125,8 +126,9 @@ const Hero: React.FC = () => {
           </h1>
           <p 
             className="
+              mx-auto
               max-w-2xl 
-              text-green-50 
+              text-green-50
               text-base 
               md:text-lg 
               leading-relaxed 
