@@ -61,7 +61,7 @@ const ExportCard: React.FC<ExportItem> = ({ src, text, path, describe }) => {
 
   return (
     <article
-      className="group relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer bg-white"
+      className="group relative overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer bg-white"
       onClick={handleNavigation}
       onKeyDown={handleKeyPress}
       role="button"
@@ -72,7 +72,7 @@ const ExportCard: React.FC<ExportItem> = ({ src, text, path, describe }) => {
         <img
           src={src}
           alt={text}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 "
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

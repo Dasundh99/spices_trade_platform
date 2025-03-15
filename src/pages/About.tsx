@@ -11,7 +11,7 @@ const About: React.FC = () => {
         <div className="w-full space-y-5">
           {/* Separate Title Section */}
           <div className="w-full flex justify-center pb-8">
-            <h2 className="ext-4xl md:text-6xl text-green-700 tracking-wide font-light opacity-40 pt-15">
+            <h2 className="text-4xl md:text-6xl text-green-700 tracking-wide font-light opacity-40 pt-15">
               About Us
             </h2>
           </div>
@@ -37,20 +37,20 @@ const About: React.FC = () => {
           <div className="flex justify-center md:justify-center gap-12 pt-10">
             {/* Quality Icon */}
             <div className="flex flex-col items-center">
-              <FaCheckCircle className="text-green-600 text-4xl" />
-              <span className="text-gray-700 text-sm font-semibold pt-2">Quality</span>
+              <FaCheckCircle className="text-gray-400 text-4xl" />
+              <span className="text-gray-400 opacity-90 text-sm font-semibold pt-2">Quality</span>
             </div>
 
             {/* Reliability Icon */}
             <div className="flex flex-col items-center">
-              <FaHandshake className="text-green-600 text-4xl" />
-              <span className="text-gray-700 text-sm font-semibold pt-2">Reliability</span>
+              <FaHandshake className="text-gray-400 text-4xl" />
+              <span className="text-gray-400 text-sm font-semibold pt-2">Reliability</span>
             </div>
 
             {/* Integrity Icon */}
             <div className="flex flex-col items-center">
-              <FaShieldAlt className="text-green-600 text-4xl" />
-              <span className="text-gray-700 text-sm font-semibold pt-2">Integrity</span>
+              <FaShieldAlt className="text-gray-400 text-4xl " />
+              <span className="text-gray-400 text-sm font-semibold pt-2">Integrity</span>
             </div>
           </div>
         </div>

@@ -1,106 +1,97 @@
 import React, { useState, useEffect } from 'react';
 import { FaCheckCircle, FaHandshake, FaShieldAlt } from 'react-icons/fa';
+import '../pages/Home.css';
 
-import fruitImage from '../assets/ilyuza-mingazova-G1rAFQ5pdz4-unsplash (2).jpg';
+import welcomeImage from '../assets/felipe-vieira-RXnLDj2WBgY-unsplash.jpg';
+import fruitImage from '../assets/bon-vivant-Ooj1c6fhdFM-unsplash (1).jpg';
 import VegetableImage from '../assets/nathan-dumlao-bRdRUUtbxO0-unsplash.jpg';
 import SpiceImage from '../assets/ratul-ghosh-NPrWYa69Mz0-unsplash.jpg';
 import teaImage from '../assets/rashid-New8EgKnSds-unsplash.jpg';
 
-// Define interface for feature items
+// Interfaces
 interface FeatureItem {
   icon: React.ReactElement;
   text: string;
 }
 
-// Define interface for slideshow items
 interface SlideItem {
   image: string;
   title: string;
 }
 
-/**
- * Hero Section Component
- * Displays a slideshow background with overlay content and feature highlights
- * @returns {JSX.Element} Hero section component
- */
+interface ContentItem {
+  title: string;
+  description: string;
+}
+
 const Hero: React.FC = () => {
-  // Feature items configuration
   const features: FeatureItem[] = [
-    { icon: <FaCheckCircle size={16} color="#2ecc71" />, text: 'Quality' },
-    { icon: <FaHandshake size={16} color="#2ecc71" />, text: 'Reliability' },
-    { icon: <FaShieldAlt size={16} color="#2ecc71" />, text: 'Integrity' },
+    { icon: <FaCheckCircle size={32} color="white" />, text: 'Quality' },
+    { icon: <FaHandshake size={32} color="white" />, text: 'Reliability' },
+    { icon: <FaShieldAlt size={32} color="white" />, text: 'Integrity' },
   ];
 
-  // Slideshow items configuration
   const slides: SlideItem[] = [
+    { image: welcomeImage, title: 'Welcome' },
     { image: fruitImage, title: 'Premium Ceylon Tea' },
     { image: VegetableImage, title: 'Exotic Spices' },
     { image: SpiceImage, title: 'Fresh Produce' },
     { image: teaImage, title: 'Natural Quality' },
   ];
 
-  // State for current slide
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const contentVariations: ContentItem[] = [
+    {
+      title: 'To Global Markets with Quality',
+      description: 'From the diverse soils of Ceylon to the world, we bring you the finest agricultural products, nurtured with care and tradition.'
+    },
+    {
+      title: 'Tropical Fruits, Fresh from Ceylon',
+      description: 'Experience the exotic flavors of Ceylon\'s tropical fruits, grown in the heart of the island for your enjoyment.'
+    },
+    {
+      title: 'Tropical Vegetables, Fresh from Ceylon',
+      description: 'Experience the exotic flavors of Ceylon\'s tropical vegetables, grown in the heart of the island for your enjoyment.'
+    },
+    {
+      title: 'Spices, Fresh from Ceylon',
+      description: 'Experience the exotic flavors of Ceylon\'s spices, grown in the heart of the island for your enjoyment.'
+    },
+    {
+      title: 'Tea, Fresh from Ceylon',
+      description: 'Experience the exotic flavors of Ceylon\'s tea, grown in the heart of the island for your enjoyment.'
+    }
+  ];
 
-  // Slideshow effect
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000); // Change slide every 5 seconds
-
+      setCurrentIndex((prev) => (prev + 1) % slides.length);
+    }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
 
   return (
     <section
       id="home"
-      className="relative flex min-h-[80vh] items-center rounded-b-none bg-gradient-to-b from-transparent to-green-800/90 px-0"
+      className="relative flex min-h-[90vh] items-center rounded-b-none bg-gradient-to-b from-transparent to-green-800/70 px-0"
     >
       {/* Slideshow Background */}
       <div className="absolute left-0 top-0 z-[-1] h-full w-full overflow-hidden">
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+              index === currentIndex 
+                ? 'opacity-100 transform scale-110' 
+                : 'opacity-0 transform scale-100'
             }`}
-            
           >
             <img
               src={slide.image}
               alt={slide.title}
-              className={`h-full w-full object-cover transition-transform duration-[8000ms] ease-linear ${
-                index === currentSlide ? 'scale-110' : 'scale-100'
-              }`}
+              className="h-full w-full object-cover"
             />
-            <div
-              className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 ${
-                index === currentSlide
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-10'
-              }`}
-            >
-              {/* Uncomment if you want titles back */}
-              {/* <h2
-                className="
-                  text-white 
-                  text-2xl 
-                  md:text-3xl 
-                  lg:text-4xl 
-                  font-bold 
-                  tracking-tight 
-                  opacity-90 
-                  font-sans 
-                  antialiased
-                  bg-black/30 
-                  px-6 
-                  py-3 
-                  rounded-lg
-                "
-              >
-                {slide.title}
-              </h2> */}
-            </div>
           </div>
         ))}
       </div>
@@ -108,25 +99,29 @@ const Hero: React.FC = () => {
       {/* Gradient Overlay */}
       <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-b from-black/20 to-black/10" />
 
-      {/* Main Content */}
+      {/* Main Content with Smooth Transition */}
       <div className="container mx-auto flex flex-col items-center px-10 md:flex-row">
-        <div className="space-y-6 text-left text-white">
+        <div className="space-y-4 text-left text-white" key={currentIndex}>
           <h1 
             className="
-              font-bold 
               text-green-100 
-              text-2xl 
-              sm:text-3xl 
-              md:text-4xl 
-              lg:text-5xl 
+              text-3xl 
+              sm:text-4xl 
+              md:text-5xl 
+              lg:text-6xl 
               tracking-tight 
               leading-tight 
               opacity-90 
               font-sans 
               antialiased
+              transition-all 
+              duration-1000 
+              ease-in-out
+              transform
+              ${currentIndex === currentIndex ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
             "
           >
-            To Global Markets with Quality
+            {contentVariations[currentIndex].title}
           </h1>
           <p 
             className="
@@ -139,10 +134,15 @@ const Hero: React.FC = () => {
               font-light 
               font-sans 
               antialiased
+              transition-all 
+              duration-1000 
+              ease-in-out
+              transform
+              delay-200
+              ${currentIndex === currentIndex ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
             "
           >
-            From the diverse soils of Ceylon to the world, we bring you the finest agricultural products,
-            nurtured with care and tradition.
+            {contentVariations[currentIndex].description}
           </p>
         </div>
       </div>
@@ -150,23 +150,27 @@ const Hero: React.FC = () => {
       {/* Feature Highlights */}
       <div className="absolute bottom-0 flex w-full items-center justify-center gap-15 p-5 pb-12 md:gap-20 lg:gap-32">
         {features.map((feature, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <div className="rounded-full border-2 border-green-500 bg-black/20 p-4">
+          <div 
+            key={index} 
+            className="flex flex-col items-center animate-fade-in-up" 
+            style={{animationDelay: `${index * 200}ms`}}
+          >
+            <div className="opacity-40">
               {feature.icon}
             </div>
             <p 
               className="
-                pt-3 
-                text-sm 
+                pt-2
+                text-xs 
                 font-medium 
                 text-white 
-                opacity-70 
+                opacity-40 
                 font-sans 
                 tracking-wide 
                 antialiased
               "
             >
-              {feature.text} {/* Uncommented this to show feature text */}
+              {feature.text}
             </p>
           </div>
         ))}

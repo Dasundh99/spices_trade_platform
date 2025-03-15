@@ -5,43 +5,43 @@ import ExportNavigator from "../components/exportNav/exportNav";
 
 // Refined Greenish Color Palette
 const colors = {
-  deepGreen: "#355E3B",    // Deep, elegant green for text and accents
-  sageGreen: "#A9BDA8",    // Soft sage green for backgrounds and highlights
-  mutedGreen: "#E8F0E8",   // Very light green for section background
-  accentGreen: "#6B8E6B",  // Subtle accent green for hover states
+  deepGreen: "#3B8C5E",    // A lively, lighter deep green for text and accents
+  sageGreen: "#C8E0C5",    // A bright, cheerful sage green for backgrounds and highlights
+  mutedGreen: "#F5FBF5",   // An ultra-light, almost glowing green for section backgrounds
+  accentGreen: "#8CC089",  // A vivid yet soft green for hover states and accents
 };
 
 // Gallery data
 const galleryImages = [
   {
-    src: "https://plus.unsplash.com/premium_photo-1675731118342-1544e274b633?q=80&w=2127&auto=format&fit=crop",
-    caption: "Organic Mangoes",
-    describe: "Fresh and organic mangoes from Sri Lanka's fertile soil.",
+    src: "https://images.unsplash.com/photo-1587131782738-de30ea91a542?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    caption: "Cinnamon",
+    describe: "Cinnamon sticks and powder, a staple in Sri Lankan cuisine.",
   },
   {
-    src: "https://images.unsplash.com/photo-1624843994317-541c71718272?w=600&auto=format&fit=crop",
-    caption: "Juicy Coconuts",
-    describe: "Juicy coconuts grown along Sri Lanka's pristine beaches.",
+    src: "https://images.unsplash.com/photo-1636488771211-9c635f5002e9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    caption: "Black pepper",
+    describe: "Black pepper, known as the King of Spices, is a pungent and aromatic spice derived from the dried fruit of the *Piper nigrum* plant. It is widely used in Sri Lankan cuisine to add heat and flavor to dishes.",
   },
   {
-    src: "https://images.unsplash.com/photo-1649960861739-113b8588eaf8?w=600&auto=format&fit=crop",
-    caption: "Fresh Pineapples",
-    describe: "Sweet pineapples from Sri Lanka's sunny climes.",
+    src: "https://images.unsplash.com/photo-1615485500834-bc10199bc727?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    caption: "Turmeric",
+    describe: "Turmeric, a vibrant yellow spice, is derived from the root of the *Curcuma longa* plant. It is commonly used in Sri Lankan cuisine for its earthy flavor and numerous health benefits, including anti-inflammatory properties.",
   },
   {
-    src: "https://plus.unsplash.com/premium_photo-1675639895212-696149c275f9?w=600&auto=format&fit=crop",
-    caption: "Exotic Papayas",
-    describe: "Vibrant papayas from Sri Lanka's tropical farms.",
+    src: "https://images.unsplash.com/photo-1615477550927-6ec8445fcfe6?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    caption: "Garlic",
+    describe: "Garlic, a pungent and flavorful bulb, is commonly used in Sri Lankan cooking to add depth and aroma to dishes. It is known for its strong, distinctive taste and is also valued for its health benefits, such as boosting immunity and promoting heart health.",
   },
   {
-    src: "https://images.unsplash.com/photo-1620036924477-c3d6e9ce36fc?w=600&auto=format&fit=crop",
-    caption: "Sweet Bananas",
-    describe: "Naturally sweet bananas, a Sri Lankan staple.",
+    src: "https://images.unsplash.com/photo-1603431777782-912e3b76f60d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    caption: "Ginger",
+    describe: "Ginger, a fragrant and spicy root, is widely used in Sri Lankan cuisine for its zesty flavor and medicinal properties. It adds warmth and depth to dishes and is known for its ability to aid digestion and reduce inflammation.",
   },
   {
-    src: "https://plus.unsplash.com/premium_photo-1675731118342-1544e274b633?q=80&w=2127&auto=format&fit=crop",
-    caption: "Organic Mangoes",
-    describe: "Fresh and organic mangoes from Sri Lanka's fertile soil.",
+    src: "https://images.unsplash.com/photo-1588413333412-82148535db53?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    caption: "Coconut oil",
+    describe: "Coconut oil, extracted from the flesh of mature coconuts, is a staple in Sri Lankan cooking and skincare. It has a rich, slightly sweet flavor and is known for its health benefits, including promoting heart health and providing antimicrobial properties.",
   },
 ];
 

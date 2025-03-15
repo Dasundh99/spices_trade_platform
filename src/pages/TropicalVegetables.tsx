@@ -5,43 +5,43 @@ import ExportNavigator from "../components/exportNav/exportNav";
 
 // Refined Greenish Color Palette
 const colors = {
-  deepGreen: "#355E3B",    // Deep, elegant green for text and accents
-  sageGreen: "#A9BDA8",    // Soft sage green for backgrounds and highlights
-  mutedGreen: "#E8F0E8",   // Very light green for section background
-  accentGreen: "#6B8E6B",  // Subtle accent green for hover states
+  deepGreen: "#3B8C5E",    // A lively, lighter deep green for text and accents
+  sageGreen: "#C8E0C5",    // A bright, cheerful sage green for backgrounds and highlights
+  mutedGreen: "#F5FBF5",   // An ultra-light, almost glowing green for section backgrounds
+  accentGreen: "#8CC089",  // A vivid yet soft green for hover states and accents
 };
 
 // Gallery data
 const galleryImages = [
   {
-    src: "https://plus.unsplash.com/premium_photo-1675731118342-1544e274b633?q=80&w=2127&auto=format&fit=crop",
-    caption: "Organic Mangoes",
-    describe: "Fresh and organic mangoes from Sri Lanka's fertile soil.",
+    src: "https://farmfreshorganics.com.bd/wp-content/uploads/1723890954068-570x931.jpg",
+    caption: "Snake Gourd",
+    describe: "Snake gourd is a tropical or subtropical vine that climbs by tendrils. It is a popular vegetable in Sri Lanka, and other Asian countries.",
   },
   {
-    src: "https://images.unsplash.com/photo-1624843994317-541c71718272?w=600&auto=format&fit=crop",
-    caption: "Juicy Coconuts",
-    describe: "Juicy coconuts grown along Sri Lanka's pristine beaches.",
+    src: "https://images.unsplash.com/photo-1509622905150-fa66d3906e09?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    caption: "Pumpkin",
+    describe: "Pumpkin is a popular vegetable in Sri Lanka, and other Asian countries.",
   },
   {
-    src: "https://images.unsplash.com/photo-1649960861739-113b8588eaf8?w=600&auto=format&fit=crop",
-    caption: "Fresh Pineapples",
-    describe: "Sweet pineapples from Sri Lanka's sunny climes.",
+    src: "https://images.unsplash.com/photo-1635013973792-2d1595bfa0b2?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    caption: "Ash Plantain",
+    describe: "Ash plantain is a popular vegetable in Sri Lanka, and other Asian countries.",
   },
   {
-    src: "https://plus.unsplash.com/premium_photo-1675639895212-696149c275f9?w=600&auto=format&fit=crop",
-    caption: "Exotic Papayas",
-    describe: "Vibrant papayas from Sri Lanka's tropical farms.",
+    src: "https://grosgo.co.uk/cdn/shop/files/PinkStripeBrinjal_27e4b1dc-52bb-42c8-83c1-cbe33c3261bf.jpg?v=1734632650",
+    caption: "Brinjal",
+    describe: "Brinjal is a popular vegetable in Sri Lanka, and other Asian countries.",
   },
   {
-    src: "https://images.unsplash.com/photo-1620036924477-c3d6e9ce36fc?w=600&auto=format&fit=crop",
-    caption: "Sweet Bananas",
-    describe: "Naturally sweet bananas, a Sri Lankan staple.",
+    src: "https://images.unsplash.com/photo-1676994174279-102e0abff98f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    caption: "Bitter Gourd",
+    describe: "Bitter Gourd is a popular vegetable in Sri Lanka, and other Asian countries.",
   },
   {
-    src: "https://plus.unsplash.com/premium_photo-1675731118342-1544e274b633?q=80&w=2127&auto=format&fit=crop",
-    caption: "Organic Mangoes",
-    describe: "Fresh and organic mangoes from Sri Lanka's fertile soil.",
+    src: "https://images.unsplash.com/photo-1668120082831-e83f387e3461?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    caption: "cabbage",
+    describe: "Cabbage is a popular vegetable in Sri Lanka, and other Asian countries.",
   },
 ];
 
