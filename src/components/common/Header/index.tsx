@@ -2,18 +2,16 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import styles from './style.module.scss';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Rounded from '../../common/RoundedButton';
 import Magnetic from '../../common/Magnetic';
 import Nav from './nav';
-import { HashLink } from 'react-router-hash-link';
 
-export default function index() {
+export default function Index() {
     const header = useRef(null);
     const [isActive, setIsActive] = useState(false);
-    const pathname = useLocation();
+    const { pathname } = useLocation();
     const navigate = useNavigate();
     const button = useRef(null);
 
@@ -34,6 +32,24 @@ export default function index() {
         });
     }, []);
 
+    // Function to handle smooth scrolling
+    const scrollToSection = (sectionId: string) => {
+        if (pathname !== '/') {
+            navigate('/');
+            setTimeout(() => {
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        } else {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    };
+
     return (
         <>
             <div ref={header} className={styles.header}>
@@ -47,32 +63,56 @@ export default function index() {
                 <div className={styles.nav}>
                     <Magnetic>
                         <div className={styles.el}>
-                            <HashLink to='/#hero' smooth={true}>Home</HashLink>
-                            <div className={styles.indicator}></div>
-                        </div>
-                    </Magnetic>
-                    
-                    <Magnetic>
-                        <div className={styles.el}>
-                            <HashLink to='/#exports' smooth={true}>Exports</HashLink>
+                            <p 
+                                className="cursor-pointer" 
+                                onClick={() => scrollToSection('home')}
+                            >
+                                Home
+                            </p>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
                         <div className={styles.el}>
-                            <HashLink to='/#clients' smooth={true}>Clients</HashLink>
+                            <p 
+                                className="cursor-pointer" 
+                                onClick={() => scrollToSection('exports')}
+                            >
+                                Exports
+                            </p>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
-                        <div className={styles.el} onClick={() => navigate('/about')}>
-                            <p className="cursor-pointer">About</p>
+                        <div className={styles.el}>
+                            <p 
+                                className="cursor-pointer" 
+                                onClick={() => scrollToSection('clients')}
+                            >
+                                Clients
+                            </p>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
-                        <div className={styles.el} onClick={() => navigate('/contact')}>
-                            <p className="cursor-pointer">Contact</p>
+                        <div className={styles.el}>
+                            <p 
+                                className="cursor-pointer" 
+                                onClick={() => navigate('/about')}
+                            >
+                                About
+                            </p>
+                            <div className={styles.indicator}></div>
+                        </div>
+                    </Magnetic>
+                    <Magnetic>
+                        <div className={styles.el}>
+                            <p 
+                                className="cursor-pointer" 
+                                onClick={() => navigate('/contact')}
+                            >
+                                Contact
+                            </p>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>

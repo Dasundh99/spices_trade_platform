@@ -26,17 +26,17 @@ const OurClients: React.FC = () => {
   return (
     <section
       id="clients"
-      className="min-h-screen flex flex-col items-center justify-center pt-2 bg-white"
+      className="min-h-screen flex flex-col items-center justify-center pt-2 bg-green-100"
     >
 
 
       <div className="flex flex-col items-center justify-center w-full max-w-7xl mx-auto text-center px-4">
         <div className="w-full mb-8 flex flex-col items-center">
           <h2
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-[7rem] font-bold text-green-600 uppercase tracking-wider text-center opacity-20"
+            className="ext-4xl md:text-6xl text-green-700 tracking-wide font-light opacity-40"
             style={{ lineHeight: "1" }}
           >
-            CLIENTS
+            Our clients
           </h2>
         </div>
 

@@ -1,90 +1,68 @@
 import React from "react";
-import Lottie from "react-lottie";
-import { GiFarmer } from "react-icons/gi";
-import { SiCodefresh } from "react-icons/si";
-import animationData from "../assets/Animation - 1741613422274.json";
+import { FaCheckCircle, FaHandshake, FaShieldAlt } from "react-icons/fa"; // Importing Icons
+import aboutImage from "../assets/irene-kredenets-AWMWcR3hQUg-unsplash.jpg";
 
 const About: React.FC = () => {
-  // Lottie animation settings
-  const lottieOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
   return (
-    <section id="about" className="relative min-h-screen w-full bg-white">
-      {/* Title Section */}
-      <div className="w-full pt-30 pb-10 text-left">
-        <div className="container mx-auto px-0 md:px-12 lg:px-0">
-          <div className="text-center py-5">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-[7rem] font-bold text-green-600 uppercase tracking-wider text-center opacity-20 pb-10">
-              ABOUT
+    <section id="about" className="w-full bg-green-100">
+      {/* Main Content Wrapper */}
+      <div className="container mx-auto px-6 p-10 pt-20 md:px-6 lg:px-8 flex flex-col md:flex-row gap-14">
+        {/* Left Side: Text Content */}
+        <div className="w-full space-y-5">
+          {/* Separate Title Section */}
+          <div className="w-full flex justify-center pb-8">
+            <h2 className="ext-4xl md:text-6xl text-green-700 tracking-wide font-light opacity-40 pt-15">
+              About Us
             </h2>
           </div>
-        </div>
-      </div>
+          <div className="w-full text-center space-y-2">
+            <p className="text-sm sm:text-sm text-gray-600 leading-relaxed">
+              <span className="font-semibold text-gray-700">GSGreen</span>, a Sri Lankan company, connects rural farmers’ produce to global markets while preserving traditional agriculture.
+            </p>
+            <p className="text-sm sm:text-sm text-gray-600 leading-relaxed">
+              We ensure high-quality, sustainable exports by fostering trust with farmers and clients.
+            </p>
+            <p className="text-sm sm:text-sm text-gray-600 leading-relaxed">
+              Sri Lanka’s diverse landscape enables year-round cultivation, giving us a competitive edge globally.
+            </p>
+            <p className="text-sm sm:text-sm text-gray-600 leading-relaxed">
+              At GSGreen, we prioritize quality, reliability, and integrity in every step.
+            </p>
+          </div>
 
-      {/* Content Section */}
-      <div className="container mx-auto px-6 md:px-12 lg:px-20">
-        <div className="flex flex-col md:flex-row items-center">
-          {/* Main Content */}
-          <div className="w-full max-w-2xl md:w-1/2">
-            <div className="space-y-6 text-gray-800">
-              {/* Content */}
-              <p className="text-lg text-gray-500 leading-relaxed">
-                <span className="font-semibold text-gray-500">GSGreen</span>, a proudly Sri Lankan company, connects rural farmers’ hard-earned agricultural products to the international market.
-              </p>
+          {/* Divider Line */}
+          <hr className="border-t border-gray-300 my-6 mx-auto w-1/2" />
 
-              <p className="text-lg text-gray-500 leading-relaxed mt-4">
-                Sourced from small-scale farms and select commercial projects, our products uphold traditional domestic agriculture practices.
-              </p>
+          {/* Icons Section */}
+          <div className="flex justify-center md:justify-center gap-12 pt-10">
+            {/* Quality Icon */}
+            <div className="flex flex-col items-center">
+              <FaCheckCircle className="text-green-600 text-4xl" />
+              <span className="text-gray-700 text-sm font-semibold pt-2">Quality</span>
+            </div>
 
-              <p className="text-lg text-gray-500 leading-relaxed mt-4">
-                We prioritize trust with our farming community and clients, ensuring high-quality, sustainable exports.
-              </p>
+            {/* Reliability Icon */}
+            <div className="flex flex-col items-center">
+              <FaHandshake className="text-green-600 text-4xl" />
+              <span className="text-gray-700 text-sm font-semibold pt-2">Reliability</span>
+            </div>
 
-              <p className="text-lg text-gray-500 leading-relaxed mt-4">
-                Sri Lanka’s diverse 65,000 km² landscape, enriched by varied soils and climatic conditions, enables year-round cultivation of a wide range of products.
-              </p>
-
-              <p className="text-lg text-gray-500 leading-relaxed mt-4">
-                This natural diversity gives us a competitive edge in global markets. At GSGreen, we emphasize quality, reliability, and integrity in every step.
-              </p>
+            {/* Integrity Icon */}
+            <div className="flex flex-col items-center">
+              <FaShieldAlt className="text-green-600 text-4xl" />
+              <span className="text-gray-700 text-sm font-semibold pt-2">Integrity</span>
             </div>
           </div>
-
-          {/* Lottie Animation */}
-          <div className="w-full md:w-1/2 flex justify-center items-center">
-            <Lottie options={lottieOptions} height={400} width={400} />
-          </div>
         </div>
 
-        {/* Horizontal Line Divider */}
-        <div className="w-full flex justify-center my-20">
-          <hr className="w-full border-t-1 border-gray-300" />
-        </div>
-
-        {/* Icons Section - Centered Below Both Columns */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10 mt-8 text-center pb-10">
-          <div className="flex flex-col items-center">
-            <GiFarmer className="text-green-600 text-5xl" />
-            <p className="text-lg text-gray-700 mt-2">
-              <span className="font-semibold">Sustainable Farming</span>
-              <br />
-              Empowering farmers with sustainable agricultural practices.
-            </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <SiCodefresh className="text-green-600 text-5xl" />
-            <p className="text-lg text-gray-700 mt-2">
-              <span className="font-semibold">Innovative Processing</span>
-              <br />
-              Modern processes ensuring fresh, high-quality products.
-            </p>
+        {/* Right Side: Image with 1:1 Aspect Ratio */}
+        <div className="w-full md:w-3/4 flex justify-center pt-10">
+          <div className="w-full max-w-screen-md aspect-square overflow-hidden">
+            <img
+              src={aboutImage}
+              alt="About Us"
+              className="w-full h-full object-cover transform transition duration-300 hover:scale-105 hover:contrast-110"
+            />
           </div>
         </div>
       </div>
