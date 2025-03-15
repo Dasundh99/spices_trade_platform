@@ -61,7 +61,7 @@ const ExportCard: React.FC<ExportItem> = ({ src, text, path, describe }) => {
 
   return (
     <article
-      className="group relative overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer bg-white"
+      className="group relative overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer bg-white font-lato"
       onClick={handleNavigation}
       onKeyDown={handleKeyPress}
       role="button"
@@ -95,7 +95,7 @@ const Exports: React.FC = () => {
   return (
     <section
       id="exports"
-      className="min-h-[70vh] py-8 bg-gray-50 overflow-hidden"
+      className="min-h-[70vh] py-8 bg-gray-50 overflow-hidden font-lato"
       aria-label="Product Exports Section"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

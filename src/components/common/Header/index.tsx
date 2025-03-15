@@ -97,7 +97,7 @@ const Header = () => {
     return (
         <header
             ref={headerRef}
-            className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${headerStyles.background}`}
+            className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 font-lato ${headerStyles.background}`}
         >
             {/* Reduced padding from py-3 to py-2 */}
             <div className="container mx-auto px-4 xl:px-20 py-2 flex justify-between items-center">
@@ -178,7 +178,7 @@ const Header = () => {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        className="fixed min-h-[100vh] w-full top-0 right-0 bottom-0 bg-white z-40 md:hidden overflow-y-auto"
+                        className="fixed min-h-[100vh] w-full top-0 right-0 bottom-0 bg-white z-40 md:hidden overflow-y-auto font-lato"
                         initial="initial"
                         animate="animate"
                         exit="exit"

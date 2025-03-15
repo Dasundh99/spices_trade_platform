@@ -83,7 +83,7 @@ const TropicalFruits: React.FC = () => {
   return (
     <section
       id="tropical"
-      className="min-h-screen pt-20 pb-16 overflow-hidden"
+      className="min-h-screen pt-20 pb-16 overflow-hidden font-lato"
       style={{ backgroundColor: colors.mutedGreen }}
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-20 mt-[40px]">

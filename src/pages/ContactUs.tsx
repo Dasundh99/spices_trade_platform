@@ -19,7 +19,7 @@ const ContactUs: React.FC = () => {
   ];
 
   const inputStyles = "w-full mt-1 p-2 bg-green-50 text-gray-800 border border-green-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition duration-200";
-  const sectionStyles = "py-8 px-4 sm:px-6 lg:px-8 bg-green-100";
+  const sectionStyles = "py-8 px-4 sm:px-6 lg:px-8 bg-green-100 font-lato ";
 
   return (
     <section id="contact" className={sectionStyles}>

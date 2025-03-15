@@ -41,7 +41,7 @@ const ProductDetails: React.FC = () => {
   if (!image || !image.src) {
     return (
       <div
-        className="min-h-screen flex items-center justify-center p-4"
+        className="min-h-screen flex items-center justify-center p-4 font-lato"
         style={{ backgroundColor: colors.mutedGreen }}
       >
         <div className="bg-white p-8 rounded-lg shadow-sm max-w-md w-full text-center space-y-6">
@@ -74,7 +74,7 @@ const ProductDetails: React.FC = () => {
 
   return (
     <div
-      className="min-h-screen py-12"
+      className="min-h-screen py-12 font-lato"
       style={{ backgroundColor: colors.mutedGreen }}
     >
       {/* Main Container */}

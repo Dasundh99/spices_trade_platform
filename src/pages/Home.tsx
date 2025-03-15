@@ -113,7 +113,7 @@ const Hero: React.FC = () => {
               tracking-tight 
               leading-tight 
               opacity-90 
-              font-sans 
+              font-lato 
               antialiased
               transition-all 
               duration-1000 
@@ -134,7 +134,7 @@ const Hero: React.FC = () => {
               leading-relaxed 
               opacity-80 
               font-light 
-              font-sans 
+              font-lato 
               antialiased
               transition-all 
               duration-1000 
@@ -150,7 +150,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Feature Highlights */}
-      <div className="absolute bottom-0 flex w-full items-center justify-center gap-4 p-5 pb-12 md:gap-20 lg:gap-32">
+      <div className="absolute bottom-0   font-lato  flex w-full items-center justify-center gap-4 p-5 pb-12 md:gap-20 lg:gap-32">
         {features.map((feature, index) => (
           <div 
             key={index} 
@@ -167,7 +167,6 @@ const Hero: React.FC = () => {
                 font-medium 
                 text-white 
                 opacity-40 
-                font-sans 
                 tracking-wide 
                 antialiased
               "
