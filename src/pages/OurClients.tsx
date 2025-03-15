@@ -63,7 +63,7 @@ const ExportSection = () => {
     };
 
     return (
-        <section id="clients" className="bg-gray-100 py-8 md:py-16 overflow-hidden">
+        <section id="clients" className="bg-gray-100 py-8 md:py-16 overflow-hidden font-lato">
             {/* Heading and Subheading */}
             <div className="container mx-auto px-4 text-center mb-8">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
