@@ -33,7 +33,7 @@ const OurClients: React.FC = () => {
       <div className="flex flex-col items-center justify-center w-full max-w-7xl mx-auto text-center px-4">
         <div className="w-full mb-8 flex flex-col items-center">
           <h2
-            className="ext-4xl md:text-6xl text-green-700 tracking-wide font-light opacity-40"
+            className="text-4xl md:text-6xl text-green-700 tracking-wide font-light opacity-40"
             style={{ lineHeight: "1" }}
           >
             Our clients

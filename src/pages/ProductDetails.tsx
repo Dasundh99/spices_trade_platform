@@ -10,10 +10,10 @@ interface ImageData {
 
 // Refined Greenish Color Palette
 const colors = {
-  deepGreen: "#3B8C5E",    // A lively, lighter deep green for text and accents
-  sageGreen: "#C8E0C5",    // A bright, cheerful sage green for backgrounds and highlights
+  deepGreen: "#4ADE80",    // A lively, lighter deep green for text and accents
+  sageGreen: "#DCFCE7",    // A bright, cheerful sage green for backgrounds and highlights
   mutedGreen: "#F5FBF5",   // An ultra-light, almost glowing green for section backgrounds
-  accentGreen: "#8CC089",  // A vivid yet soft green for hover states and accents
+  accentGreen: "#22C55E",  // A vivid yet soft green for hover states and accents
 };
 
 /**
@@ -106,13 +106,13 @@ const ProductDetails: React.FC = () => {
             <div className="p-6 flex flex-col justify-center space-y-4">
               <h2
                 className="text-2xl md:text-3xl font-semibold leading-tight tracking-tight antialiased"
-                style={{ color: colors.deepGreen }}
+                style={{ color: 'black' }}
               >
                 {image.caption || "Unnamed Product"}
               </h2>
               <p
                 className="text-sm md:text-base leading-relaxed font-light antialiased"
-                style={{ color: colors.deepGreen }}
+                style={{ color: 'black' }}
               >
                 {image.describe || "No description available."}
               </p>
