@@ -1,19 +1,19 @@
-import { useState, ChangeEvent, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import WorldMap from '../assets/AdobeStock_564546034.png';
 
 const ExportSection = () => {
-    const [selectedCountry, setSelectedCountry] = useState('India');
+    const [selectedCountry] = useState('India');
     const [hoveredLocation, setHoveredLocation] = useState<string | null>(null);
     const [mapDimensions, setMapDimensions] = useState({ width: 0, height: 0 });
     const mapRef = useRef<HTMLImageElement>(null);
 
-    const countries = [
-        'India',
-        'Brazil',
-        'Australia',
-        'United States',
-        'China',
-    ];
+    // const countries = [
+    //     'India',
+    //     'Brazil',
+    //     'Australia',
+    //     'United States',
+    //     'China',
+    // ];
 
     const baseExportLocations = [
         { name: 'Brazil', location: 'Rio de Janeiro', coordinates: { x: 40, y: 76 } },
@@ -50,13 +50,13 @@ const ExportSection = () => {
         };
     };
 
-    const handleCountryChange = (e: ChangeEvent<HTMLSelectElement>) => {
-        setSelectedCountry(e.target.value);
-    };
+    // const handleCountryChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    //     setSelectedCountry(e.target.value);
+    // };
 
-    const handleSeeServicesClick = () => {
-        alert('Redirecting to Services page!');
-    };
+    // const handleSeeServicesClick = () => {
+    //     alert('Redirecting to Services page!');
+    // };
 
     return (
         <section id="clients" className="bg-gray-200 py-10 overflow-hidden font-lato shadow-lg rounded-lg">
