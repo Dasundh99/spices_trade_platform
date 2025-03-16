@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
 
 const ContactUs: React.FC = () => {
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
   const contactInfo = [
     { icon: <FaMapMarkerAlt className="text-green-600 text-lg" />, label: "Address", value: "123/2B, Colombo, Sri Lanka" },
     { icon: <FaPhone className="text-green-600 text-lg" />, label: "Phone", value: "+94 123456789" },
