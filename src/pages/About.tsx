@@ -11,7 +11,7 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <section id="about" className="w-full bg-gray-200 font-lato ">
+    <section id="about" className="w-full bg-green-100 font-lato ">
       {/* Main Content Wrapper */}
       <div className="container mx-auto px-6 p-10 pt-10 md:pt-20 lg:pt-20 md:px-6 lg:px-8 flex flex-col md:flex-row gap-14">
         {/* Left Side: Text Content */}

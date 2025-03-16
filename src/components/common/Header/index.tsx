@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
 import { useLocation } from 'react-router-dom';
 import Magnetic from '../Magnetic';
+// import Logo from "../../../assets/GSGreenLogo.png"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -105,8 +106,9 @@ const Header = () => {
                 {/* Reduced text size from xl to md, sm:text-sm to sm:text-xs, md:text-xl to md:text-base */}
                 <div className={`${headerStyles.textColor} text-md sm:text-md md:text-base`}>
                     <HashLink smooth to="/#home" className="flex flex-col md:block">
-                        GS GREEN PVT LTD
+                        GSGreen LANKA (Pvt) Ltd
                     </HashLink>
+                    
                 </div>
 
                 {/* Desktop Navigation - reduced text size from md:text-2xl to md:text-lg */}

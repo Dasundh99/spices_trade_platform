@@ -43,6 +43,21 @@ const galleryImages = [
     caption: "Cabbage",
     describe: "Cabbage is a leafy vegetable that is widely used in Sri Lankan and global cuisine. It can be eaten raw in salads, stir-fried, or added to soups and curries. Packed with vitamins C and K, it promotes overall health and digestion while adding a crisp texture to dishes.",
   },
+  {
+    src: "",
+    caption: "Ambaralla",
+    describe:""
+  },  
+  {
+    src: "",
+    caption: "Sweet Potato",
+    describe:""
+  },  
+  {
+    src: "",
+    caption: "Green Chili",
+    describe:""
+  },
 ];
 
 /**

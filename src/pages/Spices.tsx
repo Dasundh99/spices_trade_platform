@@ -43,6 +43,31 @@ const galleryImages = [
     caption: "Coconut Oil",
     describe: "Coconut oil, extracted from mature coconut flesh, is a cornerstone of Sri Lankan cuisine. It enhances the richness of curries and fried dishes. Known for its antimicrobial properties and healthy fats, it supports heart health, nourishes skin and hair, and serves as a natural remedy in Ayurvedic practices.",
   },
+  {
+    src: "",
+    caption: "Clove",
+    describe:""
+  },
+  {
+    src: "",
+    caption: "Mace",
+    describe:""
+  },  
+  {
+    src: "",
+    caption: "Cardamom",
+    describe:""
+  },
+  {
+    src: "",
+    caption: "Curry Leaves ",
+    describe:""
+  },
+  {
+    src: "",
+    caption: "Turmeric",
+    describe:""
+  },  
 ];
 
 /**

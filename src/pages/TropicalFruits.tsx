@@ -34,15 +34,41 @@ const galleryImages = [
     describe: "Bananas from Sri Lanka are creamy and naturally sweet, making them a versatile fruit. Whether eaten raw, added to smoothies, or used in baking, Sri Lankan bananas offer a rich flavor and nutritional benefits. Their perfect ripeness makes them a convenient snack for any time of the day."
   },
   {
-    src: "https://www.luluhypermarket.com/cdn-cgi/image/f=auto/medias/1187972-01.jpg-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxOTAzNjV8aW1hZ2UvanBlZ3xhVzFoWjJWekwyaGtNUzlvWXpJdk9URTJNVGt3TURjMU1qa3lOaTVxY0djfGQxN2I1OGE2YzA5NTI4MTI4NGVmZDNlMzMwMDlmYTc5NzNiN2U2MjRmZGRhMWE3OTZiOWJkMmFmNGU2YmFkZjE",
-    caption: "Mangosteen",
-    describe: "Known as the 'queen of fruits,' mangosteen is a small, round fruit with a tough purple rind and a sweet, juicy interior. Native to Sri Lanka, this tropical gem is beloved for its delicate flavor, offering a balance of sweetness and tanginess. Its unique taste is a treat for fruit lovers."
-  },
-  {
     src: "https://th.bing.com/th/id/OIP.A3itxGJ9fFwkmplVS_2X0gHaHa?rs=1&pid=ImgDetMain",
     caption: "Jackfruit",
     describe: "Jackfruit, a large tropical fruit from Sri Lanka, offers a unique blend of sweet and savory flavors. Its versatile nature makes it ideal for both sweet dishes like desserts and savory meals such as curries. Rich in fiber, vitamins, and antioxidants, it’s a nutritious and flavorful fruit choice."
-  }
+  },
+  {
+    src: "",
+    caption: "Papaya",
+    describe:""
+  },
+  {
+    src: "",
+    caption: "Avacado",
+    describe:""
+  },
+  {
+    src: "",
+    caption: "Water Melon",
+    describe:""
+  },
+  {
+    src: "",
+    caption: "Lime",
+    describe:""
+  },
+  {
+    src: "",
+    caption: "King Coconut",
+    describe:""
+  },  
+  {
+    src: "",
+    caption: "Soursop",
+    describe:""
+  },  
+
 ];
 /**
  * TropicalFruits Component

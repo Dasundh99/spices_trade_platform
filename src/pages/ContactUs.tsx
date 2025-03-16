@@ -6,6 +6,10 @@ import {
 
 const ContactUs: React.FC = () => {
 
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
   const contactInfo = [
     { icon: <FaMapMarkerAlt className="text-green-600 text-lg" />, label: "Address", value: "123/2B, Colombo, Sri Lanka" },
     { icon: <FaPhone className="text-green-600 text-lg" />, label: "Phone", value: "+94 123456789" },
@@ -20,13 +24,7 @@ const ContactUs: React.FC = () => {
   ];
 
   const inputStyles = "w-full mt-1 p-2 bg-green-50 text-gray-800 border border-green-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition duration-200";
-  const sectionStyles = "py-8 px-4 sm:px-6 lg:px-8 bg-gray-200 font-lato ";
-
-  useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 500); 
-  }, []);
+  const sectionStyles = "py-8 px-4 sm:px-6 lg:px-8 bg-green-100 font-lato ";
 
   return (
     <section id="contact" className={sectionStyles}>
