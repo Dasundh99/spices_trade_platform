@@ -49,15 +49,15 @@ const ExportSection = () => {
             style={{
                 borderTopLeftRadius: '50% 10%',
                 borderTopRightRadius: '50% 10%',
-                marginTop: '-2rem', // Adjust this value to control how much it overlaps the previous section
-                paddingTop: '6rem', // Add padding to prevent content from being cut off
+                marginTop: '1rem', // Adjust this value to control how much it overlaps the previous section
+                paddingTop: '4rem', // Add padding to prevent content from being cut off
             }}
         >
             <div className="container mx-auto px-2 text-center">
                 <h2 className="text-4xl md:text-6xl text-black font-Semibold tracking-wide opacity-60">
                     Our Global Clients
                 </h2>
-                <p className="text-lg sm:text-lg md:text-xl text-black opacity-40 mb-4 pt-2">
+                <p className="text-lg sm:text-lg md:text-xl text-black opacity-40 mb-4 pt-2 pb-4">
                     Exporting the local finest worldwide.
                 </p>
             </div>

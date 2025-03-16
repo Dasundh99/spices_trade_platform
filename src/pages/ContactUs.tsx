@@ -44,8 +44,8 @@ const ContactUs: React.FC = () => {
                     {item.icon}
                   </div>
                   <div>
-                    <p className="block text-sm font-medium text-green-700 mb-1">{item.label}</p>
-                    <p className="text-xs text-gray-600 leading-relaxed">{item.value}</p>
+                    <p className="block text-xs font-medium text-green-700 mb-1">{item.label}</p>
+                    <p className="text-[10px] text-gray-600 leading-relaxed">{item.value}</p>
                   </div>
                 </div>
               ))}
