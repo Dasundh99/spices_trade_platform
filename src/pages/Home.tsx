@@ -41,24 +41,24 @@ const Hero: React.FC = () => {
 
   const contentVariations: ContentItem[] = [
     {
-      title: 'To Global Markets with Quality',
-      description: 'From the diverse soils of Ceylon to the world, we bring you the finest agricultural products, nurtured with care and tradition.'
+      "title": "Bringing Ceylon’s Finest to Global Markets",
+      "description": "Sourced from the rich soils of Ceylon, our premium agricultural products embody the essence of quality, tradition, and sustainability—delivering nature’s best to the world."
     },
     {
-      title: 'Tropical Fruits, Fresh from Ceylon',
-      description: 'Experience the exotic flavors of Ceylon\'s tropical fruits, grown in the heart of the island for your enjoyment.'
+      "title": "Exotic Tropical Fruits, Harvested with Care",
+      "description": "Indulge in the vibrant flavors of Ceylon’s tropical fruits, handpicked at peak ripeness to ensure unmatched freshness, taste, and nutritional value."
     },
     {
-      title: 'Tropical Vegetables, Fresh from Ceylon',
-      description: 'Experience the exotic flavors of Ceylon\'s tropical vegetables, grown in the heart of the island for your enjoyment.'
+      "title": "Farm-Fresh Tropical Vegetables from Ceylon",
+      "description": "Enjoy the crispness and rich flavors of Ceylon’s tropical vegetables, cultivated in fertile lands and delivered fresh to your table with uncompromising quality."
     },
     {
-      title: 'Spices, Fresh from Ceylon',
-      description: 'Experience the exotic flavors of Ceylon\'s spices, grown in the heart of the island for your enjoyment.'
+      "title": "Authentic Ceylon Spices, A Symphony of Flavors",
+      "description": "Enhance your culinary creations with the bold aromas and rich flavors of Ceylon’s world-renowned spices, carefully cultivated and expertly processed for purity and potency."
     },
     {
-      title: 'Tea, Fresh from Ceylon',
-      description: 'Experience the exotic flavors of Ceylon\'s tea, grown in the heart of the island for your enjoyment.'
+      "title": "Ceylon Tea, The Essence of Pure Indulgence",
+      "description": "Savor the unparalleled taste of Ceylon tea, cultivated in the lush highlands and crafted to perfection, offering a rich, soothing, and aromatic experience in every sip."
     }
   ];
 
