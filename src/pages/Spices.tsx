@@ -19,7 +19,7 @@ const galleryImages = [
     describe: "Cinnamon sticks and powder, a staple in Sri Lankan cuisine.",
   },
   {
-    src: "https://images.unsplash.com/photo-1636488771211-9c635f5002e9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "https://img.freepik.com/premium-photo/black-pepper-white-background-generative-ai_186938-6068.jpg",
     caption: "Black pepper",
     describe: "Black pepper, known as the King of Spices, is a pungent and aromatic spice derived from the dried fruit of the *Piper nigrum* plant. It is widely used in Sri Lankan cuisine to add heat and flavor to dishes.",
   },
@@ -29,17 +29,17 @@ const galleryImages = [
     describe: "Turmeric, a vibrant yellow spice, is derived from the root of the *Curcuma longa* plant. It is commonly used in Sri Lankan cuisine for its earthy flavor and numerous health benefits, including anti-inflammatory properties.",
   },
   {
-    src: "https://images.unsplash.com/photo-1615477550927-6ec8445fcfe6?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "https://th.bing.com/th/id/R.750ee80645d877fc8b79a1d5d663744b?rik=8uXbmwxw1Hiu4A&pid=ImgRaw&r=0",
     caption: "Garlic",
     describe: "Garlic, a pungent and flavorful bulb, is commonly used in Sri Lankan cooking to add depth and aroma to dishes. It is known for its strong, distinctive taste and is also valued for its health benefits, such as boosting immunity and promoting heart health.",
   },
   {
-    src: "https://images.unsplash.com/photo-1603431777782-912e3b76f60d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "https://th.bing.com/th/id/R.bd4e32bdff9b40b81fcc5fd83a00643b?rik=S%2bOkRu1aU5rLzg&riu=http%3a%2f%2fphotos.demandstudios.com%2fgetty%2farticle%2f197%2f220%2f502011542.jpg&ehk=XDm4Fwddt35MDMvAUKSIFnjb2XOI6trbU%2fbIUVa%2fOgg%3d&risl=&pid=ImgRaw&r=0",
     caption: "Ginger",
     describe: "Ginger, a fragrant and spicy root, is widely used in Sri Lankan cuisine for its zesty flavor and medicinal properties. It adds warmth and depth to dishes and is known for its ability to aid digestion and reduce inflammation.",
   },
   {
-    src: "https://images.unsplash.com/photo-1588413333412-82148535db53?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "https://www.shutterstock.com/image-photo/coconut-oil-fruits-cut-half-600nw-1910657323.jpg",
     caption: "Coconut oil",
     describe: "Coconut oil, extracted from the flesh of mature coconuts, is a staple in Sri Lankan cooking and skincare. It has a rich, slightly sweet flavor and is known for its health benefits, including promoting heart health and providing antimicrobial properties.",
   },
@@ -133,12 +133,9 @@ const Spices: React.FC = () => {
                   object-cover
                 "
               />
+              {/* Updated caption container - now flows under image */}
               <div
                 className="
-                  absolute 
-                  bottom-0 
-                  left-0 
-                  right-0 
                   p-4 
                   text-center
                 "

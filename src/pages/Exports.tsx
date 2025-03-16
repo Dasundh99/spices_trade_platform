@@ -2,10 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 // Image Imports (Consider converting to WebP for performance)
-import img1 from "../assets/debora-cardenas-BIj5FAFQ_rk-unsplash.jpg";
-import img2 from "../assets/ibuki-tsubo-OUTKKo3lHuM-unsplash (1).jpg";
-import img3 from "../assets/andy-holmes-mTqGgeYkfaY-unsplash (1).jpg";
-import img4 from "../assets/ramakrishnan-nataraj-ptMFONhgVho-unsplash.jpg";
+// import img1 from "../assets/debora-cardenas-BIj5FAFQ_rk-unsplash.jpg";
+// import img2 from "../assets/ibuki-tsubo-OUTKKo3lHuM-unsplash (1).jpg";/
+// import img3 from "../assets/andy-holmes-mTqGgeYkfaY-unsplash (1).jpg";
+// import img4 from "../assets/ramakrishnan-nataraj-ptMFONhgVho-unsplash.jpg";
 
 // Define TypeScript interface for image items
 interface ExportItem {
@@ -20,28 +20,28 @@ interface ExportItem {
 const exportItems: ExportItem[] = [
   {
     id: 1,
-    src: img1,
+    src: "https://as2.ftcdn.net/v2/jpg/00/65/70/65/1000_F_65706597_uNm2SwlPIuNUDuMwo6stBd81e25Y8K8s.jpg",
     text: "Tropical Fruits",
     path: "/fruits",
     describe: "Explore our fresh and juicy tropical fruits, packed with vitamins and flavor.",
   },
   {
     id: 2,
-    src: img2,
+    src: "https://as1.ftcdn.net/v2/jpg/01/55/62/22/1000_F_155622214_sA7Fq2uegog2gyt7IeT8lCJOJo1o0Bsi.jpg",
     text: "Tropical Vegetables",
     path: "/vegetables",
     describe: "Explore our fresh tropical vegetables, packed with nutrients and flavor.",
   },
   {
     id: 3,
-    src: img3,
+    src: 'https://as1.ftcdn.net/v2/jpg/00/62/86/48/1000_F_62864850_6Vw6JNENuRPssFw8TdrwOVqi9tiQzq9w.jpg',
     text: "Spices and Oils",
     path: "/spices",
     describe: "Explore our rich and aromatic spices and oils, packed with flavor and nutrients.",
   },
   {
     id: 4,
-    src: img4,
+    src: 'https://as2.ftcdn.net/v2/jpg/04/71/47/29/1000_F_471472997_0SAoVsKUkCy7iSLQYYkAL38hihglZjP3.jpg',
     text: "Tea",
     path: "/tea",
     describe: "Explore our finest tea collection, packed with flavor and aroma.",

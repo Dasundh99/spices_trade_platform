@@ -14,32 +14,32 @@ const colors = {
 // Gallery data
 const galleryImages = [
   {
-    src: "https://farmfreshorganics.com.bd/wp-content/uploads/1723890954068-570x931.jpg",
+    src: "https://th.bing.com/th/id/OIP.idI9tA8BPoMDS0KQl-sGVgHaHa?rs=1&pid=ImgDetMain",
     caption: "Snake Gourd",
     describe: "Snake gourd is a tropical or subtropical vine that climbs by tendrils. It is a popular vegetable in Sri Lanka, and other Asian countries.",
   },
   {
-    src: "https://images.unsplash.com/photo-1509622905150-fa66d3906e09?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "https://th.bing.com/th/id/OIP.ALoBN_l46Cp_6062xtq-1gHaHa?rs=1&pid=ImgDetMain",
     caption: "Pumpkin",
     describe: "Pumpkin is a popular vegetable in Sri Lanka, and other Asian countries.",
   },
   {
-    src: "https://images.unsplash.com/photo-1635013973792-2d1595bfa0b2?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "https://th.bing.com/th/id/OIP.p7yWDaLd0NizIA1OhETqIQHaHa?rs=1&pid=ImgDetMain",
     caption: "Ash Plantain",
     describe: "Ash plantain is a popular vegetable in Sri Lanka, and other Asian countries.",
   },
   {
-    src: "https://grosgo.co.uk/cdn/shop/files/PinkStripeBrinjal_27e4b1dc-52bb-42c8-83c1-cbe33c3261bf.jpg?v=1734632650",
+    src: "https://th.bing.com/th/id/OIP.Dn71JX0hAl91J6x7U53uPwHaHa?rs=1&pid=ImgDetMain",
     caption: "Brinjal",
     describe: "Brinjal is a popular vegetable in Sri Lanka, and other Asian countries.",
   },
   {
-    src: "https://images.unsplash.com/photo-1676994174279-102e0abff98f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "https://objectstorage.ap-mumbai-1.oraclecloud.com/n/softlogicbicloud/b/cdn/o/products/310057--01--1555692319.jpeg",
     caption: "Bitter Gourd",
     describe: "Bitter Gourd is a popular vegetable in Sri Lanka, and other Asian countries.",
   },
   {
-    src: "https://images.unsplash.com/photo-1668120082831-e83f387e3461?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "https://th.bing.com/th/id/OIP.lgvsHCd01EhuP_0cA_WlLwHaFj?rs=1&pid=ImgDetMain",
     caption: "cabbage",
     describe: "Cabbage is a popular vegetable in Sri Lanka, and other Asian countries.",
   },
@@ -104,7 +104,7 @@ const TropicalVegetables: React.FC = () => {
           "
           style={{ color: colors.deepGreen }}
         >
-          Tropical Vegetables
+          Tropical vegetables
         </h2>
 
         {/* Gallery Grid */}
@@ -133,12 +133,9 @@ const TropicalVegetables: React.FC = () => {
                   object-cover
                 "
               />
+              {/* Updated caption container - now flows under image */}
               <div
                 className="
-                  absolute 
-                  bottom-0 
-                  left-0 
-                  right-0 
                   p-4 
                   text-center
                 "
