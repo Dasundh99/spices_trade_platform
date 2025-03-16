@@ -13,51 +13,23 @@ interface ExportItem {
   src: string;
   text: string;
   path: string;
-  // describe: string;
 }
 
 // Move to a separate constants file (e.g., `exportData.ts`)
 const exportItems: ExportItem[] = [
-  {
-    id: 1,
-    src: img1,
-    text: "Tropical Fruits",
-    path: "/fruits",
-    // describe: "Explore our fresh and juicy tropical fruits, packed with vitamins and flavor.",
-  },
-  {
-    id: 2,
-    src: img2,
-    text: "Tropical Vegetables",
-    path: "/vegetables",
-    // describe: "Explore our fresh tropical vegetables, packed with nutrients and flavor.",
-  },
-  {
-    id: 3,
-    src: img3,
-    text: "Spices and Oils",
-    path: "/spices",
-    // describe: "Explore our rich and aromatic spices and oils, packed with flavor and nutrients.",
-  },
-  {
-    id: 4,
-    src: img4,
-    text: "Tea",
-    path: "/tea",
-    // describe: "Explore our finest tea collection, packed with flavor and aroma.",
-  },
+  { id: 1, src: img1, text: "Tropical Fruits", path: "/fruits" },
+  { id: 2, src: img2, text: "Tropical Vegetables", path: "/vegetables" },
+  { id: 3, src: img3, text: "Spices and Oils", path: "/spices" },
+  { id: 4, src: img4, text: "Tea", path: "/tea" },
 ];
 
 // Reusable Card Component
-// const ExportCard: React.FC<ExportItem> = ({ src, text, path, describe }) => {
 const ExportCard: React.FC<ExportItem> = ({ src, text, path }) => {
   const navigate = useNavigate();
 
   const handleNavigation = () => navigate(path);
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter" || e.key === " ") {
-      navigate(path);
-    }
+    if (e.key === "Enter" || e.key === " ") navigate(path);
   };
 
   return (
@@ -69,21 +41,18 @@ const ExportCard: React.FC<ExportItem> = ({ src, text, path }) => {
       tabIndex={0}
       aria-label={`Navigate to ${text} page`}
     >
-      <div className="relative w-full h-72">
+      <div className="relative w-full h-64 md:h-45 lg:h-50"> {/* Customizable height */}
         <img
           src={src}
           alt={text}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
           loading="lazy"
         />
-        <div className="absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
-      <div className="p-4 text-gray-900">
-        <h3 className="text-xl mb-1 tracking-tight">{text}</h3>
-        <p className="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          {/* {describe} */}
-        </p>
+      <div className="p-2 text-gray-900">
+        <h3 className="text-md mb-1 tracking-tight">{text}</h3>
       </div>
 
       <div className="absolute inset-0 border-2 border-green-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none" />
@@ -96,7 +65,7 @@ const Exports: React.FC = () => {
   return (
     <section
       id="exports"
-      className="min-h-[70vh] py-8 bg-gray-50 overflow-hidden font-lato"
+      className="min-h-[60vh] py-8 bg-gray-50 overflow-hidden font-lato"
       aria-label="Product Exports Section"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -106,7 +75,8 @@ const Exports: React.FC = () => {
           </h2>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl mx-auto">
+          {/* Customize width with max-w-* or w-* */}
           {exportItems.map((item) => (
             <ExportCard key={item.id} {...item} />
           ))}

@@ -61,10 +61,10 @@ const ExportSection = () => {
     return (
         <section id="clients" className="bg-gray-200 py-10 overflow-hidden font-lato shadow-lg rounded-lg">
             <div className="container mx-auto px-4 text-center">
-                <h2 className="text-5xl md:text-6xl text-green-700 tracking-wide font-light opacity-80 mb-4">
+                <h2 className="text-5xl md:text-6xl text-green-600 tracking-wide font-light opacity-60 mb-4">
                     Our Global Clients
                 </h2>
-                <p className="text-lg sm:text-xl md:text-2xl text-green-700 opacity-40 mb-4">
+                <p className="text-lg sm:text-lg md:text-xl text-green-700 opacity-40 mb-4">
                     Delivering the local finest worldwide.
                 </p>
             </div>
