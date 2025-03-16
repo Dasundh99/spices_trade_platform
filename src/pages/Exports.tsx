@@ -2,10 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 // Image Imports (Consider converting to WebP for performance)
-// import img1 from "../assets/debora-cardenas-BIj5FAFQ_rk-unsplash.jpg";
-// import img2 from "../assets/ibuki-tsubo-OUTKKo3lHuM-unsplash (1).jpg";/
-// import img3 from "../assets/andy-holmes-mTqGgeYkfaY-unsplash (1).jpg";
-// import img4 from "../assets/ramakrishnan-nataraj-ptMFONhgVho-unsplash.jpg";
+import img1 from "../assets/fruit.jpg";
+import img2 from "../assets/vegetable.jpg";
+import img3 from "../assets/spices.jpg";
+import img4 from "../assets/tea.jpg";
 
 // Define TypeScript interface for image items
 interface ExportItem {
@@ -13,43 +13,44 @@ interface ExportItem {
   src: string;
   text: string;
   path: string;
-  describe: string;
+  // describe: string;
 }
 
 // Move to a separate constants file (e.g., `exportData.ts`)
 const exportItems: ExportItem[] = [
   {
     id: 1,
-    src: "https://as2.ftcdn.net/v2/jpg/00/65/70/65/1000_F_65706597_uNm2SwlPIuNUDuMwo6stBd81e25Y8K8s.jpg",
+    src: img1,
     text: "Tropical Fruits",
     path: "/fruits",
-    describe: "Explore our fresh and juicy tropical fruits, packed with vitamins and flavor.",
+    // describe: "Explore our fresh and juicy tropical fruits, packed with vitamins and flavor.",
   },
   {
     id: 2,
-    src: "https://as1.ftcdn.net/v2/jpg/01/55/62/22/1000_F_155622214_sA7Fq2uegog2gyt7IeT8lCJOJo1o0Bsi.jpg",
+    src: img2,
     text: "Tropical Vegetables",
     path: "/vegetables",
-    describe: "Explore our fresh tropical vegetables, packed with nutrients and flavor.",
+    // describe: "Explore our fresh tropical vegetables, packed with nutrients and flavor.",
   },
   {
     id: 3,
-    src: 'https://as1.ftcdn.net/v2/jpg/00/62/86/48/1000_F_62864850_6Vw6JNENuRPssFw8TdrwOVqi9tiQzq9w.jpg',
+    src: img3,
     text: "Spices and Oils",
     path: "/spices",
-    describe: "Explore our rich and aromatic spices and oils, packed with flavor and nutrients.",
+    // describe: "Explore our rich and aromatic spices and oils, packed with flavor and nutrients.",
   },
   {
     id: 4,
-    src: 'https://as2.ftcdn.net/v2/jpg/04/71/47/29/1000_F_471472997_0SAoVsKUkCy7iSLQYYkAL38hihglZjP3.jpg',
+    src: img4,
     text: "Tea",
     path: "/tea",
-    describe: "Explore our finest tea collection, packed with flavor and aroma.",
+    // describe: "Explore our finest tea collection, packed with flavor and aroma.",
   },
 ];
 
 // Reusable Card Component
-const ExportCard: React.FC<ExportItem> = ({ src, text, path, describe }) => {
+// const ExportCard: React.FC<ExportItem> = ({ src, text, path, describe }) => {
+const ExportCard: React.FC<ExportItem> = ({ src, text, path }) => {
   const navigate = useNavigate();
 
   const handleNavigation = () => navigate(path);
@@ -72,16 +73,16 @@ const ExportCard: React.FC<ExportItem> = ({ src, text, path, describe }) => {
         <img
           src={src}
           alt={text}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 "
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
-        <h3 className="text-xl font-semibold mb-1 tracking-tight">{text}</h3>
-        <p className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          {describe}
+      <div className="p-4 text-gray-900">
+        <h3 className="text-xl mb-1 tracking-tight">{text}</h3>
+        <p className="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          {/* {describe} */}
         </p>
       </div>
 

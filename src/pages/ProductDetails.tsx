@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 // Define interface for image data
@@ -10,10 +10,10 @@ interface ImageData {
 
 // Refined Greenish Color Palette
 const colors = {
-  deepGreen: "#4ADE80",    // A lively, lighter deep green for text and accents
-  sageGreen: "#DCFCE7",    // A bright, cheerful sage green for backgrounds and highlights
-  mutedGreen: "#F5FBF5",   // An ultra-light, almost glowing green for section backgrounds
-  accentGreen: "#22C55E",  // A vivid yet soft green for hover states and accents
+  deepGreen: "#4ADE80",
+  sageGreen: "#DCFCE7",
+  mutedGreen: "#F5FBF5",
+  accentGreen: "#22C55E",
 };
 
 /**
@@ -25,6 +25,9 @@ const ProductDetails: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { image } = (location.state as { image?: ImageData }) || {};
+
+  // State to store original image dimensions (optional, for display purposes)
+  const [imageDimensions, setImageDimensions] = useState<{ width: number; height: number } | null>(null);
 
   // Scroll to top on component mount
   useEffect(() => {
@@ -61,8 +64,8 @@ const ProductDetails: React.FC = () => {
             onClick={() => navigate(-1)}
             className="inline-flex items-center px-4 py-2 rounded-md text-white font-medium transition-colors duration-200 antialiased"
             style={{ backgroundColor: colors.accentGreen }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.deepGreen}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = colors.accentGreen}
+            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = colors.deepGreen)}
+            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = colors.accentGreen)}
             aria-label="Return to previous page"
           >
             Go Back
@@ -72,6 +75,15 @@ const ProductDetails: React.FC = () => {
     );
   }
 
+  // Function to handle image load and capture dimensions (optional)
+  const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.currentTarget;
+    setImageDimensions({
+      width: img.naturalWidth,
+      height: img.naturalHeight,
+    });
+  };
+
   return (
     <div
       className="min-h-screen py-12 font-lato"
@@ -79,40 +91,50 @@ const ProductDetails: React.FC = () => {
     >
       {/* Main Container */}
       <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 pt-20">
-        {/* Product Card */}
-        <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Image Section */}
-            <div className="p-6 flex items-center justify-center">
+        {/* Product Card with fixed size */}
+        <div className="bg-white rounded-lg shadow-sm overflow-hidden w-full h-[600px] lg:h-[400px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full">
+            {/* Image Section with fixed dimensions */}
+            <div className="p-6 flex items-center justify-center h-full">
               {image.src ? (
-                <div className="w-full max-w-sm aspect-[3/4] relative">
+                <div className="w-full h-full max-w-sm max-h-[300px] relative flex items-center justify-center">
                   <img
                     src={image.src}
                     alt={image.caption || "Product Image"}
-                    className="w-full h-full object-cover rounded-md transition-opacity duration-300"
+                    className="max-w-full max-h-full object-contain rounded-md transition-opacity duration-300" // Preserve original ratio
+                    onLoad={handleImageLoad} // Optional: Capture dimensions
                     onError={(e) => {
                       console.error("Image failed to load:", image.src);
                       e.currentTarget.src = "https://via.placeholder.com/300?text=Image+Not+Found";
                     }}
                     loading="lazy"
                   />
+                  {/* Optional: Display original image size */}
+                  {imageDimensions && (
+                    <p
+                      className="text-sm mt-2 absolute bottom-0 antialiased"
+                      style={{ color: colors.deepGreen }}
+                    >
+                      {/* Original Size: {imageDimensions.width} x {imageDimensions.height} pixels */}
+                    </p>
+                  )}
                 </div>
               ) : (
-                <div className="w-full max-w-sm aspect-[3/4] bg-gray-200 animate-pulse rounded-md" />
+                <div className="w-full h-full max-w-sm max-h-[300px] bg-gray-200 animate-pulse rounded-md" />
               )}
             </div>
 
             {/* Details Section */}
-            <div className="p-6 flex flex-col justify-center space-y-4">
+            <div className="p-6 flex flex-col justify-center space-y-4 h-full">
               <h2
                 className="text-2xl md:text-3xl font-semibold leading-tight tracking-tight antialiased"
-                style={{ color: 'black' }}
+                style={{ color: "black" }}
               >
                 {image.caption || "Unnamed Product"}
               </h2>
               <p
                 className="text-sm md:text-base leading-relaxed font-light antialiased"
-                style={{ color: 'black' }}
+                style={{ color: "black" }}
               >
                 {image.describe || "No description available."}
               </p>
@@ -126,12 +148,8 @@ const ProductDetails: React.FC = () => {
             onClick={() => navigate(-1)}
             className="inline-flex items-center px-5 py-2 rounded-md text-white font-medium transition-colors duration-200 antialiased"
             style={{ backgroundColor: colors.accentGreen }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.backgroundColor = colors.deepGreen)
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.backgroundColor = colors.accentGreen)
-            }
+            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = colors.deepGreen)}
+            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = colors.accentGreen)}
             aria-label="Return to previous page"
           >
             <span className="mr-2">Back</span>
