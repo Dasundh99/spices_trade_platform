@@ -2,6 +2,12 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Lenis from "@studio-freight/lenis";
 import ExportNavigator from "../components/exportNav/exportNav";
+import Papaya from "../assets/Fruits/papaya.jpg"
+import Avacado from "../assets/Fruits/Avacado.png"
+import Watermelon from "../assets/Fruits/Watermelon.png"
+import Lime from "../assets/Fruits/Lime.png"
+import KingCoconut from "../assets/Fruits/KingCoconut.png"
+import Soursop from "../assets/Fruits/Soursop.png"
 
 // Refined Greenish Color Palette
 const colors = {
@@ -39,32 +45,32 @@ const galleryImages = [
     describe: "Jackfruit, a large tropical fruit from Sri Lanka, offers a unique blend of sweet and savory flavors. Its versatile nature makes it ideal for both sweet dishes like desserts and savory meals such as curries. Rich in fiber, vitamins, and antioxidants, it’s a nutritious and flavorful fruit choice."
   },
   {
-    src: "",
+    src: Papaya,
     caption: "Papaya",
     describe:""
   },
   {
-    src: "",
+    src: Avacado,
     caption: "Avacado",
     describe:""
   },
   {
-    src: "",
-    caption: "Water Melon",
+    src: Watermelon,
+    caption: "Watermelon",
     describe:""
   },
   {
-    src: "",
+    src: Lime,
     caption: "Lime",
     describe:""
   },
   {
-    src: "",
+    src: KingCoconut,
     caption: "King Coconut",
     describe:""
   },  
   {
-    src: "",
+    src: Soursop,
     caption: "Soursop",
     describe:""
   },  
