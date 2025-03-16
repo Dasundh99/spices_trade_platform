@@ -53,10 +53,10 @@ const galleryImages = [
 const Spices: React.FC = () => {
   const navigate = useNavigate();
 
-  // Scroll to top on mount
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // // Scroll to top on mount
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   // Initialize Lenis for smooth scrolling
   useEffect(() => {
@@ -80,6 +80,12 @@ const Spices: React.FC = () => {
       state: { image },
     });
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 500); 
+  }, []);
 
   return (
     <section

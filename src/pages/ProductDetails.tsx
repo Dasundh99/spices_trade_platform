@@ -30,9 +30,9 @@ const ProductDetails: React.FC = () => {
   const [imageDimensions, setImageDimensions] = useState<{ width: number; height: number } | null>(null);
 
   // Scroll to top on component mount
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // }, []);
 
   // Debug image data (optional, can be removed in production)
   useEffect(() => {
@@ -83,6 +83,12 @@ const ProductDetails: React.FC = () => {
       height: img.naturalHeight,
     });
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 500); 
+  }, []);
 
   return (
     <div
