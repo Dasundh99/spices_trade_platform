@@ -53,12 +53,12 @@ const ExportSection = () => {
                 paddingTop: '6rem', // Add padding to prevent content from being cut off
             }}
         >
-            <div className="container mx-auto px-4 text-center">
-                <h2 className="text-4xl md:text-6xl text-green-700 font-Semibold tracking-wide opacity-40">
+            <div className="container mx-auto px-2 text-center">
+                <h2 className="text-4xl md:text-6xl text-black font-Semibold tracking-wide opacity-60">
                     Our Global Clients
                 </h2>
-                <p className="text-lg sm:text-lg md:text-xl text-green-700 opacity-40 mb-4 pt-4">
-                    Delivering the local finest worldwide.
+                <p className="text-lg sm:text-lg md:text-xl text-black opacity-40 mb-4 pt-2">
+                    Exporting the local finest worldwide.
                 </p>
             </div>
 

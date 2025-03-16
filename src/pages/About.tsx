@@ -1,17 +1,17 @@
 import React from "react";
 import { FaCheckCircle, FaHandshake, FaShieldAlt } from "react-icons/fa"; // Importing Icons
-import aboutImage from "../assets/irene-kredenets-AWMWcR3hQUg-unsplash.jpg";
+// import aboutImage from "../assets/irene-kredenets-AWMWcR3hQUg-unsplash.jpg";
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="w-full bg-green-100 font-lato ">
+    <section id="about" className="w-full bg-gray-200 font-lato ">
       {/* Main Content Wrapper */}
       <div className="container mx-auto px-6 p-10 pt-10 md:pt-20 lg:pt-20 md:px-6 lg:px-8 flex flex-col md:flex-row gap-14">
         {/* Left Side: Text Content */}
         <div className="w-full space-y-5">
           {/* Separate Title Section */}
           <div className="w-full flex justify-center pb-4">
-            <h2 className="text-4xl md:text-6xl text-green-700 tracking-wide font-Semibold opacity-40 lg:pt-15 pt-5">
+            <h2 className="text-4xl md:text-6xl text-black tracking-wide font-Semibold opacity-60 lg:pt-9 pt-5">
               About Us
             </h2>
           </div>
@@ -37,26 +37,26 @@ const About: React.FC = () => {
           <div className="flex justify-center md:justify-center gap-12 pt-10">
             {/* Quality Icon */}
             <div className="flex flex-col items-center">
-              <FaCheckCircle className="text-gray-400 text-4xl" />
-              <span className="text-gray-400 opacity-90 text-sm font-semibold pt-2">Quality</span>
+              <FaCheckCircle className="text-green-600 opacity-60 text-4xl" />
+              <span className="text-green-600 opacity-60 text-sm font-semibold pt-2">Quality</span>
             </div>
 
             {/* Reliability Icon */}
             <div className="flex flex-col items-center">
-              <FaHandshake className="text-gray-400 text-4xl" />
-              <span className="text-gray-400 text-sm font-semibold pt-2">Reliability</span>
+              <FaHandshake className="text-green-600 opacity-60 text-4xl" />
+              <span className="text-green-600 opacity-60 text-sm font-semibold pt-2">Reliability</span>
             </div>
 
             {/* Integrity Icon */}
             <div className="flex flex-col items-center">
-              <FaShieldAlt className="text-gray-400 text-4xl " />
-              <span className="text-gray-400 text-sm font-semibold pt-2">Integrity</span>
+              <FaShieldAlt className="text-green-600 opacity-60 text-4xl " />
+              <span className="text-green-600 opacity-60 text-sm font-semibold pt-2">Integrity</span>
             </div>
           </div>
         </div>
 
         {/* Right Side: Image with 1:1 Aspect Ratio */}
-        <div className="w-full md:w-3/4 flex justify-center pt-10">
+        {/* <div className="w-full md:w-3/4 flex justify-center pt-10">
           <div className="w-full max-w-screen-md aspect-square overflow-hidden">
             <img
               src={aboutImage}
@@ -64,7 +64,7 @@ const About: React.FC = () => {
               className="w-full h-full object-cover transform transition duration-300 hover:scale-105 hover:contrast-110"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

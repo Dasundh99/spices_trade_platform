@@ -70,7 +70,7 @@ const Exports: React.FC = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <header className="text-center mb-12">
-          <h2 className="text-4xl md:text-6xl text-green-700 font-Semibold tracking-wide opacity-40">
+          <h2 className="text-4xl md:text-6xl text-black font-Semibold tracking-wide opacity-60">
             Exports
           </h2>
         </header>

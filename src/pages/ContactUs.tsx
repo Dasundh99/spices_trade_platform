@@ -19,21 +19,21 @@ const ContactUs: React.FC = () => {
   ];
 
   const inputStyles = "w-full mt-1 p-2 bg-green-50 text-gray-800 border border-green-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition duration-200";
-  const sectionStyles = "py-8 px-4 sm:px-6 lg:px-8 bg-green-100 font-lato ";
+  const sectionStyles = "py-8 px-4 sm:px-6 lg:px-8 bg-gray-200 font-lato ";
 
   return (
     <section id="contact" className={sectionStyles}>
       <div className="max-w-7xl mx-auto lg:pt-20 md:pt-15  sm:pt-10 pt-5">
         {/* Header */}
-        <div className="text-center mb-6">
-          <h1 className="text-4xl md:text-6xl text-green-700 tracking-wide font-Semibold opacity-40">
+        {/* <div className="text-center mb-6">
+          <h1 className="text-4xl md:text-6xl text-black tracking-wide font-Semibold opacity-60">
            Contact us
           </h1>
-        </div>
+        </div> */}
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 ">
           {/* Contact Information Section */}
-          <div className="bg-green-50 p-6">
+          <div className="bg-white p-6">
             <h2 className="text-xl font-semibold text-green-600 mb-4">
               Contact Information
             </h2>
@@ -69,7 +69,7 @@ const ContactUs: React.FC = () => {
           </div>
 
           {/* Contact Form Section */}
-          <div className="bg-green-50 p-6">
+          <div className="bg-white p-6">
             <h2 className="text-xl font-semibold text-green-600 mb-4">
               Send Us a Message
             </h2>

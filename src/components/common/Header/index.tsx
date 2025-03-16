@@ -93,6 +93,7 @@ const Header = () => {
     };
 
     const headerStyles = getHeaderStyles();
+    
 
     return (
         <header
