@@ -91,7 +91,7 @@ const Spices: React.FC = () => {
         <ExportNavigator />
 
         {/* Section Title */}
-        <h2
+        {/* <h2
           className="
             text-3xl 
             md:text-4xl 
@@ -105,7 +105,7 @@ const Spices: React.FC = () => {
           style={{ color: colors.deepGreen }}
         >
           Spices and Oils
-        </h2>
+        </h2> */}
 
         {/* Gallery Grid */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
