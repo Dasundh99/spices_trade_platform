@@ -74,57 +74,42 @@ const Tea: React.FC = () => {
         </h2> */}
 
         {/* Gallery Grid */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+        {/* Gallery Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {galleryImages.map((image, index) => (
             <div
               key={index}
               className="
-                break-inside-avoid 
-                relative 
-                overflow-hidden 
-                rounded-lg 
-                shadow-sm 
-                cursor-pointer
-                bg-white
-              "
+        relative 
+        overflow-hidden 
+        rounded-lg 
+        shadow-sm 
+        cursor-pointer
+        bg-white
+      "
               onClick={() => handleClick(image)}
             >
               <img
                 src={image.src}
                 alt={image.caption}
                 loading="lazy"
-                className="
-                  w-full 
-                  h-72 
-                  object-cover
-                "
+                className="w-full h-56 object-cover aspect-[4/3]"
               />
-              {/* Updated caption container - now flows under image */}
               <div
-                className="
-                  p-4 
-                  text-center
-                "
+                className="p-4 text-center"
                 style={{
                   backgroundColor: colors.sageGreen,
                   color: colors.deepGreen,
                 }}
               >
-                <p
-                  className="
-                    text-base 
-                    font-medium 
-                    font-sans 
-                    tracking-wide 
-                    antialiased
-                  "
-                >
+                <p className="text-base font-medium font-sans tracking-wide antialiased">
                   {image.caption}
                 </p>
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
