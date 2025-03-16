@@ -68,7 +68,7 @@ const ExportSection = () => {
                         ref={mapRef}
                         src={WorldMap}
                         alt="World Map"
-                        className="w-full h-full object-contain opacity-60 rounded-lg shadow-lg bg-gray-100"
+                        className="w-full h-full object-contain rounded-lg shadow-lg bg-white"
                     />
                     {baseExportLocations.map((location, index) => {
                         const { x, y } = getResponsiveCoordinates(
