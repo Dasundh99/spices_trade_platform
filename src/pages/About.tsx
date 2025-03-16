@@ -5,7 +5,9 @@ import { FaCheckCircle, FaHandshake, FaShieldAlt } from "react-icons/fa"; // Imp
 const About: React.FC = () => {
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 500); 
   }, []);
 
   return (

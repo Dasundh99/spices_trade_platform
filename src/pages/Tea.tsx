@@ -37,15 +37,21 @@ const galleryImages = [
 const Tea: React.FC = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   const handleClick = (image: { src: string; caption: string; describe: string }) => {
     navigate(`/fruit/${image.caption.toLowerCase().replace(/\s+/g, "-")}`, {
       state: { image },
     });
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 500); 
+  }, []);
 
   return (
     <section
