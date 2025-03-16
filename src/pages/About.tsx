@@ -6,12 +6,12 @@ const About: React.FC = () => {
   return (
     <section id="about" className="w-full bg-green-100 font-lato ">
       {/* Main Content Wrapper */}
-      <div className="container mx-auto px-6 p-10 pt-20 md:px-6 lg:px-8 flex flex-col md:flex-row gap-14">
+      <div className="container mx-auto px-6 p-10 pt-10 md:pt-20 lg:pt-20 md:px-6 lg:px-8 flex flex-col md:flex-row gap-14">
         {/* Left Side: Text Content */}
         <div className="w-full space-y-5">
           {/* Separate Title Section */}
           <div className="w-full flex justify-center pb-4">
-            <h2 className="text-4xl md:text-6xl text-green-700 tracking-wide font-light opacity-40 lg:pt-15 pt-5">
+            <h2 className="text-4xl md:text-6xl text-green-700 tracking-wide font-Semibold opacity-40 lg:pt-15 pt-5">
               About Us
             </h2>
           </div>

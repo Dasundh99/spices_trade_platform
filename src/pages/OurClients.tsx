@@ -7,14 +7,6 @@ const ExportSection = () => {
     const [mapDimensions, setMapDimensions] = useState({ width: 0, height: 0 });
     const mapRef = useRef<HTMLImageElement>(null);
 
-    // const countries = [
-    //     'India',
-    //     'Brazil',
-    //     'Australia',
-    //     'United States',
-    //     'China',
-    // ];
-
     const baseExportLocations = [
         { name: 'Brazil', location: 'Rio de Janeiro', coordinates: { x: 40, y: 76 } },
         { name: 'India', location: 'Mumbai', coordinates: { x: 61, y: 62 } },
@@ -50,21 +42,22 @@ const ExportSection = () => {
         };
     };
 
-    // const handleCountryChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    //     setSelectedCountry(e.target.value);
-    // };
-
-    // const handleSeeServicesClick = () => {
-    //     alert('Redirecting to Services page!');
-    // };
-
     return (
-        <section id="clients" className="bg-gray-200 py-10 overflow-hidden font-lato shadow-lg rounded-lg">
+        <section 
+            id="clients" 
+            className="bg-gray-200 py-10 overflow-hidden font-lato relative"
+            style={{
+                borderTopLeftRadius: '50% 10%',
+                borderTopRightRadius: '50% 10%',
+                marginTop: '-2rem', // Adjust this value to control how much it overlaps the previous section
+                paddingTop: '6rem', // Add padding to prevent content from being cut off
+            }}
+        >
             <div className="container mx-auto px-4 text-center">
-                <h2 className="text-5xl md:text-6xl text-green-600 tracking-wide font-light opacity-60 mb-4">
+                <h2 className="text-4xl md:text-6xl text-green-700 font-Semibold tracking-wide opacity-40">
                     Our Global Clients
                 </h2>
-                <p className="text-lg sm:text-lg md:text-xl text-green-700 opacity-40 mb-4">
+                <p className="text-lg sm:text-lg md:text-xl text-green-700 opacity-40 mb-4 pt-4">
                     Delivering the local finest worldwide.
                 </p>
             </div>

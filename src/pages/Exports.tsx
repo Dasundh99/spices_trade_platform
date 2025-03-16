@@ -65,12 +65,12 @@ const Exports: React.FC = () => {
   return (
     <section
       id="exports"
-      className="min-h-[60vh] py-8 bg-gray-50 overflow-hidden font-lato"
+      className="min-h-[60vh] py-8 bg-white overflow-hidden font-lato"
       aria-label="Product Exports Section"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <header className="text-center mb-12">
-          <h2 className="text-4xl md:text-6xl text-green-700 tracking-wide font-light opacity-40">
+          <h2 className="text-4xl md:text-6xl text-green-700 font-Semibold tracking-wide opacity-40">
             Exports
           </h2>
         </header>

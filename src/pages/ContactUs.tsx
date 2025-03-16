@@ -26,7 +26,7 @@ const ContactUs: React.FC = () => {
       <div className="max-w-7xl mx-auto lg:pt-20 md:pt-15  sm:pt-10 pt-5">
         {/* Header */}
         <div className="text-center mb-6">
-          <h1 className="text-4xl md:text-6xl text-green-700 tracking-wide font-light opacity-40">
+          <h1 className="text-4xl md:text-6xl text-green-700 tracking-wide font-Semibold opacity-40">
            Contact us
           </h1>
         </div>
