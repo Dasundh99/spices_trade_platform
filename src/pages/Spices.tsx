@@ -16,32 +16,32 @@ const galleryImages = [
   {
     src: "https://images.unsplash.com/photo-1587131782738-de30ea91a542?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     caption: "Cinnamon",
-    describe: "Cinnamon sticks and powder, a staple in Sri Lankan cuisine.",
+    describe: "Cinnamon, derived from the inner bark of Cinnamomum trees, is a fragrant spice widely used in Sri Lankan cuisine. Its warm, sweet aroma enhances both savory and dessert dishes. Known for its anti-inflammatory properties, it is also used in traditional medicine and herbal remedies for various health benefits.",
   },
   {
     src: "https://img.freepik.com/premium-photo/black-pepper-white-background-generative-ai_186938-6068.jpg",
-    caption: "Black pepper",
-    describe: "Black pepper, known as the King of Spices, is a pungent and aromatic spice derived from the dried fruit of the *Piper nigrum* plant. It is widely used in Sri Lankan cuisine to add heat and flavor to dishes.",
+    caption: "Black Pepper",
+    describe: "Black pepper, often called the 'King of Spices,' comes from the dried berries of the Piper nigrum plant. It adds pungency and depth to Sri Lankan dishes. Rich in antioxidants, it boosts digestion and metabolism, making it both a flavorful and medicinally significant spice in South Asian cooking.",
   },
   {
     src: "https://images.unsplash.com/photo-1615485500834-bc10199bc727?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     caption: "Turmeric",
-    describe: "Turmeric, a vibrant yellow spice, is derived from the root of the *Curcuma longa* plant. It is commonly used in Sri Lankan cuisine for its earthy flavor and numerous health benefits, including anti-inflammatory properties.",
+    describe: "Turmeric, a bright yellow spice, is derived from the root of 'Curcuma longa'. It is a key ingredient in Sri Lankan cooking, known for its earthy taste and vibrant color. Packed with curcumin, it has powerful anti-inflammatory and antioxidant properties, making it both a culinary and medicinal staple.",
   },
   {
     src: "https://th.bing.com/th/id/R.750ee80645d877fc8b79a1d5d663744b?rik=8uXbmwxw1Hiu4A&pid=ImgRaw&r=0",
     caption: "Garlic",
-    describe: "Garlic, a pungent and flavorful bulb, is commonly used in Sri Lankan cooking to add depth and aroma to dishes. It is known for its strong, distinctive taste and is also valued for its health benefits, such as boosting immunity and promoting heart health.",
+    describe: "Garlic, a pungent bulb, is essential in Sri Lankan cuisine. Its bold flavor enhances curries, stir-fries, and meat dishes. Beyond its culinary uses, garlic is renowned for its medicinal properties, including boosting immunity, improving heart health, and reducing blood pressure, making it a vital ingredient in traditional remedies.",
   },
   {
     src: "https://th.bing.com/th/id/R.bd4e32bdff9b40b81fcc5fd83a00643b?rik=S%2bOkRu1aU5rLzg&riu=http%3a%2f%2fphotos.demandstudios.com%2fgetty%2farticle%2f197%2f220%2f502011542.jpg&ehk=XDm4Fwddt35MDMvAUKSIFnjb2XOI6trbU%2fbIUVa%2fOgg%3d&risl=&pid=ImgRaw&r=0",
     caption: "Ginger",
-    describe: "Ginger, a fragrant and spicy root, is widely used in Sri Lankan cuisine for its zesty flavor and medicinal properties. It adds warmth and depth to dishes and is known for its ability to aid digestion and reduce inflammation.",
+    describe: "Ginger, a spicy and aromatic root, is a common ingredient in Sri Lankan cooking. It adds warmth and zest to dishes, teas, and herbal infusions. Known for its digestive benefits, anti-inflammatory properties, and ability to relieve nausea, it is both a flavorful and medicinally significant spice.",
   },
   {
     src: "https://www.shutterstock.com/image-photo/coconut-oil-fruits-cut-half-600nw-1910657323.jpg",
-    caption: "Coconut oil",
-    describe: "Coconut oil, extracted from the flesh of mature coconuts, is a staple in Sri Lankan cooking and skincare. It has a rich, slightly sweet flavor and is known for its health benefits, including promoting heart health and providing antimicrobial properties.",
+    caption: "Coconut Oil",
+    describe: "Coconut oil, extracted from mature coconut flesh, is a cornerstone of Sri Lankan cuisine. It enhances the richness of curries and fried dishes. Known for its antimicrobial properties and healthy fats, it supports heart health, nourishes skin and hair, and serves as a natural remedy in Ayurvedic practices.",
   },
 ];
 

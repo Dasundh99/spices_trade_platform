@@ -16,32 +16,32 @@ const galleryImages = [
   {
     src: "https://th.bing.com/th/id/OIP.idI9tA8BPoMDS0KQl-sGVgHaHa?rs=1&pid=ImgDetMain",
     caption: "Snake Gourd",
-    describe: "Snake gourd is a tropical or subtropical vine that climbs by tendrils. It is a popular vegetable in Sri Lanka, and other Asian countries.",
+    describe: "Snake gourd is a long, slender vegetable that thrives in tropical climates. It has a mild flavor and is commonly used in curries, stir-fries, and soups. Rich in fiber and nutrients, it supports digestion and overall health. In Sri Lanka, it's a staple in many traditional dishes.",
   },
   {
     src: "https://th.bing.com/th/id/OIP.ALoBN_l46Cp_6062xtq-1gHaHa?rs=1&pid=ImgDetMain",
     caption: "Pumpkin",
-    describe: "Pumpkin is a popular vegetable in Sri Lanka, and other Asian countries.",
+    describe: "Pumpkin is a nutrient-rich vegetable with a sweet, earthy taste. Used in both savory and sweet dishes, it is packed with vitamins A and C. Popular in Sri Lanka, it's often added to curries, soups, and even desserts for its soft texture and natural sweetness.",
   },
   {
     src: "https://th.bing.com/th/id/OIP.p7yWDaLd0NizIA1OhETqIQHaHa?rs=1&pid=ImgDetMain",
     caption: "Ash Plantain",
-    describe: "Ash plantain is a popular vegetable in Sri Lanka, and other Asian countries.",
+    describe: "Ash plantain is a starchy vegetable similar to bananas but less sweet. It is widely used in Sri Lankan cuisine, often boiled, fried, or added to curries. High in fiber and potassium, it supports digestion and provides energy, making it a favorite in traditional dishes.",
   },
   {
     src: "https://th.bing.com/th/id/OIP.Dn71JX0hAl91J6x7U53uPwHaHa?rs=1&pid=ImgDetMain",
     caption: "Brinjal",
-    describe: "Brinjal is a popular vegetable in Sri Lanka, and other Asian countries.",
+    describe: "Brinjal, also known as eggplant, is a versatile vegetable used in a variety of dishes. It absorbs flavors well, making it ideal for curries, stir-fries, and even grilled preparations. Rich in antioxidants and fiber, it is beneficial for heart health and digestion, making it a staple in Sri Lankan cooking.",
   },
   {
     src: "https://objectstorage.ap-mumbai-1.oraclecloud.com/n/softlogicbicloud/b/cdn/o/products/310057--01--1555692319.jpeg",
     caption: "Bitter Gourd",
-    describe: "Bitter Gourd is a popular vegetable in Sri Lanka, and other Asian countries.",
+    describe: "Bitter gourd has a distinct bitter taste but is highly valued for its medicinal properties. Used in curries, stir-fries, and even juices, it helps regulate blood sugar levels and boosts immunity. In Sri Lanka, it is a common ingredient in traditional Ayurvedic recipes for its numerous health benefits.",
   },
   {
     src: "https://th.bing.com/th/id/OIP.lgvsHCd01EhuP_0cA_WlLwHaFj?rs=1&pid=ImgDetMain",
-    caption: "cabbage",
-    describe: "Cabbage is a popular vegetable in Sri Lanka, and other Asian countries.",
+    caption: "Cabbage",
+    describe: "Cabbage is a leafy vegetable that is widely used in Sri Lankan and global cuisine. It can be eaten raw in salads, stir-fried, or added to soups and curries. Packed with vitamins C and K, it promotes overall health and digestion while adding a crisp texture to dishes.",
   },
 ];
 

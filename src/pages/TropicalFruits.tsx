@@ -13,36 +13,36 @@ const colors = {
 
 // Gallery data
 const galleryImages = [
-    {
-      src: "https://th.bing.com/th/id/OIP.75mnHF5lab6Y0iCVfQN0hwHaHa?rs=1&pid=ImgDetMain",
-      caption: "Mango",
-      describe: "Premium mango varieties from Sri Lanka's tropical regions.",
-    },
-    {
-      src: "https://getfreshswansea.co.uk/wp-content/uploads/2020/07/pineapple.jpg",
-      caption: "Pineapple",
-      describe: "Sweet and juicy pineapples from Sri Lanka's plantations.",
-    },
-    {
-      src: "https://static.vecteezy.com/system/resources/previews/029/228/582/large_2x/rambutan-transparent-background-free-png.png",
-      caption: "Rambutan",
-      describe: "Exotic rambutan with sweet, juicy flesh from Sri Lanka.",
-    },
-    {
-      src: "https://th.bing.com/th/id/OIP.AtddZh1gwIOxJ1gdMkis_QHaHa?rs=1&pid=ImgDetMain",
-      caption: "Banana",
-      describe: "Unique wood apples with a distinctive tangy flavor.",
-    },
-    {
-      src: "https://www.luluhypermarket.com/cdn-cgi/image/f=auto/medias/1187972-01.jpg-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxOTAzNjV8aW1hZ2UvanBlZ3xhVzFoWjJWekwyaGtNUzlvWXpJdk9URTJNVGt3TURjMU1qa3lOaTVxY0djfGQxN2I1OGE2YzA5NTI4MTI4NGVmZDNlMzMwMDlmYTc5NzNiN2U2MjRmZGRhMWE3OTZiOWJkMmFmNGU2YmFkZjE",
-      caption: "Mangosteen",
-      describe: "Delicious mangosteen, the queen of tropical fruits.",
-    },
-    {
-      src: "https://th.bing.com/th/id/OIP.A3itxGJ9fFwkmplVS_2X0gHaHa?rs=1&pid=ImgDetMain",
-      caption: "Jackfruit",
-      describe: "Versatile jackfruit varieties from Sri Lanka's tropics.",
-    }
+  {
+    src: "https://th.bing.com/th/id/OIP.75mnHF5lab6Y0iCVfQN0hwHaHa?rs=1&pid=ImgDetMain",
+    caption: "Mango",
+    describe: "A tropical delight, mangoes from Sri Lanka are rich in flavor, offering a perfect balance of sweetness and tanginess. Enjoyed fresh or in smoothies, desserts, and savory dishes, Sri Lankan mangoes are known for their juicy and tender texture, making them a favorite among fruit lovers."
+  },
+  {
+    src: "https://getfreshswansea.co.uk/wp-content/uploads/2020/07/pineapple.jpg",
+    caption: "Pineapple",
+    describe: "Known for its vibrant yellow flesh and sweet-tart flavor, Sri Lankan pineapples are prized for their intense sweetness and juiciness. These tropical fruits are perfect for refreshing fruit salads, desserts, and tropical beverages, and they also add a delightful zing to savory dishes and grilled recipes."
+  },
+  {
+    src: "https://static.vecteezy.com/system/resources/previews/029/228/582/large_2x/rambutan-transparent-background-free-png.png",
+    caption: "Rambutan",
+    describe: "Rambutan is an exotic fruit native to Sri Lanka, with a hairy exterior and a juicy, sweet interior. Its unique texture and taste make it a fun and delicious snack. The fruit is packed with vitamins and antioxidants, making it a healthy and refreshing treat for any occasion."
+  },
+  {
+    src: "https://th.bing.com/th/id/OIP.AtddZh1gwIOxJ1gdMkis_QHaHa?rs=1&pid=ImgDetMain",
+    caption: "Banana",
+    describe: "Bananas from Sri Lanka are creamy and naturally sweet, making them a versatile fruit. Whether eaten raw, added to smoothies, or used in baking, Sri Lankan bananas offer a rich flavor and nutritional benefits. Their perfect ripeness makes them a convenient snack for any time of the day."
+  },
+  {
+    src: "https://www.luluhypermarket.com/cdn-cgi/image/f=auto/medias/1187972-01.jpg-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxOTAzNjV8aW1hZ2UvanBlZ3xhVzFoWjJWekwyaGtNUzlvWXpJdk9URTJNVGt3TURjMU1qa3lOaTVxY0djfGQxN2I1OGE2YzA5NTI4MTI4NGVmZDNlMzMwMDlmYTc5NzNiN2U2MjRmZGRhMWE3OTZiOWJkMmFmNGU2YmFkZjE",
+    caption: "Mangosteen",
+    describe: "Known as the 'queen of fruits,' mangosteen is a small, round fruit with a tough purple rind and a sweet, juicy interior. Native to Sri Lanka, this tropical gem is beloved for its delicate flavor, offering a balance of sweetness and tanginess. Its unique taste is a treat for fruit lovers."
+  },
+  {
+    src: "https://th.bing.com/th/id/OIP.A3itxGJ9fFwkmplVS_2X0gHaHa?rs=1&pid=ImgDetMain",
+    caption: "Jackfruit",
+    describe: "Jackfruit, a large tropical fruit from Sri Lanka, offers a unique blend of sweet and savory flavors. Its versatile nature makes it ideal for both sweet dishes like desserts and savory meals such as curries. Rich in fiber, vitamins, and antioxidants, it’s a nutritious and flavorful fruit choice."
+  }
 ];
 /**
  * TropicalFruits Component
