@@ -14,32 +14,32 @@ const colors = {
 // Gallery data
 const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1623497718131-46ace0d4d707?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "https://th.bing.com/th/id/OIP.75mnHF5lab6Y0iCVfQN0hwHaHa?rs=1&pid=ImgDetMain",
       caption: "Mango",
       describe: "Premium mango varieties from Sri Lanka's tropical regions.",
     },
     {
-      src: "https://images.unsplash.com/photo-1572859704906-ab0716da285f?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "https://getfreshswansea.co.uk/wp-content/uploads/2020/07/pineapple.jpg",
       caption: "Pineapple",
       describe: "Sweet and juicy pineapples from Sri Lanka's plantations.",
     },
     {
-      src: "https://images.unsplash.com/photo-1609123079242-086695c6ff09?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "https://static.vecteezy.com/system/resources/previews/029/228/582/large_2x/rambutan-transparent-background-free-png.png",
       caption: "Rambutan",
       describe: "Exotic rambutan with sweet, juicy flesh from Sri Lanka.",
     },
     {
-      src: "https://images.unsplash.com/photo-1543218024-57a70143c369?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "https://th.bing.com/th/id/OIP.AtddZh1gwIOxJ1gdMkis_QHaHa?rs=1&pid=ImgDetMain",
       caption: "Banana",
       describe: "Unique wood apples with a distinctive tangy flavor.",
     },
     {
-      src: "https://images.unsplash.com/photo-1627998398537-0cbff2cee742?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "https://www.luluhypermarket.com/cdn-cgi/image/f=auto/medias/1187972-01.jpg-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxOTAzNjV8aW1hZ2UvanBlZ3xhVzFoWjJWekwyaGtNUzlvWXpJdk9URTJNVGt3TURjMU1qa3lOaTVxY0djfGQxN2I1OGE2YzA5NTI4MTI4NGVmZDNlMzMwMDlmYTc5NzNiN2U2MjRmZGRhMWE3OTZiOWJkMmFmNGU2YmFkZjE",
       caption: "Mangosteen",
       describe: "Delicious mangosteen, the queen of tropical fruits.",
     },
     {
-      src: "https://images.unsplash.com/photo-1596626233681-39f5eb87d501?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "https://th.bing.com/th/id/OIP.A3itxGJ9fFwkmplVS_2X0gHaHa?rs=1&pid=ImgDetMain",
       caption: "Jackfruit",
       describe: "Versatile jackfruit varieties from Sri Lanka's tropics.",
     }
@@ -132,12 +132,9 @@ const TropicalFruits: React.FC = () => {
                   object-cover
                 "
               />
+              {/* Updated caption container - now flows under image */}
               <div
                 className="
-                  absolute 
-                  bottom-0 
-                  left-0 
-                  right-0 
                   p-4 
                   text-center
                 "

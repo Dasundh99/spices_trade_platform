@@ -13,12 +13,12 @@ const colors = {
 // Gallery data - Reduced to 3 items for one row
 const galleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1617191880520-c6a69e04fa75?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "https://th.bing.com/th/id/R.cbed108695d917265dbea07bc609dde8?rik=B9IMhWwrl8q44A&riu=http%3a%2f%2fdetoxdiy.com%2fwp-content%2fuploads%2f2017%2f03%2foolong-tea.jpg&ehk=tECHXfnFTUYBa4afQtu3n9bO0gNPqg1OXxUaQWvGDzY%3d&risl=&pid=ImgRaw&r=0",
     caption: "Black Tea",
     describe: "Black tea, a popular beverage in Sri Lanka, is made from fully oxidized tea leaves, giving it a robust flavor and dark color. It is often enjoyed with milk and sugar and is known for its rich aroma, antioxidant properties, and energizing effects.",
   },
   {
-    src: "https://manorhousedental.com/wp-content/uploads/2023/04/leaf-plate-wood-object-healthy-eating.jpg",
+    src: "https://st2.depositphotos.com/2309415/5354/i/450/depositphotos_53541807-stock-photo-green-tea-with-lemon-isolated.jpg",
     caption: "Green Tea",
     describe: "Green tea, made from unoxidized tea leaves, has a light, refreshing taste and is known for its health benefits, including antioxidants and improved metabolism. In Sri Lanka, it is often enjoyed as a soothing beverage, promoting relaxation and wellness.",
   },
@@ -73,12 +73,13 @@ const Tea: React.FC = () => {
           Tea
         </h2>
 
-        {/* Gallery Grid - Changed to single row with 3 elements */}
-        <div className="grid grid-cols-3 gap-6">
+        {/* Gallery Grid */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
           {galleryImages.map((image, index) => (
             <div
               key={index}
               className="
+                break-inside-avoid 
                 relative 
                 overflow-hidden 
                 rounded-lg 
@@ -98,12 +99,9 @@ const Tea: React.FC = () => {
                   object-cover
                 "
               />
+              {/* Updated caption container - now flows under image */}
               <div
                 className="
-                  absolute 
-                  bottom-0 
-                  left-0 
-                  right-0 
                   p-4 
                   text-center
                 "
