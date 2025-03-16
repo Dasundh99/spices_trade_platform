@@ -45,7 +45,7 @@ const ExportSection = () => {
     return (
         <section 
             id="clients" 
-            className="bg-gray-200 py-10 overflow-hidden font-lato relative"
+            className="bg-gray-200 pt-10 overflow-hidden font-lato relative"
             style={{
                 borderTopLeftRadius: '50% 10%',
                 borderTopRightRadius: '50% 10%',
@@ -138,22 +138,22 @@ const ExportSection = () => {
             </div>
 
             <div className="container mx-auto px-4 text-center mt-8">
-                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto mb-8">
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 max-w-4xl mx-auto mb-8">
                     <div className="flex flex-col items-center">
-                        <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-green-500 mb-2">+2</div>
-                        <p className="text-gray-600 text-sm sm:text-base">Awards</p>
+                        <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-green-500 mb-2">+2</div>
+                        <p className="text-gray-600 text-xs sm:text-base">Awards</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-green-500 mb-2">+190</div>
-                        <p className="text-gray-600 text-sm sm:text-base">Case Studies</p>
+                        <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-green-500 mb-2">+190</div>
+                        <p className="text-gray-600 text-xs sm:text-base">Case Studies</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-green-500 mb-2">+147</div>
-                        <p className="text-gray-600 text-sm sm:text-base">Customers</p>
+                        <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-green-500 mb-2">+147</div>
+                        <p className="text-gray-600 text-xs sm:text-base">Customers</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-green-500 mb-2">3</div>
-                        <p className="text-gray-600 text-sm sm:text-base">Offices</p>
+                        <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-green-500 mb-2">3</div>
+                        <p className="text-gray-600 text-xs sm:text-base">Offices</p>
                     </div>
                 </div>
             </div>
