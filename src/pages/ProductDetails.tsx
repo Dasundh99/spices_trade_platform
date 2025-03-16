@@ -90,7 +90,7 @@ const ProductDetails: React.FC = () => {
       style={{ backgroundColor: colors.mutedGreen }}
     >
       {/* Main Container */}
-      <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 pt-20">
+      <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 lg:pt-20 md:pt-15 pt-10">
         {/* Product Card with fixed size */}
         <div className="bg-white rounded-lg shadow-sm overflow-hidden w-full h-[600px] lg:h-[400px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full">
@@ -125,7 +125,7 @@ const ProductDetails: React.FC = () => {
             </div>
 
             {/* Details Section */}
-            <div className="p-6 flex flex-col justify-center space-y-4 h-full">
+            <div className="px-6 flex flex-col justify-center space-y-4 h-full">
               <h2
                 className="text-2xl md:text-3xl font-semibold leading-tight tracking-tight antialiased"
                 style={{ color: "black" }}
