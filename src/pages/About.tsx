@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaCheckCircle, FaHandshake, FaShieldAlt } from "react-icons/fa"; // Importing Icons
 // import aboutImage from "../assets/irene-kredenets-AWMWcR3hQUg-unsplash.jpg";
 
 const About: React.FC = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section id="about" className="w-full bg-gray-200 font-lato ">
       {/* Main Content Wrapper */}
