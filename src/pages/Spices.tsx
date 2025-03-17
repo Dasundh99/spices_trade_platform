@@ -101,7 +101,7 @@ const Spices: React.FC = () => {
 
   // Handle navigation to fruit detail page
   const handleClick = (image: { src: string; caption: string; describe: string }) => {
-    navigate(`/fruit/${image.caption.toLowerCase().replace(/\s+/g, "-")}`, {
+    navigate(`/spices/${image.caption.toLowerCase().replace(/\s+/g, "-")}`, {
       state: { image },
     });
   };

@@ -6,7 +6,6 @@ import Papaya from "../assets/Fruits/papaya.jpg"
 import Avacado from "../assets/Fruits/Avacado.png"
 import Watermelon from "../assets/Fruits/Watermelon.png"
 import Lime from "../assets/Fruits/Lime.png"
-import KingCoconut from "../assets/Fruits/KingCoconut.png"
 import Soursop from "../assets/Fruits/Soursop.png"
 
 // Refined Greenish Color Palette
@@ -64,11 +63,6 @@ const galleryImages = [
     caption: "Lime",
     describe:""
   },
-  {
-    src: KingCoconut,
-    caption: "King Coconut",
-    describe:""
-  },  
   {
     src: Soursop,
     caption: "Soursop",

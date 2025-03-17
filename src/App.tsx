@@ -12,6 +12,7 @@ import Footer from './components/layout/Footer';
 import TropicalFruits from './pages/TropicalFruits';
 import TropicalVegetables from './pages/TropicalVegetables';
 import Spices from './pages/Spices';
+import Coconut from './pages/Coconut';
 import Tea from './pages/Tea';
 import ProductDetails from './pages/ProductDetails';
 import Header from './components/common/Header';
@@ -58,7 +59,12 @@ function App() {
         <Route path='/vegetables' element={<TropicalVegetables />} />
         <Route path='/spices' element={<Spices />} />
         <Route path='/tea' element={<Tea />} />
+        <Route path='/coconut' element={<Coconut/>}/>
         <Route path="/fruit/:name" Component={ProductDetails} />
+        <Route path="/vegetable/:name" Component={ProductDetails} />
+        <Route path="/spices/:name" Component={ProductDetails} />
+        <Route path="/tea/:name" Component={ProductDetails} />
+        <Route path="/coconut/:name" Component={ProductDetails} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import {
+  FaEnvelope,
   // FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
@@ -12,7 +13,7 @@ const ContactUs: React.FC = () => {
 
   const contactInfo = [
     { icon: <FaMapMarkerAlt className="text-green-600 text-lg" />, label: "Address", value: "38/18, Sri Bimbarama Road, Kolamunna, Piliyandala, Sri Lanka." },
-    // { icon: <FaPhone className="text-green-600 text-lg" />, label: "Phone", value: "+94 123456789" },
+    { icon: <FaEnvelope className="text-green-600 text-lg" />, label: "Email", value: "gsgreenlanka.com" },
   ];
 
   const formFields = [

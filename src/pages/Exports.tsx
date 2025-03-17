@@ -6,6 +6,7 @@ import img1 from "../assets/fruit.jpg";
 import img2 from "../assets/vegetable.jpg";
 import img3 from "../assets/spices.jpg";
 import img4 from "../assets/tea.jpg";
+import img5 from "../assets/KingCoconut.png";
 
 // Define TypeScript interface for image items
 interface ExportItem {
@@ -21,6 +22,7 @@ const exportItems: ExportItem[] = [
   { id: 2, src: img2, text: "Tropical Vegetables", path: "/vegetables" },
   { id: 3, src: img3, text: "Spices and Oils", path: "/spices" },
   { id: 4, src: img4, text: "Tea", path: "/tea" },
+  { id: 5, src: img5, text: "Coconut", path: "/coconut" },
 ];
 
 // Reusable Card Component
@@ -68,7 +70,7 @@ const Exports: React.FC = () => {
       className="min-h-[60vh] py-8 bg-white overflow-hidden font-lato"
       aria-label="Product Exports Section"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
         <header className="text-center mb-12">
           <h2 className="text-4xl md:text-6xl text-black font-Semibold tracking-wide opacity-60">
             Exports

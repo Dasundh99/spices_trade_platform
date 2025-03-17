@@ -83,7 +83,7 @@ const TropicalVegetables: React.FC = () => {
 
   // Handle navigation to fruit detail page
   const handleClick = (image: { src: string; caption: string; describe: string }) => {
-    navigate(`/fruit/${image.caption.toLowerCase().replace(/\s+/g, "-")}`, {
+    navigate(`/vegetable/${image.caption.toLowerCase().replace(/\s+/g, "-")}`, {
       state: { image },
     });
   };

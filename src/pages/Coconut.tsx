@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ExportNavigator from "../components/exportNav/exportNav";
+import KingCoconut from "../assets/Coconut/KingCoconut.png"
 
 // Refined Greenish Color Palette
 const colors = {
@@ -13,15 +14,11 @@ const colors = {
 // Gallery data - Reduced to 3 items for one row
 const galleryImages = [
   {
-    src: "https://th.bing.com/th/id/R.cbed108695d917265dbea07bc609dde8?rik=B9IMhWwrl8q44A&riu=http%3a%2f%2fdetoxdiy.com%2fwp-content%2fuploads%2f2017%2f03%2foolong-tea.jpg&ehk=tECHXfnFTUYBa4afQtu3n9bO0gNPqg1OXxUaQWvGDzY%3d&risl=&pid=ImgRaw&r=0",
-    caption: "Black Tea",
-    describe: "Black tea, a popular beverage in Sri Lanka, is made from fully oxidized tea leaves, giving it a robust flavor and dark color. It is often enjoyed with milk and sugar and is known for its rich aroma, antioxidant properties, and energizing effects.",
+    src: KingCoconut,
+    caption: "King Coconut",
+    describe: "",
   },
-  {
-    src: "https://st2.depositphotos.com/2309415/5354/i/450/depositphotos_53541807-stock-photo-green-tea-with-lemon-isolated.jpg",
-    caption: "Green Tea",
-    describe: "Green tea, made from unoxidized tea leaves, has a light, refreshing taste and is known for its health benefits, including antioxidants and improved metabolism. In Sri Lanka, it is often enjoyed as a soothing beverage, promoting relaxation and wellness.",
-  },
+  
   // {
   //   src: "https://images.unsplash.com/photo-1620036924477-c3d6e9ce36fc?w=600&auto=format&fit=crop",
   //   caption: "Sweet Bananas",
@@ -34,7 +31,7 @@ const galleryImages = [
  * A professional gallery of tropical fruits with smooth scrolling
  * @returns {JSX.Element} Tropical fruits section
  */
-const Tea: React.FC = () => {
+const Coconut: React.FC = () => {
   const navigate = useNavigate();
 
   // useEffect(() => {
@@ -42,7 +39,7 @@ const Tea: React.FC = () => {
   // }, []);
 
   const handleClick = (image: { src: string; caption: string; describe: string }) => {
-    navigate(`/tea/${image.caption.toLowerCase().replace(/\s+/g, "-")}`, {
+    navigate(`/coconut/${image.caption.toLowerCase().replace(/\s+/g, "-")}`, {
       state: { image },
     });
   };
@@ -55,7 +52,7 @@ const Tea: React.FC = () => {
 
   return (
     <section
-      id="tropical"
+      id="coconut"
       className="min-h-screen lg:pt-20 md:pt-15 pt-10 pb-16 overflow-hidden font-lato"
       style={{ backgroundColor: colors.mutedGreen }}
     >
@@ -128,4 +125,4 @@ const Tea: React.FC = () => {
   );
 };
 
-export default Tea;
+export default Coconut;
