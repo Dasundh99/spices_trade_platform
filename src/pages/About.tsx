@@ -3,15 +3,14 @@ import { FaCheckCircle, FaHandshake, FaShieldAlt } from "react-icons/fa"; // Imp
 // import aboutImage from "../assets/irene-kredenets-AWMWcR3hQUg-unsplash.jpg";
 
 const About: React.FC = () => {
-
   useEffect(() => {
     setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 500); 
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 500);
   }, []);
 
   return (
-    <section id="about" className="w-full bg-gray-200 font-lato ">
+    <section id="about" className="w-full bg-green-100 font-lato ">
       {/* Main Content Wrapper */}
       <div className="container mx-auto px-6 p-10 pt-10 md:pt-20 lg:pt-20 md:px-6 lg:px-8 flex flex-col md:flex-row gap-14">
         {/* Left Side: Text Content */}
@@ -27,13 +26,13 @@ const About: React.FC = () => {
               <span className="font-semibold text-gray-700">GSGreen</span>, a Sri Lankan company, connects rural farmers’ produce to global markets while preserving traditional agriculture.
             </p>
             <p className="text-sm sm:text-sm text-gray-600 leading-relaxed">
-              We ensure high-quality, sustainable exports by fostering trust with farmers and clients.
+            Generations of farming roots have transformed into the organized cultivation of tropical fruits, vegetables, and spices over the past few years, further expanding into the processing and exporting of Ceylon-origin fruits, vegetables, spices, tea, and coconut products. We ensure high-quality, sustainable exports by fostering trust with farmers and clients.
             </p>
             <p className="text-sm sm:text-sm text-gray-600 leading-relaxed">
-              Sri Lanka’s diverse landscape enables year-round cultivation, giving us a competitive edge globally.
+            Sri Lanka’s diverse landscape enables year-round cultivation, giving us a competitive edge globally. Our hearts are always with the sweat and tears of the small-scale farmer community across the country, generating high value for their products.
             </p>
             <p className="text-sm sm:text-sm text-gray-600 leading-relaxed">
-              At GSGreen, we prioritize quality, reliability, and integrity in every step.
+            At GSGreen, we prioritize quality, reliability, and integrity in every step, ensuring trust in all that we do.
             </p>
           </div>
 

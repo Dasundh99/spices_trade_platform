@@ -2,6 +2,11 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Lenis from "@studio-freight/lenis";
 import ExportNavigator from "../components/exportNav/exportNav";
+import Clove from "../assets/Spices/Clove.png"
+import Mace from "../assets/Spices/Mace.png"
+import Cardamom from "../assets/Spices/Cardamon.png"
+import CurryLeaves from "../assets/Spices/CurryLeaves.png"
+import Turmeric from "../assets/Spices/Turmeric.png"
 
 // Refined Greenish Color Palette
 const colors = {
@@ -24,7 +29,7 @@ const galleryImages = [
     describe: "Black pepper, often called the 'King of Spices,' comes from the dried berries of the Piper nigrum plant. It adds pungency and depth to Sri Lankan dishes. Rich in antioxidants, it boosts digestion and metabolism, making it both a flavorful and medicinally significant spice in South Asian cooking.",
   },
   {
-    src: "https://images.unsplash.com/photo-1615485500834-bc10199bc727?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: Turmeric,
     caption: "Turmeric",
     describe: "Turmeric, a bright yellow spice, is derived from the root of 'Curcuma longa'. It is a key ingredient in Sri Lankan cooking, known for its earthy taste and vibrant color. Packed with curcumin, it has powerful anti-inflammatory and antioxidant properties, making it both a culinary and medicinal staple.",
   },
@@ -43,6 +48,26 @@ const galleryImages = [
     caption: "Coconut Oil",
     describe: "Coconut oil, extracted from mature coconut flesh, is a cornerstone of Sri Lankan cuisine. It enhances the richness of curries and fried dishes. Known for its antimicrobial properties and healthy fats, it supports heart health, nourishes skin and hair, and serves as a natural remedy in Ayurvedic practices.",
   },
+  {
+    src: Clove,
+    caption: "Clove",
+    describe: ""
+  },
+  {
+    src: Mace,
+    caption: "Mace",
+    describe: ""
+  },
+  {
+    src: Cardamom,
+    caption: "Cardamom",
+    describe: ""
+  },
+  {
+    src: CurryLeaves,
+    caption: "Curry Leaves ",
+    describe: ""
+  }
 ];
 
 /**
@@ -76,7 +101,7 @@ const Spices: React.FC = () => {
 
   // Handle navigation to fruit detail page
   const handleClick = (image: { src: string; caption: string; describe: string }) => {
-    navigate(`/fruit/${image.caption.toLowerCase().replace(/\s+/g, "-")}`, {
+    navigate(`/spices/${image.caption.toLowerCase().replace(/\s+/g, "-")}`, {
       state: { image },
     });
   };
@@ -84,7 +109,7 @@ const Spices: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 500); 
+    }, 500);
   }, []);
 
   return (
@@ -115,11 +140,11 @@ const Spices: React.FC = () => {
 
         {/* Gallery Grid */}
         {/* Gallery Grid */}
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-  {galleryImages.map((image, index) => (
-    <div
-      key={index}
-      className="
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {galleryImages.map((image, index) => (
+            <div
+              key={index}
+              className="
         relative 
         overflow-hidden 
         rounded-lg 
@@ -127,36 +152,34 @@ const Spices: React.FC = () => {
         cursor-pointer
         bg-white
       "
-      onClick={() => handleClick(image)}
-    >
-      <img
-        src={image.src}
-        alt={image.caption}
-        loading="lazy"
-        className="
+              onClick={() => handleClick(image)}
+            >
+              <img
+                src={image.src}
+                alt={image.caption}
+                loading="lazy"
+                className="
           w-full 
           h-auto 
           aspect-[4/3]  /* Maintains aspect ratio */
           sm:aspect-[4/3] 
           lg:aspect-[4/3]
         "
-      />
-      <div
-        className="p-4 text-center"
-        style={{
-          backgroundColor: colors.sageGreen,
-          color: colors.deepGreen,
-        }}
-      >
-        <p className="text-base font-medium font-sans tracking-wide antialiased">
-          {image.caption}
-        </p>
-      </div>
-    </div>
-  ))}
-</div>
-
-
+              />
+              <div
+                className="p-4 text-center"
+                style={{
+                  backgroundColor: colors.sageGreen,
+                  color: colors.deepGreen,
+                }}
+              >
+                <p className="text-base font-medium font-sans tracking-wide antialiased">
+                  {image.caption}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

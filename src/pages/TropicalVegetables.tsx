@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Lenis from "@studio-freight/lenis";
 import ExportNavigator from "../components/exportNav/exportNav";
+import SweetPotato from "../assets/Vegetables/SweetPotato.png"
+import GreenChili from "../assets/Vegetables/GreenChili.png"
 
 // Refined Greenish Color Palette
 const colors = {
@@ -37,11 +39,16 @@ const galleryImages = [
     src: "https://objectstorage.ap-mumbai-1.oraclecloud.com/n/softlogicbicloud/b/cdn/o/products/310057--01--1555692319.jpeg",
     caption: "Bitter Gourd",
     describe: "Bitter gourd has a distinct bitter taste but is highly valued for its medicinal properties. Used in curries, stir-fries, and even juices, it helps regulate blood sugar levels and boosts immunity. In Sri Lanka, it is a common ingredient in traditional Ayurvedic recipes for its numerous health benefits.",
-  },
+  },  
   {
-    src: "https://th.bing.com/th/id/OIP.lgvsHCd01EhuP_0cA_WlLwHaFj?rs=1&pid=ImgDetMain",
-    caption: "Cabbage",
-    describe: "Cabbage is a leafy vegetable that is widely used in Sri Lankan and global cuisine. It can be eaten raw in salads, stir-fried, or added to soups and curries. Packed with vitamins C and K, it promotes overall health and digestion while adding a crisp texture to dishes.",
+    src: SweetPotato,
+    caption: "Sweet Potato",
+    describe:""
+  },  
+  {
+    src: GreenChili,
+    caption: "Green Chili",
+    describe:""
   },
 ];
 
@@ -76,7 +83,7 @@ const TropicalVegetables: React.FC = () => {
 
   // Handle navigation to fruit detail page
   const handleClick = (image: { src: string; caption: string; describe: string }) => {
-    navigate(`/fruit/${image.caption.toLowerCase().replace(/\s+/g, "-")}`, {
+    navigate(`/vegetable/${image.caption.toLowerCase().replace(/\s+/g, "-")}`, {
       state: { image },
     });
   };

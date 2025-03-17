@@ -5,6 +5,7 @@ const navItems = [
   { path: "/vegetables", label: "Vegetables" },
   { path: "/spices", label: "Spices and Oil" },
   { path: "/tea", label: "Tea" },
+  {path: "/coconut", label: "Coconut"}
 ];
 
 const colors = {
@@ -23,7 +24,7 @@ const ExportNavigator = () => {
         className="backdrop-blur-lg shadow-xxl p-2 rounded-xl mb-10"
         style={{ backgroundColor: colors.mutedGreen }}
       >
-        <ul className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <ul className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path;
             return (

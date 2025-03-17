@@ -1,14 +1,19 @@
 import React, { useEffect } from "react";
 import {
-  FaPhone,
+  FaEnvelope,
+  // FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
 
 const ContactUs: React.FC = () => {
 
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
   const contactInfo = [
-    { icon: <FaMapMarkerAlt className="text-green-600 text-lg" />, label: "Address", value: "123/2B, Colombo, Sri Lanka" },
-    { icon: <FaPhone className="text-green-600 text-lg" />, label: "Phone", value: "+94 123456789" },
+    { icon: <FaMapMarkerAlt className="text-green-600 text-lg" />, label: "Address", value: "38/18, Sri Bimbarama Road, Kolamunna, Piliyandala, Sri Lanka." },
+    { icon: <FaEnvelope className="text-green-600 text-lg" />, label: "Email", value: "gsgreenlanka.com" },
   ];
 
   const formFields = [
@@ -20,13 +25,7 @@ const ContactUs: React.FC = () => {
   ];
 
   const inputStyles = "w-full mt-1 p-2 bg-green-50 text-gray-800 border border-green-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition duration-200";
-  const sectionStyles = "py-8 px-4 sm:px-6 lg:px-8 bg-gray-200 font-lato ";
-
-  useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 500); 
-  }, []);
+  const sectionStyles = "py-8 px-4 sm:px-6 lg:px-8 bg-green-100 font-lato ";
 
   return (
     <section id="contact" className={sectionStyles}>
@@ -66,10 +65,10 @@ const ContactUs: React.FC = () => {
               <div className="w-full h-64 rounded-lg overflow-hidden shadow-md border border-gray-200">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.9029385418665!2d79.8589286142747!3d6.902200620228745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259631bffffff%3A0x4e0f1d5e4ebfc28!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1631122323013!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.7752716458463!2d79.92102677464689!3d6.797173993200171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae24ff467a8727f%3A0x513c2390b30f19a6!2s38%2C%2018%20Sri%20Bimbarama%20Road%2C%20Piliyandala!5e0!3m2!1sen!2slk!4v1742161053883!5m2!1sen!2slk"
                   allowFullScreen
                   loading="lazy"
-                  title="GS Green Lanka Location"
+                  title="GS Green Lanka (Pvt) Ltd"
                 />
               </div>
             </div>

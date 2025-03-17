@@ -1,18 +1,16 @@
 import { useState, useEffect, useRef } from 'react';
-import WorldMap from '../assets/AdobeStock_564546034.png';
+import WorldMap from '../assets/AdobeStock_660856837.png';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 
 const ExportSection = () => {
-    const [selectedCountry] = useState('India');
     const [hoveredLocation, setHoveredLocation] = useState<string | null>(null);
     const [mapDimensions, setMapDimensions] = useState({ width: 0, height: 0 });
     const mapRef = useRef<HTMLImageElement>(null);
 
     const baseExportLocations = [
-        { name: 'Brazil', location: 'Rio de Janeiro', coordinates: { x: 40, y: 76 } },
-        { name: 'India', location: 'Mumbai', coordinates: { x: 61, y: 62 } },
-        { name: 'Australia', location: 'Sydney', coordinates: { x: 75, y: 80 } },
-        { name: 'United States', location: 'New York', coordinates: { x: 35, y: 52 } },
-        { name: 'China', location: 'Shanghai', coordinates: { x: 73, y: 47 } },
+        { name: 'Maldives', coordinates: { x: 62.1, y: 58.5 } },
+        { name: 'India', coordinates: { x: 63, y: 49 } },
+        { name: 'Germany', coordinates: { x: 48, y: 35 } },
     ];
 
     useEffect(() => {
@@ -45,16 +43,16 @@ const ExportSection = () => {
     return (
         <section 
             id="clients" 
-            className="bg-gray-200 pt-10 overflow-hidden font-lato relative"
+            className="bg-green-100 pt-10 overflow-hidden font-lato relative"
             style={{
                 borderTopLeftRadius: '50% 10%',
                 borderTopRightRadius: '50% 10%',
-                marginTop: '1rem', // Adjust this value to control how much it overlaps the previous section
-                paddingTop: '4rem', // Add padding to prevent content from being cut off
+                marginTop: '1rem',
+                paddingTop: '4rem',
             }}
         >
             <div className="container mx-auto px-2 text-center">
-                <h2 className="text-4xl md:text-6xl text-black font-Semibold tracking-wide opacity-60">
+                <h2 className="text-4xl md:text-6xl text-black font-Semibold tracking-wide opacity-60 font-lato">
                     Our Global Clients
                 </h2>
                 <p className="text-lg sm:text-lg md:text-xl text-black opacity-40 mb-4 pt-2 pb-4">
@@ -62,13 +60,13 @@ const ExportSection = () => {
                 </p>
             </div>
 
-            <div className="relative container mx-auto px-4">
+            <div className="relative container mx-auto px-4 pb-10">
                 <div className="relative w-full max-w-[1200px] mx-auto aspect-[2/1]">
                     <img
                         ref={mapRef}
                         src={WorldMap}
                         alt="World Map"
-                        className="w-full h-full object-contain rounded-lg shadow-lg bg-white"
+                        className="w-full h-full object-contain rounded-lg shadow-lg bg-green-300"
                     />
                     {baseExportLocations.map((location, index) => {
                         const { x, y } = getResponsiveCoordinates(
@@ -87,14 +85,16 @@ const ExportSection = () => {
                                 onMouseEnter={() => setHoveredLocation(location.name)}
                                 onMouseLeave={() => setHoveredLocation(null)}
                             >
-                                <div className="w-3 sm:w-4 md:w-5 h-3 sm:h-4 md:h-5 bg-green-500 rounded-full animate-pulse transition-transform duration-300 group-hover:scale-125"></div>
+                                <FaMapMarkerAlt 
+                                    className="w-5 sm:w-6 md:w-9 h-5 sm:h-6 md:h-9 text-white animate-bounce transition-transform duration-200 group-hover:scale-125 z-10" 
+                                />
 
                                 {hoveredLocation === location.name && (
                                     <div
-                                        className="absolute top-[-60px] left-1/2 transform -translate-x-1/2 
+                                        className="absolute left-full top-1/2 transform -translate-y-1/2 ml-2
                                         bg-white p-3 rounded-lg shadow-lg border-l-4 border-green-500
                                         flex items-center space-x-2 transition-all duration-300 
-                                        opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 text-sm"
+                                        opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 text-sm z-20"
                                     >
                                         <svg
                                             className="w-5 h-5 text-green-500"
@@ -118,42 +118,33 @@ const ExportSection = () => {
                                         <div className="text-gray-800">
                                             <span className="font-bold">{location.name}</span>
                                             <br />
-                                            {location.location}
                                         </div>
-                                    </div>
-                                )}
-
-                                {selectedCountry === location.name && !hoveredLocation && (
-                                    <div
-                                        className="absolute top-[-60px] left-1/2 transform -translate-x-1/2 
-                                        bg-white p-3 rounded shadow-md text-sm text-gray-800"
-                                    >
-                                        {location.name} <br /> {location.location}
                                     </div>
                                 )}
                             </div>
                         );
                     })}
-                </div>
-            </div>
-
-            <div className="container mx-auto px-4 text-center mt-8">
-                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 max-w-4xl mx-auto mb-8">
-                    <div className="flex flex-col items-center">
-                        <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-green-500 mb-2">+2</div>
-                        <p className="text-gray-600 text-xs sm:text-base">Awards</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-green-500 mb-2">+190</div>
-                        <p className="text-gray-600 text-xs sm:text-base">Case Studies</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-green-500 mb-2">+147</div>
-                        <p className="text-gray-600 text-xs sm:text-base">Customers</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-green-500 mb-2">3</div>
-                        <p className="text-gray-600 text-xs sm:text-base">Offices</p>
+                    {/* Responsive Legend */}
+                    <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 bg-white p-2 sm:p-3 rounded-lg shadow-lg border-t-2 sm:border-t-4 border-green-500 w-24 sm:w-auto max-w-[40%] sm:max-w-none">
+                        <h3 className="text-xs sm:text-sm font-bold text-gray-800 mb-1 sm:mb-2">Clients</h3>
+                        <div className="flex flex-col space-y-1 sm:space-y-2">
+                            <div className="flex items-center space-x-1 sm:space-x-2">
+                                <FaMapMarkerAlt className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-green-500 rounded-full p-0.5" />
+                                <span className="text-[8px] sm:text-xs text-gray-700">Locations</span>
+                            </div>
+                            <div className="flex items-center space-x-1 sm:space-x-2">
+                                <FaMapMarkerAlt className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-green-500 rounded-full p-0.5" />
+                                <span className="text-[8px] sm:text-xs text-gray-700">Maldives</span>
+                            </div>
+                            <div className="flex items-center space-x-1 sm:space-x-2">
+                                <FaMapMarkerAlt className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-green-500 rounded-full p-0.5" />
+                                <span className="text-[8px] sm:text-xs text-gray-700">India</span>
+                            </div>
+                            <div className="flex items-center space-x-1 sm:space-x-2">
+                                <FaMapMarkerAlt className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-green-500 rounded-full p-0.5" />
+                                <span className="text-[8px] sm:text-xs text-gray-700">Germany</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
