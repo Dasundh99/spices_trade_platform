@@ -6,8 +6,9 @@ import SweetPotato from "../assets/Vegetables/SweetPotato.png"
 import GreenChili from "../assets/Vegetables/GreenChili.png"
 import SnakeGoard from "../assets/Vegetables/SnakeGourd.png"
 import Pumpkin from "../assets/Vegetables/Pumpkin.png"
-// import Ash from "../assets/Vegetables/Ash.png"
+import Ash from "../assets/Vegetables/Ash.png"
 import Brinjol from "../assets/Vegetables/Brinjol.png"
+import Bitter from "../assets/Vegetables/Bitter.png"
 
 // Refined Greenish Color Palette
 const colors = {
@@ -29,18 +30,18 @@ const galleryImages = [
     caption: "Pumpkin",
     describe: "Pumpkin is a nutrient-rich vegetable with a sweet, earthy taste. Used in both savory and sweet dishes, it is packed with vitamins A and C. Popular in Sri Lanka, it's often added to curries, soups, and even desserts for its soft texture and natural sweetness.",
   },
-  // {
-  //   src: Ash,
-  //   caption: "Ash Plantain",
-  //   describe: "Ash plantain is a starchy vegetable similar to bananas but less sweet. It is widely used in Sri Lankan cuisine, often boiled, fried, or added to curries. High in fiber and potassium, it supports digestion and provides energy, making it a favorite in traditional dishes.",
-  // },
+  {
+    src: Ash,
+    caption: "Ash Plantain",
+    describe: "Ash plantain is a starchy vegetable similar to bananas but less sweet. It is widely used in Sri Lankan cuisine, often boiled, fried, or added to curries. High in fiber and potassium, it supports digestion and provides energy, making it a favorite in traditional dishes.",
+  },
   {
     src: Brinjol,
     caption: "Brinjal",
     describe: "Brinjal, also known as eggplant, is a versatile vegetable used in a variety of dishes. It absorbs flavors well, making it ideal for curries, stir-fries, and even grilled preparations. Rich in antioxidants and fiber, it is beneficial for heart health and digestion, making it a staple in Sri Lankan cooking.",
   },
   {
-    src: "https://objectstorage.ap-mumbai-1.oraclecloud.com/n/softlogicbicloud/b/cdn/o/products/310057--01--1555692319.jpeg",
+    src: Bitter,
     caption: "Bitter Gourd",
     describe: "Bitter gourd has a distinct bitter taste but is highly valued for its medicinal properties. Used in curries, stir-fries, and even juices, it helps regulate blood sugar levels and boosts immunity. In Sri Lanka, it is a common ingredient in traditional Ayurvedic recipes for its numerous health benefits.",
   },  
