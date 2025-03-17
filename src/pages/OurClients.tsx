@@ -52,7 +52,7 @@ const ExportSection = () => {
             }}
         >
             <div className="container mx-auto px-2 text-center">
-                <h2 className="text-4xl md:text-6xl text-black font-Semibold tracking-wide opacity-60">
+                <h2 className="text-4xl md:text-6xl text-black font-Semibold tracking-wide opacity-60 font-lato">
                     Our Global Clients
                 </h2>
                 <p className="text-lg sm:text-lg md:text-xl text-black opacity-40 mb-4 pt-2 pb-4">
@@ -124,6 +124,28 @@ const ExportSection = () => {
                             </div>
                         );
                     })}
+                    {/* Responsive Legend */}
+                    <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 bg-white p-2 sm:p-3 rounded-lg shadow-lg border-t-2 sm:border-t-4 border-green-500 w-24 sm:w-auto max-w-[40%] sm:max-w-none">
+                        <h3 className="text-xs sm:text-sm font-bold text-gray-800 mb-1 sm:mb-2">Clients</h3>
+                        <div className="flex flex-col space-y-1 sm:space-y-2">
+                            <div className="flex items-center space-x-1 sm:space-x-2">
+                                <FaMapMarkerAlt className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-green-500 rounded-full p-0.5" />
+                                <span className="text-[8px] sm:text-xs text-gray-700">Locations</span>
+                            </div>
+                            <div className="flex items-center space-x-1 sm:space-x-2">
+                                <FaMapMarkerAlt className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-green-500 rounded-full p-0.5" />
+                                <span className="text-[8px] sm:text-xs text-gray-700">Maldives</span>
+                            </div>
+                            <div className="flex items-center space-x-1 sm:space-x-2">
+                                <FaMapMarkerAlt className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-green-500 rounded-full p-0.5" />
+                                <span className="text-[8px] sm:text-xs text-gray-700">India</span>
+                            </div>
+                            <div className="flex items-center space-x-1 sm:space-x-2">
+                                <FaMapMarkerAlt className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-green-500 rounded-full p-0.5" />
+                                <span className="text-[8px] sm:text-xs text-gray-700">Germany</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
