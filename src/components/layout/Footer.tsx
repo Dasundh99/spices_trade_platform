@@ -20,13 +20,13 @@ const Footer = () => {
                   Simply about what you do!
                 </p> */}
                 <div className="mt-4 text-xs space-y-2">
-                  <p className="flex items-center text-[10px]">
-                    <FaMapMarkerAlt className="mr-2 text-xs" />
+                  <p className="flex items-center text-[10px] hover:text-gray-300 text-gray-400">
+                    <FaMapMarkerAlt className="mr-2 text-xs hover:text-gray-300 text-gray-400" />
                     38/18, Sri Bimbarama Road, Kolamunna, Piliyandala.
                   </p>
                   
-                  <p className="flex items-center text-[10px]">
-                    <FaEnvelope className="mr-2 text-xs" />
+                  <p className="flex items-center text-[10px] hover:text-gray-300 text-gray-400">
+                    <FaEnvelope className="mr-2 text-xs hover:text-gray-300 text-gray-400" />
                     gsgreenlanka.com
                   </p>
                 </div>
