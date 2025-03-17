@@ -130,10 +130,6 @@ const ExportSection = () => {
                         <div className="flex flex-col space-y-1 sm:space-y-2">
                             <div className="flex items-center space-x-1 sm:space-x-2">
                                 <FaMapMarkerAlt className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-green-500 rounded-full p-0.5" />
-                                <span className="text-[8px] sm:text-xs text-gray-700">Locations</span>
-                            </div>
-                            <div className="flex items-center space-x-1 sm:space-x-2">
-                                <FaMapMarkerAlt className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-green-500 rounded-full p-0.5" />
                                 <span className="text-[8px] sm:text-xs text-gray-700">Maldives</span>
                             </div>
                             <div className="flex items-center space-x-1 sm:space-x-2">
