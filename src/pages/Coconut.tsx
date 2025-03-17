@@ -77,7 +77,6 @@ const Coconut: React.FC = () => {
         </h2> */}
 
         {/* Gallery Grid */}
-        {/* Gallery Grid */}
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
   {galleryImages.map((image, index) => (
     <div
@@ -99,9 +98,10 @@ const Coconut: React.FC = () => {
         className="
           w-full 
           h-auto 
-          aspect-[4/3]  /* Maintains aspect ratio */
-          sm:aspect-[4/3] 
-          lg:aspect-[4/3]
+          aspect-[4/4]  /* Changed from 4/3 to 4/4 for slightly taller cards */
+          sm:aspect-[4/4] 
+          lg:aspect-[4/4]
+          object-cover  /* Ensures the image fills the space nicely */
         "
       />
       <div

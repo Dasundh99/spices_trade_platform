@@ -139,12 +139,11 @@ const Spices: React.FC = () => {
         </h2> */}
 
         {/* Gallery Grid */}
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {galleryImages.map((image, index) => (
-            <div
-              key={index}
-              className="
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  {galleryImages.map((image, index) => (
+    <div
+      key={index}
+      className="
         relative 
         overflow-hidden 
         rounded-lg 
@@ -152,34 +151,35 @@ const Spices: React.FC = () => {
         cursor-pointer
         bg-white
       "
-              onClick={() => handleClick(image)}
-            >
-              <img
-                src={image.src}
-                alt={image.caption}
-                loading="lazy"
-                className="
+      onClick={() => handleClick(image)}
+    >
+      <img
+        src={image.src}
+        alt={image.caption}
+        loading="lazy"
+        className="
           w-full 
           h-auto 
-          aspect-[4/3]  /* Maintains aspect ratio */
-          sm:aspect-[4/3] 
-          lg:aspect-[4/3]
+          aspect-[4/4]  /* Changed from 4/3 to 4/4 for slightly taller cards */
+          sm:aspect-[4/4] 
+          lg:aspect-[4/4]
+          object-cover  /* Ensures the image fills the space nicely */
         "
-              />
-              <div
-                className="p-4 text-center"
-                style={{
-                  backgroundColor: colors.sageGreen,
-                  color: colors.deepGreen,
-                }}
-              >
-                <p className="text-base font-medium font-sans tracking-wide antialiased">
-                  {image.caption}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+      />
+      <div
+        className="p-4 text-center"
+        style={{
+          backgroundColor: colors.sageGreen,
+          color: colors.deepGreen,
+        }}
+      >
+        <p className="text-base font-medium font-sans tracking-wide antialiased">
+          {image.caption}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
       </div>
     </section>
   );

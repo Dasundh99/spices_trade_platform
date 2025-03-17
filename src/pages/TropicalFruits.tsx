@@ -2,11 +2,16 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Lenis from "@studio-freight/lenis";
 import ExportNavigator from "../components/exportNav/exportNav";
-import Papaya from "../assets/Fruits/papaya.jpg"
+import Papaya from "../assets/Fruits/Papaya.png";
 import Avacado from "../assets/Fruits/Avacado.png"
 import Watermelon from "../assets/Fruits/Watermelon.png"
 import Lime from "../assets/Fruits/Lime.png"
 import Soursop from "../assets/Fruits/Soursop.png"
+import Mango from "../assets/Fruits/Mango.png"
+import Pineapple from "../assets/Fruits/Pineapple.png"
+import Rambutan from "../assets/Fruits/Rambutan.png"
+import Banana from "../assets/Fruits/Banana.png"
+import JackFruit from "../assets/Fruits/JackFruit.png"
 
 // Refined Greenish Color Palette
 const colors = {
@@ -19,55 +24,55 @@ const colors = {
 // Gallery data
 const galleryImages = [
   {
-    src: "https://th.bing.com/th/id/OIP.75mnHF5lab6Y0iCVfQN0hwHaHa?rs=1&pid=ImgDetMain",
+    src: Mango,
     caption: "Mango",
     describe: "A tropical delight, mangoes from Sri Lanka are rich in flavor, offering a perfect balance of sweetness and tanginess. Enjoyed fresh or in smoothies, desserts, and savory dishes, Sri Lankan mangoes are known for their juicy and tender texture, making them a favorite among fruit lovers."
   },
   {
-    src: "https://getfreshswansea.co.uk/wp-content/uploads/2020/07/pineapple.jpg",
+    src: Pineapple,
     caption: "Pineapple",
     describe: "Known for its vibrant yellow flesh and sweet-tart flavor, Sri Lankan pineapples are prized for their intense sweetness and juiciness. These tropical fruits are perfect for refreshing fruit salads, desserts, and tropical beverages, and they also add a delightful zing to savory dishes and grilled recipes."
   },
   {
-    src: "https://static.vecteezy.com/system/resources/previews/029/228/582/large_2x/rambutan-transparent-background-free-png.png",
+    src: Rambutan,
     caption: "Rambutan",
     describe: "Rambutan is an exotic fruit native to Sri Lanka, with a hairy exterior and a juicy, sweet interior. Its unique texture and taste make it a fun and delicious snack. The fruit is packed with vitamins and antioxidants, making it a healthy and refreshing treat for any occasion."
   },
   {
-    src: "https://th.bing.com/th/id/OIP.AtddZh1gwIOxJ1gdMkis_QHaHa?rs=1&pid=ImgDetMain",
+    src: Banana,
     caption: "Banana",
     describe: "Bananas from Sri Lanka are creamy and naturally sweet, making them a versatile fruit. Whether eaten raw, added to smoothies, or used in baking, Sri Lankan bananas offer a rich flavor and nutritional benefits. Their perfect ripeness makes them a convenient snack for any time of the day."
   },
   {
-    src: "https://th.bing.com/th/id/OIP.A3itxGJ9fFwkmplVS_2X0gHaHa?rs=1&pid=ImgDetMain",
+    src: JackFruit,
     caption: "Jackfruit",
     describe: "Jackfruit, a large tropical fruit from Sri Lanka, offers a unique blend of sweet and savory flavors. Its versatile nature makes it ideal for both sweet dishes like desserts and savory meals such as curries. Rich in fiber, vitamins, and antioxidants, it’s a nutritious and flavorful fruit choice."
   },
   {
     src: Papaya,
     caption: "Papaya",
-    describe:""
+    describe: ""
   },
   {
     src: Avacado,
     caption: "Avacado",
-    describe:""
+    describe: ""
   },
   {
     src: Watermelon,
     caption: "Watermelon",
-    describe:""
+    describe: ""
   },
   {
     src: Lime,
     caption: "Lime",
-    describe:""
+    describe: ""
   },
   {
     src: Soursop,
     caption: "Soursop",
-    describe:""
-  },  
+    describe: ""
+  },
 
 ];
 /**
@@ -109,7 +114,7 @@ const TropicalFruits: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 500); 
+    }, 500);
   }, []);
 
   return (
@@ -140,11 +145,11 @@ const TropicalFruits: React.FC = () => {
 
         {/* Gallery Grid */}
         {/* Gallery Grid */}
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-  {galleryImages.map((image, index) => (
-    <div
-      key={index}
-      className="
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {galleryImages.map((image, index) => (
+            <div
+              key={index}
+              className="
         relative 
         overflow-hidden 
         rounded-lg 
@@ -152,34 +157,35 @@ const TropicalFruits: React.FC = () => {
         cursor-pointer
         bg-white
       "
-      onClick={() => handleClick(image)}
-    >
-      <img
-        src={image.src}
-        alt={image.caption}
-        loading="lazy"
-        className="
+              onClick={() => handleClick(image)}
+            >
+              <img
+                src={image.src}
+                alt={image.caption}
+                loading="lazy"
+                className="
           w-full 
           h-auto 
-          aspect-[4/3]  /* Maintains aspect ratio */
-          sm:aspect-[4/3] 
-          lg:aspect-[4/3]
+          aspect-[4/4]  /* Changed from 4/3 to 4/4 for slightly taller cards */
+          sm:aspect-[4/4] 
+          lg:aspect-[4/4]
+          object-cover  /* Ensures the image fills the space nicely */
         "
-      />
-      <div
-        className="p-4 text-center"
-        style={{
-          backgroundColor: colors.sageGreen,
-          color: colors.deepGreen,
-        }}
-      >
-        <p className="text-base font-medium font-sans tracking-wide antialiased">
-          {image.caption}
-        </p>
-      </div>
-    </div>
-  ))}
-</div>
+              />
+              <div
+                className="p-4 text-center"
+                style={{
+                  backgroundColor: colors.sageGreen,
+                  color: colors.deepGreen,
+                }}
+              >
+                <p className="text-base font-medium font-sans tracking-wide antialiased">
+                  {image.caption}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
 
 
       </div>
