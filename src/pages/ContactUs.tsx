@@ -29,7 +29,7 @@ const ContactUs: React.FC = () => {
 
   return (
     <section id="contact" className={sectionStyles}>
-      <div className="max-w-7xl mx-auto lg:pt-20 md:pt-15  sm:pt-10 pt-5">
+      <div className="max-w-7xl mx-auto lg:pt-18 md:pt-15  sm:pt-15 pt-12">
         {/* Header */}
         {/* <div className="text-center mb-6">
           <h1 className="text-4xl md:text-6xl text-black tracking-wide font-Semibold opacity-60">
