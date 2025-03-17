@@ -102,9 +102,10 @@ const Tea: React.FC = () => {
         className="
           w-full 
           h-auto 
-          aspect-[4/3]  /* Maintains aspect ratio */
-          sm:aspect-[4/3] 
-          lg:aspect-[4/3]
+          aspect-[4/4]  /* Changed from 4/3 to 4/4 for slightly taller cards */
+          sm:aspect-[4/4] 
+          lg:aspect-[4/4]
+          object-cover  /* Ensures the image fills the space nicely */
         "
       />
       <div
@@ -121,7 +122,6 @@ const Tea: React.FC = () => {
     </div>
   ))}
 </div>
-
 
       </div>
     </section>
