@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router-dom";
 
 // Image Imports (Consider converting to WebP for performance)
-import img1 from "../assets/fruit.jpg";
+import img1 from "../assets/fruit.png";
 import img2 from "../assets/vegetable.jpg";
 import img3 from "../assets/spices.jpg";
 import img4 from "../assets/tea.jpg";
