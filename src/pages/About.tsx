@@ -17,21 +17,21 @@ const About: React.FC = () => {
         <div className="w-full space-y-5">
           {/* Separate Title Section */}
           <div className="w-full flex justify-center pb-4">
-            <h2 className="text-4xl md:text-6xl text-black tracking-wide font-Semibold opacity-60 lg:pt-9 pt-5">
+            <h2 className="text-4xl md:text-6xl text-black tracking-wide font-Semibold  lg:pt-9 pt-5">
               About Us
             </h2>
           </div>
           <div className="w-full text-center space-y-2">
-            <p className="text-sm sm:text-sm text-gray-600 leading-relaxed">
-              <span className="font-semibold text-gray-700">GSGreen</span>, a Sri Lankan company, connects rural farmers’ produce to global markets while preserving traditional agriculture.
+            <p className="text-sm sm:text-sm text-black leading-relaxed opacity-80">
+              <span className="font-semibold text-green-600">GSGreen</span>, a Sri Lankan company, connects rural farmers’ produce to global markets while preserving traditional agriculture.
             </p>
-            <p className="text-sm sm:text-sm text-gray-600 leading-relaxed">
+            <p className="text-sm sm:text-sm text-black leading-relaxed opacity-80">
             Generations of farming roots have transformed into the organized cultivation of tropical fruits, vegetables, and spices over the past few years, further expanding into the processing and exporting of Ceylon-origin fruits, vegetables, spices, tea, and coconut products. We ensure high-quality, sustainable exports by fostering trust with farmers and clients.
             </p>
-            <p className="text-sm sm:text-sm text-gray-600 leading-relaxed">
+            <p className="text-sm sm:text-sm text-black leading-relaxed opacity-80">
             Sri Lanka’s diverse landscape enables year-round cultivation, giving us a competitive edge globally. Our hearts are always with the sweat and tears of the small-scale farmer community across the country, generating high value for their products.
             </p>
-            <p className="text-sm sm:text-sm text-gray-600 leading-relaxed">
+            <p className="text-sm sm:text-sm text-black leading-relaxed opacity-80">
             At GSGreen, we prioritize quality, reliability, and integrity in every step, ensuring trust in all that we do.
             </p>
           </div>

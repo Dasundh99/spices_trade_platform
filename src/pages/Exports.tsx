@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 // Image Imports (Consider converting to WebP for performance)
 import img1 from "../assets/fruit.png";
 import img2 from "../assets/vegetable.jpg";
-import img3 from "../assets/spices.jpg";
+import img3 from "../assets/spices.png";
 import img4 from "../assets/tea.jpg";
 import img5 from "../assets/KingCoconut.png";
 
@@ -72,7 +72,7 @@ const Exports: React.FC = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
         <header className="text-center mb-12">
-          <h2 className="text-4xl md:text-6xl text-black font-Semibold tracking-wide opacity-60">
+          <h2 className="text-4xl md:text-6xl text-black font-Semibold tracking-wide">
             Exports
           </h2>
         </header>

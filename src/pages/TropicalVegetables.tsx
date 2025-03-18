@@ -158,7 +158,7 @@ const TropicalVegetables: React.FC = () => {
         className="p-4 text-center"
         style={{
           backgroundColor: colors.sageGreen,
-          color: colors.deepGreen,
+          color: "black",
         }}
       >
         <p className="text-base font-medium font-sans tracking-wide antialiased">
