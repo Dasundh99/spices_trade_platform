@@ -52,7 +52,7 @@ const ExportSection = () => {
             }}
         >
             <div className="container mx-auto px-2 text-center">
-                <h2 className="text-4xl md:text-6xl text-black font-Semibold tracking-wide opacity-60 font-lato">
+                <h2 className="text-4xl md:text-6xl text-black font-Semibold tracking-wide font-lato">
                     Our Global Clients
                 </h2>
                 <p className="text-lg sm:text-lg md:text-xl text-black opacity-40 mb-4 pt-2 pb-4">

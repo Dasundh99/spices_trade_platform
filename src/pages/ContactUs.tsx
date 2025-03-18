@@ -40,7 +40,7 @@ const ContactUs: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 ">
           {/* Contact Information Section */}
           <div className="bg-white p-6">
-            <h2 className="text-xl font-semibold text-green-600 mb-4">
+            <h2 className="text-xl font-semibold text-black mb-4">
               Contact Information
             </h2>
             <div className="space-y-5">
@@ -50,8 +50,8 @@ const ContactUs: React.FC = () => {
                     {item.icon}
                   </div>
                   <div>
-                    <p className="block text-xs font-medium text-green-700 mb-1">{item.label}</p>
-                    <p className="text-[10px] text-gray-600 leading-relaxed">{item.value}</p>
+                    <p className="block text-xs font-medium text-black mb-1">{item.label}</p>
+                    <p className="text-[10px] text-black leading-relaxed">{item.value}</p>
                   </div>
                 </div>
               ))}
@@ -59,7 +59,7 @@ const ContactUs: React.FC = () => {
 
             {/* Google Maps */}
             <div className="mt-4">
-              <h3 className="text-xl font-semibold text-green-600 mb-4">
+              <h3 className="text-xl font-semibold text-black mb-4">
                 Our Location
               </h3>
               <div className="w-full h-64 rounded-lg overflow-hidden shadow-md border border-gray-200">
@@ -76,7 +76,7 @@ const ContactUs: React.FC = () => {
 
           {/* Contact Form Section */}
           <div className="bg-white p-6">
-            <h2 className="text-xl font-semibold text-green-600 mb-4">
+            <h2 className="text-xl font-semibold text-black mb-4">
               Send Us a Message
             </h2>
             <form action="#" method="POST" className="space-y-4">
@@ -85,7 +85,7 @@ const ContactUs: React.FC = () => {
                   <div key={field.id}>
                     <label
                       htmlFor={field.id}
-                      className="block text-xs font-medium text-green-700 mb-1"
+                      className="block text-xs font-medium text-black mb-1"
                     >
                       {field.label}
                       {field.required && <span className="text-red-500">*</span>}
@@ -105,7 +105,7 @@ const ContactUs: React.FC = () => {
                 <div key={field.id}>
                   <label
                     htmlFor={field.id}
-                    className="block text-xs font-medium text-green-700 mb-1"
+                    className="block text-xs font-medium text-black mb-1"
                   >
                     {field.label}
                     {field.required && <span className="text-red-500">*</span>}
