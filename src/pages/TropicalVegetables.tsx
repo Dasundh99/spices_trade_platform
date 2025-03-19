@@ -57,20 +57,9 @@ const galleryImages = [
   },
 ];
 
-/**
- * TropicalFruits Component
- * A professional gallery of tropical fruits with smooth scrolling
- * @returns {JSX.Element} Tropical fruits section
- */
-const TropicalVegetables: React.FC = () => {
+const TropicalVegetable: React.FC = () => {
   const navigate = useNavigate();
 
-  // // Scroll to top on mount
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
-
-  // Initialize Lenis for smooth scrolling
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -86,7 +75,6 @@ const TropicalVegetables: React.FC = () => {
     return () => lenis.destroy();
   }, []);
 
-  // Handle navigation to fruit detail page
   const handleClick = (image: { src: string; caption: string; describe: string }) => {
     navigate(`/vegetable/${image.caption.toLowerCase().replace(/\s+/g, "-")}`, {
       state: { image },
@@ -96,7 +84,7 @@ const TropicalVegetables: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 500); 
+    }, 500);
   }, []);
 
   return (
@@ -108,71 +96,71 @@ const TropicalVegetables: React.FC = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-20 mt-[40px]">
         <ExportNavigator />
 
-        {/* Section Title */}
-        {/* <h2
-          className="
-            text-3xl 
-            md:text-4xl 
-            font-semibold 
-            mb-12 
-            text-center 
-            tracking-tight 
-            font-sans 
-            antialiased
-          "
-          style={{ color: colors.deepGreen }}
-        >
-          Tropical vegetables
-        </h2> */}
-
-        {/* Gallery Grid */}
-        {/* Gallery Grid */}
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-  {galleryImages.map((image, index) => (
-    <div
-      key={index}
-      className="
-        relative 
-        overflow-hidden 
-        rounded-lg 
-        shadow-sm 
-        cursor-pointer
-        bg-white
-      "
-      onClick={() => handleClick(image)}
-    >
-      <img
-        src={image.src}
-        alt={image.caption}
-        loading="lazy"
-        className="
-          w-full 
-          h-auto 
-          aspect-[4/4]  /* Changed from 4/3 to 4/4 for slightly taller cards */
-          sm:aspect-[4/4] 
-          lg:aspect-[4/4]
-          object-cover  /* Ensures the image fills the space nicely */
-        "
-      />
-      <div
-        className="p-4 text-center"
-        style={{
-          backgroundColor: colors.sageGreen,
-          color: "black",
-        }}
-      >
-        <p className="text-base font-medium font-sans tracking-wide antialiased">
-          {image.caption}
-        </p>
-      </div>
-    </div>
-  ))}
-</div>
-
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {galleryImages.map((image, index) => (
+            <div
+              key={index}
+              className="
+                relative 
+                overflow-hidden 
+                rounded-lg 
+                shadow-sm 
+                cursor-pointer
+                bg-white
+                transition-all 
+                duration-300 
+                hover:shadow-lg 
+                group
+              "
+              onClick={() => handleClick(image)}
+            >
+              <img
+                src={image.src}
+                alt={image.caption}
+                loading="lazy"
+                className="
+                  w-full 
+                  h-auto 
+                  aspect-[4/4]
+                  sm:aspect-[4/4] 
+                  lg:aspect-[4/4]
+                  object-cover
+                  transition-all 
+                  duration-300 
+                  group-hover:scale-101
+                  group-hover:brightness-110
+                "
+              />
+              <div
+                className="
+                  p-4 
+                  text-center 
+                  transition-colors 
+                  duration-300
+                  group-hover:bg-opacity-90
+                "
+                style={{
+                  backgroundColor: "white",
+                  color: "black",
+                }}
+              >
+                <p className="
+                  text-base 
+                  font-medium 
+                  font-sans 
+                  tracking-wide 
+                  antialiased
+                  group-hover:text-[colors.accentGreen]
+                ">
+                  {image.caption}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
-export default TropicalVegetables;
+export default TropicalVegetable;

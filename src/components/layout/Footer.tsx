@@ -38,19 +38,11 @@ const Footer = () => {
                 <div className="flex gap-x-5 mt-3 w-full ">
                   <ul className="flex flex-col space-y-2 text-xs">
                     <li><a href="#" className="hover:text-gray-300 text-gray-400">Germany</a></li>
-                    {/* <li><a href="#" className="hover:text-gray-300 text-gray-400">England</a></li> */}
                     <li><a href="#" className="hover:text-gray-300 text-gray-400">India</a></li>
                     <li><a href="#" className="hover:text-gray-300 text-gray-400">Maldives</a></li>
-                    {/* <li><a href="#" className="hover:text-gray-300 text-gray-400">Netherlands</a></li>
-                    <li><a href="#" className="hover:text-gray-300 text-gray-400">Hungary</a></li> */}
                   </ul>
                   <ul className="flex flex-col space-y-2 text-xs">
-                    {/* <li><a href="#" className="hover:text-gray-300 text-gray-400">Maldives</a></li>
-                    <li><a href="#" className="hover:text-gray-300 text-gray-400">UAE</a></li>
-                    <li><a href="#" className="hover:text-gray-300 text-gray-400">Bangladesh</a></li>
-                    <li><a href="#" className="hover:text-gray-300 text-gray-400">Malaysia</a></li> */}
-                    {/* <li><a href="#" className="hover:text-gray-300 text-gray-400">Kenya</a></li>
-                    <li><a href="#" className="hover:text-gray-300 text-gray-400">Africa</a></li> */}
+                    {/* <li><a href="#" className="hover:text-gray-300 text-gray-400">Africa</a></li> */}
                   </ul>
                 </div>
               </div>
@@ -65,23 +57,13 @@ const Footer = () => {
                 <h3 className="text-[18px] text-black">Information</h3>
                 <ul className="mt-3 space-y-2 text-xs">
                   <li>
-                    <a href="#" className="hover:text-gray-300 text-gray-400">
-                      Help & FAQs
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-gray-300 text-gray-400">
+                    <a href="/about" className="hover:text-gray-300 text-gray-400">
                       About Us
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-gray-300 text-gray-400">
+                    <a href="/contact" className="hover:text-gray-300 text-gray-400">
                       Contact Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-gray-300 text-gray-400">
-                      Privacy police
                     </a>
                   </li>
                 </ul>
@@ -89,7 +71,7 @@ const Footer = () => {
             </div>
             <div className="flex-1">
               <div className="h-full pl-10">
-                <div className="flex flex-col gap-y-3">
+                <div className="flex flex-col gap-y-2">
                   <div className="flex-1">
                     <h3 className="text-[18px] text-black">Follow Us</h3>
                     <div className="flex gap-2 mt-3">

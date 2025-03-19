@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ExportNavigator from "../components/exportNav/exportNav";
+import Lenis from "@studio-freight/lenis";
+
 import KingCoconut from "../assets/Coconut/KingCoconut.png"
 
 // Refined Greenish Color Palette
@@ -18,25 +20,25 @@ const galleryImages = [
     caption: "King Coconut",
     describe: "",
   },
-  
-  // {
-  //   src: "https://images.unsplash.com/photo-1620036924477-c3d6e9ce36fc?w=600&auto=format&fit=crop",
-  //   caption: "Sweet Bananas",
-  //   describe: "Naturally sweet bananas, a Sri Lankan staple.",
-  // },
 ];
 
-/**
- * TropicalFruits Component
- * A professional gallery of tropical fruits with smooth scrolling
- * @returns {JSX.Element} Tropical fruits section
- */
 const Coconut: React.FC = () => {
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(1 - t, 2)),
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+    return () => lenis.destroy();
+  }, []);
 
   const handleClick = (image: { src: string; caption: string; describe: string }) => {
     navigate(`/coconut/${image.caption.toLowerCase().replace(/\s+/g, "-")}`, {
@@ -47,7 +49,7 @@ const Coconut: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 500); 
+    }, 500);
   }, []);
 
   return (
@@ -59,67 +61,68 @@ const Coconut: React.FC = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-20 mt-[40px]">
         <ExportNavigator />
 
-        {/* Section Title */}
-        {/* <h2
-          className="
-            text-3xl 
-            md:text-4xl 
-            font-semibold 
-            mb-12 
-            text-center 
-            tracking-tight 
-            font-sans 
-            antialiased
-          "
-          style={{ color: colors.deepGreen }}
-        >
-          Tea
-        </h2> */}
-
-        {/* Gallery Grid */}
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-  {galleryImages.map((image, index) => (
-    <div
-      key={index}
-      className="
-        relative 
-        overflow-hidden 
-        rounded-lg 
-        shadow-sm 
-        cursor-pointer
-        bg-white
-      "
-      onClick={() => handleClick(image)}
-    >
-      <img
-        src={image.src}
-        alt={image.caption}
-        loading="lazy"
-        className="
-          w-full 
-          h-auto 
-          aspect-[4/4]  /* Changed from 4/3 to 4/4 for slightly taller cards */
-          sm:aspect-[4/4] 
-          lg:aspect-[4/4]
-          object-cover  /* Ensures the image fills the space nicely */
-        "
-      />
-      <div
-        className="p-4 text-center"
-        style={{
-          backgroundColor: colors.sageGreen,
-          color: "black",
-        }}
-      >
-        <p className="text-base font-medium font-sans tracking-wide antialiased">
-          {image.caption}
-        </p>
-      </div>
-    </div>
-  ))}
-</div>
-
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {galleryImages.map((image, index) => (
+            <div
+              key={index}
+              className="
+                relative 
+                overflow-hidden 
+                rounded-lg 
+                shadow-sm 
+                cursor-pointer
+                bg-white
+                transition-all 
+                duration-300 
+                hover:shadow-lg 
+                group
+              "
+              onClick={() => handleClick(image)}
+            >
+              <img
+                src={image.src}
+                alt={image.caption}
+                loading="lazy"
+                className="
+                  w-full 
+                  h-auto 
+                  aspect-[4/4]
+                  sm:aspect-[4/4] 
+                  lg:aspect-[4/4]
+                  object-cover
+                  transition-all 
+                  duration-300 
+                  group-hover:scale-101 
+                  group-hover:brightness-110
+                "
+              />
+              <div
+                className="
+                  p-4 
+                  text-center 
+                  transition-colors 
+                  duration-300
+                  group-hover:bg-opacity-90
+                "
+                style={{
+                  backgroundColor: "white",
+                  color: "black",
+                }}
+              >
+                <p className="
+                  text-base 
+                  font-medium 
+                  font-sans 
+                  tracking-wide 
+                  antialiased
+                  group-hover:text-[colors.accentGreen]
+                ">
+                  {image.caption}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
