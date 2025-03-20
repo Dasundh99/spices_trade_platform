@@ -18,7 +18,7 @@ const galleryImages = [
   {
     src: KingCoconut,
     caption: "King Coconut",
-    describe: "",
+    describe: "King coconut, known as 'Thambili' in Sri Lanka, is a refreshing tropical drink cherished for its sweet, nutrient-rich water. Widely consumed as a natural hydration source, it’s commonly sold by street vendors across the island. Rich in electrolytes and vitamins, king coconut is also used in traditional Sri Lankan desserts and remedies.",
   },
 ];
 

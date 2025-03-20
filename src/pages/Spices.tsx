@@ -52,22 +52,22 @@ const galleryImages = [
   {
     src: Clove,
     caption: "Clove",
-    describe: ""
+    describe: "Clove, known as 'Karambu Nati' in Sri Lanka, is a highly aromatic spice used in curries, teas, and traditional medicine. Grown mainly in the central highlands, it adds warmth and depth to Sri Lankan cuisine. Valued for its medicinal properties, clove is also used in Ayurvedic treatments and herbal remedies."
   },
   {
     src: Mace,
     caption: "Mace",
-    describe: ""
+    describe: "Mace, known as 'Wasawasi' in Sri Lanka, is the lacy red covering of the nutmeg seed, prized for its warm, aromatic flavor. Used in Sri Lankan curries, rice dishes, and spice blends, it enhances both sweet and savory recipes. Mace is also valued in traditional medicine for its digestive benefits."
   },
   {
     src: Cardamom,
     caption: "Cardamom",
-    describe: ""
+    describe: "Cardamom, known as 'Ela' in Sri Lanka, is a fragrant spice widely used in Sri Lankan cooking and desserts. It adds a unique, aromatic flavor to curries, rice dishes, and traditional sweets like kavum. Often used in chai tea, cardamom is also valued for its digestive and medicinal properties in Ayurvedic practices."
   },
   {
     src: CurryLeaves,
     caption: "Curry Leaves ",
-    describe: ""
+    describe: "Curry leaves, known as 'Karapincha' in Sri Lanka, are an essential herb in Sri Lankan cuisine. Their aromatic, slightly bitter flavor is used in curries, sambols, and rice dishes. Packed with antioxidants and vitamins, curry leaves are also valued in traditional medicine for promoting digestive health and treating various ailments."
   },
   {
     src: CoconutOil,

@@ -48,12 +48,12 @@ const galleryImages = [
   {
     src: SweetPotato,
     caption: "Sweet Potato",
-    describe:""
+    describe:"Sweet potato, known as 'Bathala' in Sri Lanka, is a nutritious and versatile root vegetable enjoyed in both savory and sweet dishes. Commonly boiled, fried, or made into curries, it is a staple in Sri Lankan cuisine. Rich in fiber and vitamins, it’s a popular choice for breakfast or snacks."
   },  
   {
     src: GreenChili,
     caption: "Green Chili",
-    describe:""
+    describe:"Green chili, widely used in Sri Lankan cuisine, adds heat and flavor to curries, sambols, and stir-fries. Known for its bold spiciness, it enhances dishes like pol sambol and lunu miris. Packed with vitamins and antioxidants, green chili is a key ingredient in traditional Sri Lankan cooking."
   },
 ];
 

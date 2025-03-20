@@ -52,27 +52,27 @@ const galleryImages = [
   {
     src: Papaya,
     caption: "Papaya",
-    describe: ""
+    describe: "Papaya, known as 'Gas Labu' in Sri Lanka, is a tropical fruit loved for its sweet, juicy flesh and rich nutritional benefits. Often enjoyed fresh, in fruit salads, or as a juice, it aids digestion and boosts immunity. Unripe papaya is also used in Sri Lankan curries and pickles."
   },
   {
     src: Avacado,
     caption: "Avacado",
-    describe: ""
+    describe: "Avocado, known as 'Aligeta Peara' in Sri Lanka, is a creamy, nutrient-rich fruit enjoyed in both sweet and savory dishes. Commonly blended into smoothies with sugar and milk or eaten fresh, it’s packed with healthy fats and vitamins. Avocado trees thrive in Sri Lanka’s tropical climate, especially in upcountry regions."
   },
   {
     src: Watermelon,
     caption: "Watermelon",
-    describe: ""
+    describe: "Watermelon, known as 'Komadu' in Sri Lanka, is a refreshing tropical fruit enjoyed for its sweet, hydrating flesh. Popular in juices, fruit salads, and as a cooling snack, it thrives in Sri Lanka’s warm climate. Rich in vitamins and antioxidants, it’s a favorite during hot weather and festive gatherings."
   },
   {
     src: Lime,
     caption: "Lime",
-    describe: ""
+    describe: "Lime, known as 'Dehi' in Sri Lanka, is a citrus fruit widely used in cooking, beverages, and traditional remedies. Its tangy juice enhances curries, sambols, and seafood dishes, while also being a key ingredient in refreshing drinks. Packed with vitamin C, lime is valued for its health benefits and zesty flavor."
   },
   {
     src: Soursop,
     caption: "Soursop",
-    describe: ""
+    describe: "Soursop, known as 'Katu Anoda' in Sri Lanka, is a tropical fruit with a creamy texture and a sweet-tangy flavor. Often enjoyed fresh, in juices, or as a dessert, it’s believed to have medicinal properties. Rich in antioxidants and vitamins, soursop is a popular choice for refreshing drinks and herbal remedies."
   },
 
 ];
