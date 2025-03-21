@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { FaCheckCircle, FaHandshake, FaShieldAlt } from 'react-icons/fa';
 import '../pages/Home.css';
 
-import welcomeImage from '../assets/felipe-vieira-RXnLDj2WBgY-unsplash.jpg';
-import fruitImage from '../assets/mitchell-luo-OfLc6ozzXnI-unsplash.jpg';
+import welcomeImage from '../assets/crina-miriam-cretu-ynp_0R23rQ4-unsplash.jpg';
+import fruitImage from '../assets/rebiap-UKluiWYB57E-unsplash.jpg';
 import VegetableImage from '../assets/matilda-bellman-bEnSMaiHeX0-unsplash.jpg';
 import SpiceImage from '../assets/ratul-ghosh-NPrWYa69Mz0-unsplash.jpg';
-import teaImage from '../assets/rashid-New8EgKnSds-unsplash.jpg';
+import CoconutImage from '../assets/rashid-New8EgKnSds-unsplash.jpg';
 
 // Interfaces
 interface FeatureItem {
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
     { image: fruitImage, title: 'Premium Ceylon Tea' },
     { image: VegetableImage, title: 'Exotic Spices' },
     { image: SpiceImage, title: 'Fresh Produce' },
-    { image: teaImage, title: 'Natural Quality' },
+    { image: CoconutImage, title: 'Natural Quality' },
   ];
 
   const contentVariations: ContentItem[] = [
@@ -57,9 +57,10 @@ const Hero: React.FC = () => {
       "description": "Enhance your culinary creations with the bold aromas and rich flavors of Ceylon’s world-renowned spices, carefully cultivated and expertly processed for purity and potency."
     },
     {
-      "title": "Ceylon Tea, The Essence of Pure Indulgence",
-      "description": "Savor the unparalleled taste of Ceylon tea, cultivated in the lush highlands and crafted to perfection, offering a rich, soothing, and aromatic experience in every sip."
+      "title": "Ceylon Coconut, Nature’s Purest Gift",
+      "description": "Experience the richness of Ceylon coconut, harvested from the tropical paradise of Sri Lanka, renowned for its natural goodness, versatility, and unmatched quality in every form."
     }
+    
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -74,7 +75,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative flex min-h-[90vh] items-center rounded-b-none bg-gradient-to-b from-transparent to-green-800/70 px-0"
+      className="relative flex min-h-[90vh] items-center rounded-b-none px-0"
     >
       {/* Slideshow Background */}
       <div className="absolute left-0 top-0 z-[-1] h-full w-full overflow-hidden">

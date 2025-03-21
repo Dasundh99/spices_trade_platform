@@ -12,7 +12,6 @@ import Garlic from "../assets/Spices/Garlic.png"
 import Ginger from '../assets/Spices/Ginger.png'
 import Cinnamon from '../assets/Spices/Cinnamon.png'
 import BlackPepper from '../assets/Spices/BlackPepper.png'
-import CoconutOil from '../assets/Spices/CoconutOil.jpg'
 
 // Refined Greenish Color Palette
 const colors = {
@@ -68,11 +67,6 @@ const galleryImages = [
     src: CurryLeaves,
     caption: "Curry Leaves ",
     describe: "Curry leaves, known as 'Karapincha' in Sri Lanka, are an essential herb in Sri Lankan cuisine. Their aromatic, slightly bitter flavor is used in curries, sambols, and rice dishes. Packed with antioxidants and vitamins, curry leaves are also valued in traditional medicine for promoting digestive health and treating various ailments."
-  },
-  {
-    src: CoconutOil,
-    caption: "Coconut Oil",
-    describe: "Coconut oil, extracted from mature coconut flesh, is a cornerstone of Sri Lankan cuisine. It enhances the richness of curries and fried dishes. Known for its antimicrobial properties and healthy fats, it supports heart health, nourishes skin and hair, and serves as a natural remedy in Ayurvedic practices.",
   },
 ];
 

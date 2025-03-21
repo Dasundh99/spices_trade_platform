@@ -2,8 +2,7 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Lenis from '@studio-freight/lenis'
-import { useEffect, useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { useEffect } from 'react';
 import 'lenis/dist/lenis.css'
 
 import Hero from './pages/Home';
@@ -19,11 +18,8 @@ import Coconut from './pages/Coconut';
 import Tea from './pages/Tea';
 import ProductDetails from './pages/ProductDetails';
 import Header from './components/common/Header';
-import Preloader from './components/common/Preloader/index';
 
 function App() {
-    const [isLoading, setIsLoading] = useState(true);
-
     useEffect(() => {
         const lenis = new Lenis({
             duration: 2.0,
@@ -41,48 +37,38 @@ function App() {
 
         requestAnimationFrame(raf);
 
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 3000);
-
         return () => {
             lenis.destroy();
-            clearTimeout(timer);
         };
     }, []);
 
     return (
         <BrowserRouter>
-            <AnimatePresence>
-                {isLoading && <Preloader />}
-            </AnimatePresence>
-            {!isLoading && (
-                <>
-                    <Header />
-                    <Routes>
-                        <Route path='/' element={
-                            <main>
-                                <Hero />
-                                <Exports />
-                                <Clients />
-                            </main>
-                        } />
-                        <Route path='/about' element={<About />} />
-                        <Route path='/contact' element={<ContactUs />} />
-                        <Route path='/fruits' element={<TropicalFruits />} />
-                        <Route path='/vegetables' element={<TropicalVegetables />} />
-                        <Route path='/spices' element={<Spices />} />
-                        <Route path='/tea' element={<Tea />} />
-                        <Route path='/coconut' element={<Coconut/>}/>
-                        <Route path="/fruit/:name" Component={ProductDetails} />
-                        <Route path="/vegetable/:name" Component={ProductDetails} />
-                        <Route path="/spices/:name" Component={ProductDetails} />
-                        <Route path="/tea/:name" Component={ProductDetails} />
-                        <Route path="/coconut/:name" Component={ProductDetails} />
-                    </Routes>
-                    <Footer />
-                </>
-            )}
+            <>
+                <Header />
+                <Routes>
+                    <Route path='/' element={
+                        <main>
+                            <Hero />
+                            <Exports />
+                            <Clients />
+                        </main>
+                    } />
+                    <Route path='/about' element={<About />} />
+                    <Route path='/contact' element={<ContactUs />} />
+                    <Route path='/fruits' element={<TropicalFruits />} />
+                    <Route path='/vegetables' element={<TropicalVegetables />} />
+                    <Route path='/spices' element={<Spices />} />
+                    <Route path='/tea' element={<Tea />} />
+                    <Route path='/coconut' element={<Coconut/>}/>
+                    <Route path="/fruit/:name" Component={ProductDetails} />
+                    <Route path="/vegetable/:name" Component={ProductDetails} />
+                    <Route path="/spices/:name" Component={ProductDetails} />
+                    <Route path="/tea/:name" Component={ProductDetails} />
+                    <Route path="/coconut/:name" Component={ProductDetails} />
+                </Routes>
+                <Footer />
+            </>
         </BrowserRouter>
     );
 }
