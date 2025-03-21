@@ -5,8 +5,7 @@ import { useNavigate } from "react-router-dom";
 import img1 from "../assets/fruit.png";
 import img2 from "../assets/vegetable.jpg";
 import img3 from "../assets/spices.png";
-import img4 from "../assets/tea.jpg";
-import img5 from "../assets/KingCoconut.png";
+import img4 from "../assets/KingCoconut.png";
 
 // Define TypeScript interface for image items
 interface ExportItem {
@@ -20,9 +19,8 @@ interface ExportItem {
 const exportItems: ExportItem[] = [
   { id: 1, src: img1, text: "Tropical Fruits", path: "/fruits" },
   { id: 2, src: img2, text: "Tropical Vegetables", path: "/vegetables" },
-  { id: 3, src: img3, text: "Spices and Oils", path: "/spices" },
-  { id: 4, src: img4, text: "Tea", path: "/tea" },
-  { id: 5, src: img5, text: "Coconut", path: "/coconut" },
+  { id: 3, src: img3, text: "Spices and Essential Oils", path: "/spices" },
+  { id: 4, src: img4, text: "Coconut Products", path: "/coconut" },
 ];
 
 // Reusable Card Component
@@ -53,9 +51,9 @@ const ExportCard: React.FC<ExportItem> = ({ src, text, path }) => {
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
-      <div className="p-2 text-gray-900">
-        <h3 className="text-md mb-1 tracking-tight">{text}</h3>
-      </div>
+      <div className="p-2 text-gray-900 text-center">
+    <h3 className="text-md mb-1 tracking-tight">{text}</h3>
+</div>
 
       <div className="absolute inset-0 border-2 border-green-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none" />
     </article>

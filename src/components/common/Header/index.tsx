@@ -128,24 +128,26 @@ const Header = () => {
                     </Magnetic>
                     <Magnetic>
                         <div className="group flex flex-col relative z-[1] p-[15px] cursor-pointer">
+                            <HashLink smooth to="/about" className={headerStyles.textColor}>
+                                About
+                            </HashLink>
+                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${isInHomeSection && !scrolled ? 'bg-white' : 'bg-black'}`}></div>
+                        </div>
+                    </Magnetic>
+                    <Magnetic>
+                        <div className="group flex flex-col relative z-[1] p-[15px] cursor-pointer">
                             <HashLink smooth to="/#exports" className={headerStyles.textColor}>
                                 Exports
                             </HashLink>
                             <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${isInHomeSection && !scrolled ? 'bg-white' : 'bg-black'}`}></div>
                         </div>
                     </Magnetic>
+                    
+                   
                     <Magnetic>
                         <div className="group flex flex-col relative z-[1] p-[15px] cursor-pointer">
                             <HashLink smooth to="/#clients" className={headerStyles.textColor}>
                                 Clients
-                            </HashLink>
-                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${isInHomeSection && !scrolled ? 'bg-white' : 'bg-black'}`}></div>
-                        </div>
-                    </Magnetic>
-                    <Magnetic>
-                        <div className="group flex flex-col relative z-[1] p-[15px] cursor-pointer">
-                            <HashLink smooth to="/about" className={headerStyles.textColor}>
-                                About
                             </HashLink>
                             <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${isInHomeSection && !scrolled ? 'bg-white' : 'bg-black'}`}></div>
                         </div>
@@ -221,6 +223,14 @@ const Header = () => {
                             >
                                 Home
                             </HashLink>
+                            <HashLink
+                                smooth
+                                to="/about"
+                                className="block text-black py-2 text-2xl hover:text-gray-700"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                About
+                            </HashLink>
 
                             <div className="relative py-2">
                                 <button
@@ -277,6 +287,7 @@ const Header = () => {
                                     </HashLink>
                                 </div>
                             </div>
+                            
 
                             <HashLink
                                 smooth
@@ -286,14 +297,7 @@ const Header = () => {
                             >
                                 Clients
                             </HashLink>
-                            <HashLink
-                                smooth
-                                to="/about"
-                                className="block text-black py-2 text-2xl hover:text-gray-700"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                About
-                            </HashLink>
+                            
                             <HashLink
                                 smooth
                                 to="/contact"

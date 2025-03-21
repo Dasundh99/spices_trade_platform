@@ -4,6 +4,7 @@ import ExportNavigator from "../components/exportNav/exportNav";
 import Lenis from "@studio-freight/lenis";
 
 import KingCoconut from "../assets/Coconut/KingCoconut.png"
+import CoconutOil from '../assets/Spices/CoconutOil.jpg'
 
 // Refined Greenish Color Palette
 const colors = {
@@ -19,6 +20,11 @@ const galleryImages = [
     src: KingCoconut,
     caption: "King Coconut",
     describe: "King coconut, known as 'Thambili' in Sri Lanka, is a refreshing tropical drink cherished for its sweet, nutrient-rich water. Widely consumed as a natural hydration source, it’s commonly sold by street vendors across the island. Rich in electrolytes and vitamins, king coconut is also used in traditional Sri Lankan desserts and remedies.",
+  },
+  {
+    src: CoconutOil,
+    caption: "Coconut Oil",
+    describe: "Coconut oil, extracted from mature coconut flesh, is a cornerstone of Sri Lankan cuisine. It enhances the richness of curries and fried dishes. Known for its antimicrobial properties and healthy fats, it supports heart health, nourishes skin and hair, and serves as a natural remedy in Ayurvedic practices.",
   },
 ];
 
