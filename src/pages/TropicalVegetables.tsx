@@ -4,8 +4,8 @@ import Lenis from "@studio-freight/lenis";
 import ExportNavigator from "../components/exportNav/exportNav";
 import SweetPotato from "../assets/Vegetables/SweetPotato.png"
 import GreenChili from "../assets/Vegetables/GreenChili.png"
-import SnakeGoard from "../assets/Vegetables/SnakeGourd.png"
-import Pumpkin from "../assets/Vegetables/Pumpkin.png"
+import SnakeGoard from "../assets/Vegetables/SnakeGourd.jpg"
+import Pumpkin from "../assets/Vegetables/pumpkin.jpg"
 import Ash from "../assets/Vegetables/Ash.png"
 import Brinjol from "../assets/Vegetables/Brinjol.png"
 import Bitter from "../assets/Vegetables/Bitter.png"
