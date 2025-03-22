@@ -5,7 +5,7 @@ import '../pages/Home.css';
 import welcomeImage from '../assets/pexels-ffatmaozel-18476615.jpg';
 import fruitImage from '../assets/emilia-igartua-AUqTjPy88P4-unsplash.jpg';
 import VegetableImage from '../assets/matilda-bellman-bEnSMaiHeX0-unsplash.jpg';
-import SpiceImage from '../assets/ratul-ghosh-NPrWYa69Mz0-unsplash.jpg';
+import SpiceImage from '../assets/ratul-ghosh.jpg';
 import CoconutImage from '../assets/zdenek-machacek-jvdvp6bplTs-unsplash.jpg';
 
 // Interfaces
