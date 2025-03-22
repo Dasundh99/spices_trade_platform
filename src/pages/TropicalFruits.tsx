@@ -4,7 +4,7 @@ import Lenis from "@studio-freight/lenis";
 import ExportNavigator from "../components/exportNav/exportNav";
 
 import Papaya from "../assets/Fruits/Papaya.png";
-import Avacado from "../assets/Fruits/Avacado.png"
+import Avacado from "../assets/Fruits/Avocado.png"
 import Watermelon from "../assets/Fruits/Watermelon.png"
 import Lime from "../assets/Fruits/Lime.png"
 import Soursop from "../assets/Fruits/Soursop.png"
@@ -56,7 +56,7 @@ const galleryImages = [
   },
   {
     src: Avacado,
-    caption: "Avacado",
+    caption: "Avocado",
     describe: "Avocado, known as 'Aligeta Peara' in Sri Lanka, is a creamy, nutrient-rich fruit enjoyed in both sweet and savory dishes. Commonly blended into smoothies with sugar and milk or eaten fresh, it’s packed with healthy fats and vitamins. Avocado trees thrive in Sri Lanka’s tropical climate, especially in upcountry regions."
   },
   {
