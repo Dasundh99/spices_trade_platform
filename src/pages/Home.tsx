@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { FaCheckCircle, FaHandshake, FaShieldAlt } from 'react-icons/fa';
 import '../pages/Home.css';
 
-import welcomeImage from '../assets/Home/pexels-ffatmaozel-18476615.jpg';
-import fruitImage from '../assets/Home/emilia-igartua-AUqTjPy88P4-unsplash.jpg';
-import VegetableImage from '../assets/Home/matilda-bellman-bEnSMaiHeX0-unsplash.jpg';
+import welcomeImage from '../assets/Home/pexels-alxs-3025236 (1).jpg';
+import fruitImage from '../assets/Home/kelsey-todd-XNSe89QYTVA-unsplash.jpg';
+import VegetableImage from '../assets/Home/eric-prouzet-m9EEx1eiRsc-unsplash.jpg';
 import SpiceImage from '../assets/Home/ratul-ghosh.jpg';
 import CoconutImage from '../assets/Home/zdenek-machacek-jvdvp6bplTs-unsplash.jpg';
 
@@ -75,7 +75,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative flex min-h-[90vh] items-center rounded-b-none px-0 bg-gradient-to-b from-transparent to-black/40"
+      className="relative flex min-h-[90vh] items-center rounded-b-none px-0 bg-gradient-to-b from-transparent to-black/60"
     >
       {/* Slideshow Background */}
       <div className="absolute left-0 top-0 z-[-1] h-full w-full overflow-hidden">
