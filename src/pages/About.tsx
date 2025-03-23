@@ -43,20 +43,20 @@ const About: React.FC = () => {
           <div className="flex justify-center md:justify-center gap-12 pt-10">
             {/* Quality Icon */}
             <div className="flex flex-col items-center">
-              <FaCheckCircle className="text-green-600 opacity-60 text-4xl" />
-              <span className="text-green-600 opacity-60 text-sm font-semibold pt-2">Quality</span>
+              <FaCheckCircle className="text-green-600 opacity-60 text-3xl" />
+              <span className="text-green-600 opacity-60 text-xs font-semibold pt-2">Quality</span>
             </div>
 
             {/* Reliability Icon */}
             <div className="flex flex-col items-center">
-              <FaHandshake className="text-green-600 opacity-60 text-4xl" />
-              <span className="text-green-600 opacity-60 text-sm font-semibold pt-2">Reliability</span>
+              <FaHandshake className="text-green-600 opacity-60 text-3xl" />
+              <span className="text-green-600 opacity-60 text-xs font-semibold pt-2">Reliability</span>
             </div>
 
             {/* Integrity Icon */}
             <div className="flex flex-col items-center">
-              <FaShieldAlt className="text-green-600 opacity-60 text-4xl " />
-              <span className="text-green-600 opacity-60 text-sm font-semibold pt-2">Integrity</span>
+              <FaShieldAlt className="text-green-600 opacity-60 text-3xl " />
+              <span className="text-green-600 opacity-60 text-xs font-semibold pt-2">Integrity</span>
             </div>
           </div>
         </div>
