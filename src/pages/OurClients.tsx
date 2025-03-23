@@ -66,7 +66,7 @@ const ExportSection = () => {
                         ref={mapRef}
                         src={WorldMap}
                         alt="World Map"
-                        className="w-full h-full object-contain rounded-lg shadow-lg bg-green-300"
+                        className="w-full h-full object-contain rounded-lg shadow-lg bg-green-200"
                     />
                     {baseExportLocations.map((location, index) => {
                         const { x, y } = getResponsiveCoordinates(
@@ -86,7 +86,7 @@ const ExportSection = () => {
                                 onMouseLeave={() => setHoveredLocation(null)}
                             >
                                 <FaMapMarkerAlt 
-                                    className="w-5 sm:w-6 md:w-9 h-5 sm:h-6 md:h-9 text-white animate-bounce transition-transform duration-200 group-hover:scale-125 z-10" 
+                                    className="w-3 sm:w-4 md:w-7 h-5 sm:h-6 md:h-7 text-white animate-bounce transition-transform duration-200 group-hover:scale-125 z-10" 
                                 />
 
                                 {hoveredLocation === location.name && (
