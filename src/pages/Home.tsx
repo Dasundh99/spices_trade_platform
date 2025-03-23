@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { FaCheckCircle, FaHandshake, FaShieldAlt } from 'react-icons/fa';
 import '../pages/Home.css';
 
-import welcomeImage from '../assets/pexels-ffatmaozel-18476615.jpg';
-import fruitImage from '../assets/emilia-igartua-AUqTjPy88P4-unsplash.jpg';
-import VegetableImage from '../assets/matilda-bellman-bEnSMaiHeX0-unsplash.jpg';
-import SpiceImage from '../assets/ratul-ghosh.jpg';
-import CoconutImage from '../assets/zdenek-machacek-jvdvp6bplTs-unsplash.jpg';
+import welcomeImage from '../assets/Home/pexels-ffatmaozel-18476615.jpg';
+import fruitImage from '../assets/Home/emilia-igartua-AUqTjPy88P4-unsplash.jpg';
+import VegetableImage from '../assets/Home/matilda-bellman-bEnSMaiHeX0-unsplash.jpg';
+import SpiceImage from '../assets/Home/ratul-ghosh.jpg';
+import CoconutImage from '../assets/Home/zdenek-machacek-jvdvp6bplTs-unsplash.jpg';
 
 // Interfaces
 interface FeatureItem {
