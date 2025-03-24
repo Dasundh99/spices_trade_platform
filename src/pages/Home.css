@@ -1,31 +1,31 @@
 @layer utilities {
-    /* Initial animation for features */
-    .animate-fade-in-up {
-      animation: fadeInUp 1s ease-out forwards;
-    }
-    
-    .delay-200 {
-      transition-delay: 200ms;
-    }
+  /* Slide-in with subtle rotation animation */
+  .animate-slide-rotate {
+    animation: slideRotate 1.5s ease-in-out forwards;
+  }
   
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+  .delay-150 {
+    animation-delay: 150ms;
+  }
+
+  @keyframes slideRotate {
+    from {
+      opacity: 0;
+      transform: translateX(-30px) rotate(-2deg);
     }
-  
-    /* Ensure smooth transitions for content */
-    .transition-all {
-      transition-property: all;
-      transition-timing-function: ease-in-out;
-    }
-    
-    .duration-1000 {
-      transition-duration: 1000ms;
+    to {
+      opacity: 1;
+      transform: translateX(0) rotate(0deg);
     }
   }
+
+  /* Smooth background and scale transitions */
+  .transition-bg-scale {
+    transition-property: background-color, transform;
+    transition-timing-function: ease-out;
+  }
+  
+  .duration-500 {
+    transition-duration: 500ms;
+  }
+}

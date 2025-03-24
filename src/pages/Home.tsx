@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaCheckCircle, FaHandshake, FaShieldAlt } from 'react-icons/fa';
 import '../pages/Home.css';
 
-import welcomeImage from '../assets/Home/fatemeh-zakeri-lkflaFuiXII-unsplash (1).jpg';
+import welcomeImage from '../assets/Home/rajendra-biswal-BafVsMpoSF0-unsplash.jpg';
 import fruitImage from '../assets/Home/kelsey-todd-XNSe89QYTVA-unsplash.jpg';
 import VegetableImage from '../assets/Home/eric-prouzet-m9EEx1eiRsc-unsplash.jpg';
 import SpiceImage from '../assets/Home/ratul-ghosh-updated.jpg';
@@ -41,26 +41,25 @@ const Hero: React.FC = () => {
 
   const contentVariations: ContentItem[] = [
     {
-      "title": "Bringing Ceylon’s Finest to Global Markets",
-      "description": "Sourced from the rich soils of Ceylon, our premium agricultural products embody the essence of quality, tradition, and sustainability—delivering nature’s best to the world."
+      title: "Bringing Ceylon’s Finest to Global Markets",
+      description: "Sourced from the rich soils of Ceylon, our premium agricultural products embody the essence of quality, tradition, and sustainability—delivering nature’s best to the world."
     },
     {
-      "title": "Exotic Tropical Fruits, Harvested with Care",
-      "description": "Indulge in the vibrant flavors of Ceylon’s tropical fruits, handpicked at peak ripeness to ensure unmatched freshness, taste, and nutritional value."
+      title: "Exotic Tropical Fruits, Harvested with Care",
+      description: "Indulge in the vibrant flavors of Ceylon’s tropical fruits, handpicked at peak ripeness to ensure unmatched freshness, taste, and nutritional value."
     },
     {
-      "title": "Farm-Fresh Tropical Vegetables from Ceylon",
-      "description": "Enjoy the crispness and rich flavors of Ceylon’s tropical vegetables, cultivated in fertile lands and delivered fresh to your table with uncompromising quality."
+      title: "Farm-Fresh Tropical Vegetables from Ceylon",
+      description: "Enjoy the crispness and rich flavors of Ceylon’s tropical vegetables, cultivated in fertile lands and delivered fresh to your table with uncompromising quality."
     },
     {
-      "title": "Authentic Ceylon Spices, A Symphony of Flavors",
-      "description": "Enhance your culinary creations with the bold aromas and rich flavors of Ceylon’s world-renowned spices, carefully cultivated and expertly processed for purity and potency."
+      title: "Authentic Ceylon Spices, A Symphony of Flavors",
+      description: "Enhance your culinary creations with the bold aromas and rich flavors of Ceylon’s world-renowned spices, carefully cultivated and expertly processed for purity and potency."
     },
     {
-      "title": "Ceylon Coconut, Nature’s Purest Gift",
-      "description": "Experience the richness of Ceylon coconut, harvested from the tropical paradise of Sri Lanka, renowned for its natural goodness, versatility, and unmatched quality in every form."
+      title: "Ceylon Coconut, Nature’s Purest Gift",
+      description: "Experience the richness of Ceylon coconut, harvested from the tropical paradise of Sri Lanka, renowned for its natural goodness, versatility, and unmatched quality in every form."
     }
-    
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -107,7 +106,7 @@ const Hero: React.FC = () => {
           <h1 
             className="
               text-green-100 
-              font-bold
+              font-Semibold
               text-3xl 
               sm:text-4xl 
               md:text-5xl 
@@ -120,8 +119,6 @@ const Hero: React.FC = () => {
               transition-all 
               duration-1000 
               ease-in-out
-              transform
-              ${currentIndex === currentIndex ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
             "
           >
             {contentVariations[currentIndex].title}
@@ -141,9 +138,7 @@ const Hero: React.FC = () => {
               transition-all 
               duration-1000 
               ease-in-out
-              transform
               delay-200
-              ${currentIndex === currentIndex ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
             "
           >
             {contentVariations[currentIndex].description}
@@ -151,13 +146,13 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Feature Highlights */}
-      <div className="absolute bottom-0   font-lato  flex w-full items-center justify-center gap-4 p-5 pb-6 md:pb-10 sm:pb-8 lg:pb-12 md:gap-20 lg:gap-32">
+      {/* Feature Highlights with New Animation */}
+      <div className="absolute bottom-0 font-lato flex w-full items-center justify-center gap-4 p-5 pb-6 md:pb-10 sm:pb-8 lg:pb-12 md:gap-20 lg:gap-32">
         {features.map((feature, index) => (
           <div 
             key={index} 
-            className="flex flex-col items-center animate-fade-in-up" 
-            style={{animationDelay: `${index * 200}ms`}}
+            className="flex flex-col items-center animate-slide-rotate transition-bg-scale duration-500 hover:scale-105 hover:bg-black/20" 
+            style={{ animationDelay: `${index * 150}ms` }}
           >
             <div className="opacity-40">
               {feature.icon}
