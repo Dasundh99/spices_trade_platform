@@ -29,7 +29,7 @@ const ContactUs: React.FC = () => {
 
   const contactInfo = [
     { icon: <FaMapMarkerAlt className="text-green-600 text-lg" />, label: "Address", value: "38/18, Sri Bimbarama Road, Kolamunna, Piliyandala, Sri Lanka." },
-    { icon: <FaEnvelope className="text-green-600 text-lg" />, label: "Email", value: "gsgreenlanka.com" },
+    { icon: <FaEnvelope className="text-green-600 text-lg" />, label: "Email", value: "gsgreenlanka@gmail.com" },
   ];
 
   const formFields = [
