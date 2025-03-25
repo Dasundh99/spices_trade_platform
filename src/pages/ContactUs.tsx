@@ -53,15 +53,15 @@ const ContactUs: React.FC = () => {
     setLoading(true);
 
     emailjs.send(
-      'service_xv0slwt',
-      'template_efiydmt',
+      'service_bz3s23t',
+      'template_umgck76',
       {
         from_name: `${formData.firstName} ${formData.lastName}`,
         email: formData.email,
         phone: formData.phone,
         message: formData.message
       },
-      'oxq8CWVCKmXlkthJc'
+      'alwbaoRi83apz2ktH'
     )
     .then((response) => {
       console.log('SUCCESS!', response.status, response.text);
