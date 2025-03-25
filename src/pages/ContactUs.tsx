@@ -1,15 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import emailjs from '@emailjs/browser';
 import {
   FaEnvelope,
-  // FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
 
-const ContactUs: React.FC = () => {
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  message: string;
+}
 
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+const ContactUs: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [loading, setLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const contactInfo = [
     { icon: <FaMapMarkerAlt className="text-green-600 text-lg" />, label: "Address", value: "38/18, Sri Bimbarama Road, Kolamunna, Piliyandala, Sri Lanka." },
@@ -24,19 +40,54 @@ const ContactUs: React.FC = () => {
     { id: "message", label: "Your Message", type: "textarea", required: true, rows: 3 }
   ];
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs.send(
+      'service_xv0slwt',
+      'template_efiydmt',
+      {
+        from_name: `${formData.firstName} ${formData.lastName}`,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message
+      },
+      'oxq8CWVCKmXlkthJc'
+    )
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+      setLoading(false);
+      alert('Message sent successfully!');
+    })
+    .catch((error) => {
+      console.log('FAILED...', error);
+      setLoading(false);
+      alert('Failed to send message. Please try again.');
+    });
+  };
+
   const inputStyles = "w-full mt-1 p-2 bg-green-50 text-gray-800 border border-green-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition duration-200";
   const sectionStyles = "py-8 px-4 sm:px-6 lg:px-8 bg-green-100 font-lato ";
 
   return (
     <section id="contact" className={sectionStyles}>
       <div className="max-w-7xl mx-auto lg:pt-18 md:pt-15  sm:pt-15 pt-12">
-        {/* Header */}
-        {/* <div className="text-center mb-6">
-          <h1 className="text-4xl md:text-6xl text-black tracking-wide font-Semibold opacity-60">
-           Contact us
-          </h1>
-        </div> */}
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 ">
           {/* Contact Information Section */}
           <div className="bg-white p-6">
@@ -79,7 +130,7 @@ const ContactUs: React.FC = () => {
             <h2 className="text-xl font-semibold text-black mb-4">
               Send Us a Message
             </h2>
-            <form action="#" method="POST" className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {formFields.slice(0, 2).map((field) => (
                   <div key={field.id}>
@@ -94,6 +145,8 @@ const ContactUs: React.FC = () => {
                       type={field.type}
                       id={field.id}
                       name={field.id}
+                      value={formData[field.id as keyof FormData]}
+                      onChange={handleChange}
                       required={field.required}
                       className={inputStyles}
                     />
@@ -115,6 +168,8 @@ const ContactUs: React.FC = () => {
                       id={field.id}
                       name={field.id}
                       rows={field.rows}
+                      value={formData[field.id as keyof FormData]}
+                      onChange={handleChange}
                       required={field.required}
                       className={inputStyles}
                     />
@@ -123,6 +178,8 @@ const ContactUs: React.FC = () => {
                       type={field.type}
                       id={field.id}
                       name={field.id}
+                      value={formData[field.id as keyof FormData]}
+                      onChange={handleChange}
                       required={field.required}
                       className={inputStyles}
                     />
@@ -132,9 +189,12 @@ const ContactUs: React.FC = () => {
 
               <button
                 type="submit"
-                className="w-full py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-300"
+                disabled={loading}
+                className={`w-full py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-300 ${
+                  loading ? 'opacity-50 cursor-not-allowed' : ''
+                }`}
               >
-                Send Message
+                {loading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>

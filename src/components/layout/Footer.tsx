@@ -27,7 +27,7 @@ const Footer = () => {
                   
                   <p className="flex items-center text-[10px] hover:text-gray-300 text-gray-400">
                     <FaEnvelope className="mr-2 text-xs hover:text-gray-300 text-gray-400" />
-                    gsgreenlanka.com
+                    gsgreenlanka@gmail.com
                   </p>
                 </div>
               </div>
