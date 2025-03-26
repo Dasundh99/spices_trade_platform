@@ -33,7 +33,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex-1">
-              <div className="pl-10">
+              <div className="pl-8">
                 <h3 className="text-[18px] text-black">Top Clients</h3>
                 <div className="flex gap-x-5 mt-3 w-full ">
                   <ul className="flex flex-col space-y-2 text-xs">
@@ -91,8 +91,8 @@ const Footer = () => {
                   </div>
                   <div className="flex">
                     <div className="flex items-center text-black border border-black px-2 py-2 rounded-lg gap-2">
-                      <FaGlobe className="text-l" />
-                      <h3 className="text-[12px]">English | USD</h3>
+                      <FaGlobe className="text-[10px] lg:text-[12px]" />
+                      <h3 className="text-[8px] lg:text-[12px]">English | USD</h3>
                     </div>
                   </div>
                 </div>

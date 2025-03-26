@@ -26,9 +26,9 @@ interface ContentItem {
 
 const Hero: React.FC = () => {
   const features: FeatureItem[] = [
-    { icon: <FaCheckCircle size={32} color="white" />, text: 'Quality' },
-    { icon: <FaHandshake size={32} color="white" />, text: 'Reliability' },
-    { icon: <FaShieldAlt size={32} color="white" />, text: 'Integrity' },
+    { icon: <FaCheckCircle size={24} color="white" />, text: 'Quality' },
+    { icon: <FaHandshake size={24} color="white" />, text: 'Reliability' },
+    { icon: <FaShieldAlt size={24} color="white" />, text: 'Integrity' },
   ];
 
   const slides: SlideItem[] = [
@@ -147,14 +147,14 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Feature Highlights with New Animation */}
-      <div className="absolute bottom-0 font-lato flex w-full items-center justify-center gap-4 p-5 pb-6 md:pb-10 sm:pb-8 lg:pb-12 md:gap-20 lg:gap-32">
+      <div className="absolute bottom-0 font-lato flex w-full items-center justify-center p-5 pb-6 md:pb-10 sm:pb-8 lg:pb-12 md:gap-20 lg:gap-32 sm:gap-10 gap-8">
         {features.map((feature, index) => (
           <div 
             key={index} 
             className="flex flex-col items-center animate-slide-rotate transition-bg-scale duration-500 hover:scale-105 hover:bg-black/20" 
             style={{ animationDelay: `${index * 150}ms` }}
           >
-            <div className="opacity-40">
+            <div className="opacity-60">
               {feature.icon}
             </div>
             <p 
