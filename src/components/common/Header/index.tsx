@@ -142,7 +142,14 @@ const Header = () => {
                             <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${isInHomeSection && !scrolled ? 'bg-white' : 'bg-black'}`}></div>
                         </div>
                     </Magnetic>
-                    
+                    <Magnetic>
+                        <div className="group flex flex-col relative z-[1] p-[15px] cursor-pointer">
+                            <HashLink smooth to="/projects" className={headerStyles.textColor}>
+                                Projects
+                            </HashLink>
+                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${isInHomeSection && !scrolled ? 'bg-white' : 'bg-black'}`}></div>
+                        </div>
+                    </Magnetic>
                    
                     <Magnetic>
                         <div className="group flex flex-col relative z-[1] p-[15px] cursor-pointer">
@@ -287,7 +294,14 @@ const Header = () => {
                                     </HashLink>
                                 </div>
                             </div>
-                            
+                            <HashLink
+                                smooth
+                                to="/projects"
+                                className="block text-black py-2 text-2xl hover:text-gray-700"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Projects
+                            </HashLink>
 
                             <HashLink
                                 smooth
