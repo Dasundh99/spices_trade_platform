@@ -51,8 +51,8 @@ const ExportCard: React.FC<ExportItem> = ({ src, text, path }) => {
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
-      <div className="p-2 text-gray-900 bg-gray-100 text-center">
-    <h3 className="text-md mb-1 tracking-tight">{text}</h3>
+      <div className="p-2 text-black bg-gray-100 text-center">
+    <h3 className="text-lg mb-1 tracking-tight">{text}</h3>
 </div>
 
       <div className="absolute inset-0 border-2 border-green-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none" />

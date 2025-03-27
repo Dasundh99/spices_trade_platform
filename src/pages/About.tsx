@@ -22,16 +22,16 @@ const About: React.FC = () => {
             </h2>
           </div>
           <div className="w-full text-center space-y-2">
-            <p className="text-sm sm:text-sm text-black leading-relaxed opacity-80">
+            <p className="text-md sm:text-md text-black leading-relaxed">
               <span className="font-semibold text-green-600">GSGreen</span>, a Sri Lankan company, connects rural farmers’ produce to global markets while preserving traditional agriculture.
             </p>
-            <p className="text-sm sm:text-sm text-black leading-relaxed opacity-80">
+            <p className="text-md sm:text-md text-black leading-relaxed">
             Generations of farming roots have transformed into the organized cultivation of tropical fruits, vegetables, and spices over the past few years, further expanding into the processing and exporting of Ceylon-origin fruits, vegetables, spices, tea, and coconut products. We ensure high-quality, sustainable exports by fostering trust with farmers and clients.
             </p>
-            <p className="text-sm sm:text-sm text-black leading-relaxed opacity-80">
+            <p className="text-md sm:text-md text-black leading-relaxed">
             Sri Lanka’s diverse landscape enables year-round cultivation, giving us a competitive edge globally. Our hearts are always with the sweat and tears of the small-scale farmer community across the country, generating high value for their products.
             </p>
-            <p className="text-sm sm:text-sm text-black leading-relaxed opacity-80">
+            <p className="text-md sm:text-md text-black leading-relaxed">
             At GSGreen, we prioritize quality, reliability, and integrity in every step, ensuring trust in all that we do.
             </p>
           </div>
@@ -43,20 +43,20 @@ const About: React.FC = () => {
           <div className="flex justify-center md:justify-center gap-12 pt-10">
             {/* Quality Icon */}
             <div className="flex flex-col items-center">
-              <FaCheckCircle className="text-green-600 opacity-60 text-3xl" />
-              <span className="text-green-600 opacity-60 text-xs font-semibold pt-2">Quality</span>
+              <FaCheckCircle className="text-green-600 text-3xl" />
+              <span className="text-green-600 text-xs pt-2">Quality</span>
             </div>
 
             {/* Reliability Icon */}
             <div className="flex flex-col items-center">
-              <FaHandshake className="text-green-600 opacity-60 text-3xl" />
-              <span className="text-green-600 opacity-60 text-xs font-semibold pt-2">Reliability</span>
+              <FaHandshake className="text-green-600 text-3xl" />
+              <span className="text-green-600 text-xs pt-2">Reliability</span>
             </div>
 
             {/* Integrity Icon */}
             <div className="flex flex-col items-center">
-              <FaShieldAlt className="text-green-600 opacity-60 text-3xl " />
-              <span className="text-green-600 opacity-60 text-xs font-semibold pt-2">Integrity</span>
+              <FaShieldAlt className="text-green-600 text-3xl " />
+              <span className="text-green-600 text-xs pt-2">Integrity</span>
             </div>
           </div>
         </div>
