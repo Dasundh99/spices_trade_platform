@@ -151,7 +151,7 @@ const Hero: React.FC = () => {
         {features.map((feature, index) => (
           <div 
             key={index} 
-            className="flex flex-col items-center animate-slide-rotate transition-bg-scale duration-500 hover:scale-105 hover:bg-black/20" 
+            className="flex flex-col items-center animate-slide-rotate transition-bg-scale duration-500 hover:scale-105 hover:bg-transparent" 
             style={{ animationDelay: `${index * 150}ms` }}
           >
             <div className="opacity-60">

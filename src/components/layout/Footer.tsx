@@ -20,12 +20,12 @@ const Footer = () => {
                   Simply about what you do!
                 </p> */}
                 <div className="mt-4 text-xs space-y-2">
-                  <p className="flex items-center text-[10px] hover:text-gray-300 text-gray-400">
+                  <p className="flex items-center text-[10px] hover:text-gray-300 text-gray-600">
                     <FaMapMarkerAlt className="mr-2 text-xs hover:text-gray-300 text-gray-400" />
                     38/18, Sri Bimbarama Road, Kolamunna, Piliyandala.
                   </p>
                   
-                  <p className="flex items-center text-[10px] hover:text-gray-300 text-gray-400">
+                  <p className="flex items-center text-[10px] hover:text-gray-300 text-gray-600">
                     <FaEnvelope className="mr-2 text-xs hover:text-gray-300 text-gray-400" />
                     gsgreenlanka@gmail.com
                   </p>
@@ -37,9 +37,9 @@ const Footer = () => {
                 <h3 className="text-[18px] text-black">Top Clients</h3>
                 <div className="flex gap-x-5 mt-3 w-full ">
                   <ul className="flex flex-col space-y-2 text-xs">
-                    <li><a href="#" className="hover:text-gray-300 text-gray-400">Germany</a></li>
-                    <li><a href="#" className="hover:text-gray-300 text-gray-400">India</a></li>
-                    <li><a href="#" className="hover:text-gray-300 text-gray-400">Maldives</a></li>
+                    <li><a href="#" className="hover:text-gray-300 text-gray-500">Germany</a></li>
+                    <li><a href="#" className="hover:text-gray-300 text-gray-500">India</a></li>
+                    <li><a href="#" className="hover:text-gray-300 text-gray-500">Maldives</a></li>
                   </ul>
                   <ul className="flex flex-col space-y-2 text-xs">
                     {/* <li><a href="#" className="hover:text-gray-300 text-gray-400">Africa</a></li> */}
@@ -57,12 +57,12 @@ const Footer = () => {
                 <h3 className="text-[18px] text-black">Information</h3>
                 <ul className="mt-3 space-y-2 text-xs">
                   <li>
-                    <a href="/about" className="hover:text-gray-300 text-gray-400">
+                    <a href="/about" className="hover:text-gray-300 text-gray-500">
                       About Us
                     </a>
                   </li>
                   <li>
-                    <a href="/contact" className="hover:text-gray-300 text-gray-400">
+                    <a href="/contact" className="hover:text-gray-300 text-gray-500">
                       Contact Us
                     </a>
                   </li>

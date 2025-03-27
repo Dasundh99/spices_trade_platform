@@ -37,7 +37,7 @@ const ExportNavigator = () => {
                       // border: `1px solid ${"black"}`,
                     }}
                   >
-                    <span className="text-m font-medium">{item.label}</span>
+                    <span className="text-md font-Semibold">{item.label}</span>
                   </div>
                 </Link>
               </li>
