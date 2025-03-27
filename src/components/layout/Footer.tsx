@@ -102,7 +102,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-8 border-t border-gray-700 pt-4 text-center text-xs">
-        <p className="text-gray-400">
+        <p className="text-black">
           Copyright © {new Date().getFullYear()} GSGreen Lanka. All Rights Reserved.
         </p>
       </div>

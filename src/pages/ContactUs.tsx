@@ -101,8 +101,8 @@ const ContactUs: React.FC = () => {
                     {item.icon}
                   </div>
                   <div>
-                    <p className="block text-xs font-medium text-black mb-1">{item.label}</p>
-                    <p className="text-[10px] text-black leading-relaxed">{item.value}</p>
+                    <p className="block text-sm font-medium text-black mb-1">{item.label}</p>
+                    <p className="text-[11.5px] text-black leading-relaxed">{item.value}</p>
                   </div>
                 </div>
               ))}
@@ -110,9 +110,9 @@ const ContactUs: React.FC = () => {
 
             {/* Google Maps */}
             <div className="mt-4">
-              <h3 className="text-xl font-semibold text-black mb-4">
+              <h2 className="text-xl font-semibold text-black mb-4">
                 Our Location
-              </h3>
+              </h2>
               <div className="w-full h-64 rounded-lg overflow-hidden shadow-md border border-gray-200">
                 <iframe
                   className="w-full h-full"
@@ -136,7 +136,7 @@ const ContactUs: React.FC = () => {
                   <div key={field.id}>
                     <label
                       htmlFor={field.id}
-                      className="block text-xs font-medium text-black mb-1"
+                      className="block text-sm text-black mb-1"
                     >
                       {field.label}
                       {field.required && <span className="text-red-500">*</span>}
@@ -158,7 +158,7 @@ const ContactUs: React.FC = () => {
                 <div key={field.id}>
                   <label
                     htmlFor={field.id}
-                    className="block text-xs font-medium text-black mb-1"
+                    className="block text-sm text-black mb-1"
                   >
                     {field.label}
                     {field.required && <span className="text-red-500">*</span>}
@@ -190,7 +190,7 @@ const ContactUs: React.FC = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className={`w-full py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-300 ${
+                className={`w-full py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-300 ${
                   loading ? 'opacity-50 cursor-not-allowed' : ''
                 }`}
               >

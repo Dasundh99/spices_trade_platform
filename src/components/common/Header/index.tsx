@@ -110,7 +110,7 @@ const Header = () => {
                         to="/#home"
                         className="flex flex-col items-center justify-center text-center space-y-1"
                     >
-                        <span className="text-lg sm:text-xl md:text-2xl font-semibold">GSGreen Lanka</span>
+                        <span className="text-lg sm:text-xl md:text-2xl">GSGreen Lanka</span>
                         <span className="text-xs sm:text-xs md:text-xs">Private Limited</span>
                     </HashLink>
 

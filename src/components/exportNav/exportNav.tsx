@@ -30,18 +30,18 @@ const ExportNavigator = () => {
               <li key={item.path} className="flex justify-center">
                 <Link to={item.path} className="group relative block">
                   <div
-                    className={`lg:w-40 md:w-40 w-70 h-10 flex items-center justify-center rounded-lg shadow-xl transition-colors duration-200 sm:text-xs text-xs`}
+                    className={`lg:w-50 md:w-40 w-70 h-12 flex items-center justify-center rounded-lg shadow-xl transition-colors duration-200 sm:text-md text-xs`}
                     style={{
                       backgroundColor: isActive ? colors.deepGreen : "white",
                       color: isActive ? "black" : "black",
                       // border: `1px solid ${"black"}`,
                     }}
                   >
-                    <span className="text-md font-Semibold">{item.label}</span>
+                    <span className="text-[18px] font-Semibold">{item.label}</span>
                   </div>
                 </Link>
               </li>
-            );
+            )
           })}
         </ul>
       </nav>
