@@ -17,6 +17,7 @@ import Spices from './pages/Spices';
 import Coconut from './pages/Coconut';
 import ProductDetails from './pages/ProductDetails';
 import Header from './components/common/Header';
+import Projects from './pages/Projects';
 
 function App() {
     useEffect(() => {
@@ -54,6 +55,7 @@ function App() {
                         </main>
                     } />
                     <Route path='/about' element={<About />} />
+                    <Route path='/projects' element={<Projects />} />
                     <Route path='/contact' element={<ContactUs />} />
                     <Route path='/fruits' element={<TropicalFruits />} />
                     <Route path='/vegetables' element={<TropicalVegetables />} />
