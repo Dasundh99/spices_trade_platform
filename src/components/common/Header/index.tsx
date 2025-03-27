@@ -266,7 +266,7 @@ const Header = () => {
                                         className="block text-black py-2 text-sm hover:text-gray-700"
                                         onClick={() => setIsOpen(false)}
                                     >
-                                        Tropical Fruits
+                                        Fruits
                                     </HashLink>
                                     <HashLink
                                         smooth
@@ -274,7 +274,7 @@ const Header = () => {
                                         className="block text-black py-2 text-sm hover:text-gray-700"
                                         onClick={() => setIsOpen(false)}
                                     >
-                                        Tropical Vegetables
+                                        Vegetables
                                     </HashLink>
                                     <HashLink
                                         smooth
@@ -282,15 +282,15 @@ const Header = () => {
                                         className="block text-black py-2 text-sm hover:text-gray-700"
                                         onClick={() => setIsOpen(false)}
                                     >
-                                        Spices and Oils
+                                        Spices and Essential Oils
                                     </HashLink>
                                     <HashLink
                                         smooth
-                                        to="/tea"
+                                        to="/coconut"
                                         className="block text-black py-2 text-sm hover:text-gray-700"
                                         onClick={() => setIsOpen(false)}
                                     >
-                                        Tea
+                                        Coconut Products
                                     </HashLink>
                                 </div>
                             </div>

@@ -11,12 +11,25 @@ const Projects: React.FC = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen lg:pt-20 md:pt-15 pt-10 pb-16 overflow-hidden font-lato flex justify-center"
+      className="min-h-screen lg:pt-20 md:pt-15 pt-10 pb-16 overflow-hidden font-lato flex justify-center items-center flex-col"
       style={{ backgroundColor: colors.mutedGreen }}
     >
-      <h2 className="text-4xl md:text-6xl text-black tracking-wide font-semibold lg:pt-9 pt-5 w-full text-center">
-        Projects
-      </h2>
+      <div className="container mx-auto px-4">
+        <div className="mt-8 text-center max-w-2xl mx-auto">
+          <p 
+            className="text-xl md:text-2xl font-medium uppercase tracking-wider"
+            style={{ color: colors.accentGreen }}
+          >
+            Coming Soon
+          </p>
+          <p className="text-base md:text-lg text-gray-600 mt-4 leading-relaxed">
+            We are working on innovative agricultural export projects to bring premium, sustainably sourced products to global markets. 
+            Stay tuned for updates on our upcoming initiatives or contact us to learn more about our vision.
+          </p>
+          <div className="mt-6">
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
