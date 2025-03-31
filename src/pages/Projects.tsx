@@ -17,9 +17,13 @@ import PapayaImage5 from "../assets/Projects/Papaya/image copy 6.png";
 import PapayaImage6 from "../assets/Projects/Papaya/image copy.png";
 import PapayaImage7 from "../assets/Projects/Papaya/image.png";
 
+import Soursoap1 from "../assets/Projects/Soursoap/image copy 2.png";
+import Soursoap2 from "../assets/Projects/Soursoap/image copy 3.png";
+import Soursoap3 from "../assets/Projects/Soursoap/image copy.png";
+import Soursoap4 from "../assets/Projects/Soursoap/image.png";
 
-
-
+import Watermelon1 from "../assets/Projects/Watermelon/image copy.png";
+import Watermelon2 from "../assets/Projects/Watermelon/image.png";
 
 const colors = {
   deepGreen: "#22C55E",
@@ -32,19 +36,31 @@ const projectList = [
   {
     images: [mangoImage1, mangoImage2, mangoImage3],
     title: "Mango",
-    video: "https://drive.google.com/uc?export=download&id=YOUR_VIDEO_ID",
+    video: "",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, mauris nec dictum cursus, nisl elit vehicula lorem, sed volutpat orci nunc id purus. Curabitur ut augue vel nulla laoreet tincidunt. Morbi maximus, eros sit amet pharetra feugiat, leo felis tincidunt velit, non tincidunt odio mi eget leo. Quisque in venenatis turpis. Sed malesuada urna et nisi mollis, nec convallis neque feugiat. Sed nec suscipit orci. Etiam vehicula dui id arcu maximus, at maximus mi viverra. Nulla facilisi.",
   },
   {
     images: [ManiocImage1, ManiocImage2, ManiocImage3, ManiocImage4],
     title: "Manioc",
-    video: "",
+    video: "https://drive.google.com/uc?export=download&id=YOUR_VIDEO_ID",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, mauris nec dictum cursus, nisl elit vehicula lorem, sed volutpat orci nunc id purus. Curabitur ut augue vel nulla laoreet tincidunt. Morbi maximus, eros sit amet pharetra feugiat, leo felis tincidunt velit, non tincidunt odio mi eget leo. Quisque in venenatis turpis. Sed malesuada urna et nisi mollis, nec convallis neque feugiat. Sed nec suscipit orci. Etiam vehicula dui id arcu maximus, at maximus mi viverra. Nulla facilisi.",
   },
   {
     images: [PapayaImage2, PapayaImage3, PapayaImage4, PapayaImage5, PapayaImage6, PapayaImage7],
     title: "Papaya",
     video: "",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, mauris nec dictum cursus, nisl elit vehicula lorem, sed volutpat orci nunc id purus. Curabitur ut augue vel nulla laoreet tincidunt. Morbi maximus, eros sit amet pharetra feugiat, leo felis tincidunt velit, non tincidunt odio mi eget leo. Quisque in venenatis turpis. Sed malesuada urna et nisi mollis, nec convallis neque feugiat. Sed nec suscipit orci. Etiam vehicula dui id arcu maximus, at maximus mi viverra. Nulla facilisi.",
+  },
+  {
+    images: [Soursoap1, Soursoap2, Soursoap3, Soursoap4],
+    title: "Soursoap",
+    video: "https://drive.google.com/uc?export=download&id=YOUR_VIDEO_ID",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, mauris nec dictum cursus, nisl elit vehicula lorem, sed volutpat orci nunc id purus. Curabitur ut augue vel nulla laoreet tincidunt. Morbi maximus, eros sit amet pharetra feugiat, leo felis tincidunt velit, non tincidunt odio mi eget leo. Quisque in venenatis turpis. Sed malesuada urna et nisi mollis, nec convallis neque feugiat. Sed nec suscipit orci. Etiam vehicula dui id arcu maximus, at maximus mi viverra. Nulla facilisi.",
+  },
+  {
+    images: [Watermelon1, Watermelon2],
+    title: "Watermelon",
+    video: "https://drive.google.com/uc?export=download&id=YOUR_VIDEO_ID",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, mauris nec dictum cursus, nisl elit vehicula lorem, sed volutpat orci nunc id purus. Curabitur ut augue vel nulla laoreet tincidunt. Morbi maximus, eros sit amet pharetra feugiat, leo felis tincidunt velit, non tincidunt odio mi eget leo. Quisque in venenatis turpis. Sed malesuada urna et nisi mollis, nec convallis neque feugiat. Sed nec suscipit orci. Etiam vehicula dui id arcu maximus, at maximus mi viverra. Nulla facilisi.",
   },
   
