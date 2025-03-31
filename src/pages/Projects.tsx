@@ -153,7 +153,7 @@ const Projects: React.FC = () => {
                   <div className="p-6">
                     <h2
                       className="text-2xl md:text-3xl font-semibold tracking-tight"
-                      style={{ color: colors.deepGreen }}
+                      style={{ color: "black" }}
                     >
                       {project.title}
                     </h2>
