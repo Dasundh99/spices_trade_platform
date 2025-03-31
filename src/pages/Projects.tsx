@@ -36,31 +36,31 @@ const projectList = [
     images: [mangoImage1, mangoImage2, mangoImage3],
     title: "Mango",
     video: "",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, mauris nec dictum cursus, nisl elit vehicula lorem, sed volutpat orci nunc id purus. Curabitur ut augue vel nulla laoreet tincidunt. Morbi maximus, eros sit amet pharetra feugiat, leo felis tincidunt velit, non tincidunt odio mi eget leo. Quisque in venenatis turpis. Sed malesuada urna et nisi mollis, nec convallis neque feugiat. Sed nec suscipit orci. Etiam vehicula dui id arcu maximus, at maximus mi viverra. Nulla facilisi.",
+    content: "Mango trees in Sri Lanka are naturally grown in warm, tropical environments, typically in areas with plenty of sunlight and well-drained soil. They are drought-tolerant and can thrive in various soil types. Mangoes grow best when the trees are spaced apart to ensure ample sunlight and airflow. They often require a dry period for flowering, followed by a rainy season for fruit development. The trees are usually propagated through seeds or grafting, and once mature, they start producing fruit seasonally. Natural pollination is facilitated by insects, especially bees, which transfer pollen between flowers.",
   },
   {
     images: [Soursoap1, Soursoap2, Soursoap4],
     title: "Soursoap",
     video: [SoursoapVideo],
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, mauris nec dictum cursus, nisl elit vehicula lorem, sed volutpat orci nunc id purus. Curabitur ut augue vel nulla laoreet tincidunt. Morbi maximus, eros sit amet pharetra feugiat, leo felis tincidunt velit, non tincidunt odio mi eget leo. Quisque in venenatis turpis. Sed malesuada urna et nisi mollis, nec convallis neque feugiat. Sed nec suscipit orci. Etiam vehicula dui id arcu maximus, at maximus mi viverra. Nulla facilisi.",
+    content: "Soursop, also known as Graviola, thrives naturally in Sri Lanka's tropical climate, where it grows best in warm, humid conditions. The tree prefers well-drained, fertile soil and partial shade. Soursop trees are relatively low-maintenance and can be propagated from seeds or through grafting. The fruit develops after the rainy season, requiring consistent moisture to reach its distinctive, spiky green exterior. It’s naturally pollinated by insects, especially bees, which help in fertilizing the flowers. Soursop trees are valued for their deliciously tangy, creamy pulp, often used in beverages, desserts, and traditional remedies.",
   },
   {
     images: [ManiocImage1, ManiocImage3, ManiocImage4],
     title: "Manioc",
     video: "",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, mauris nec dictum cursus, nisl elit vehicula lorem, sed volutpat orci nunc id purus. Curabitur ut augue vel nulla laoreet tincidunt. Morbi maximus, eros sit amet pharetra feugiat, leo felis tincidunt velit, non tincidunt odio mi eget leo. Quisque in venenatis turpis. Sed malesuada urna et nisi mollis, nec convallis neque feugiat. Sed nec suscipit orci. Etiam vehicula dui id arcu maximus, at maximus mi viverra. Nulla facilisi.",
+    content: "Manioc, or cassava, is a hardy root crop commonly grown in Sri Lanka’s tropical climate. It thrives in well-drained, sandy or loamy soils and requires minimal rainfall, making it ideal for regions with inconsistent weather patterns. The plant is typically propagated through stem cuttings, which are planted in the soil to grow into tall, bushy plants. After a few months, the roots mature underground, ready for harvest. Manioc is a crucial crop in Sri Lanka, providing a starchy staple used in various dishes and traditional foods. It is often grown in small-scale farming systems, contributing to food security in rural areas.",
   },
   {
     images: [PapayaImage2, PapayaImage3, PapayaImage4, PapayaImage5, PapayaImage6, PapayaImage7],
     title: "Papaya",
     video: "",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, mauris nec dictum cursus, nisl elit vehicula lorem, sed volutpat orci nunc id purus. Curabitur ut augue vel nulla laoreet tincidunt. Morbi maximus, eros sit amet pharetra feugiat, leo felis tincidunt velit, non tincidunt odio mi eget leo. Quisque in venenatis turpis. Sed malesuada urna et nisi mollis, nec convallis neque feugiat. Sed nec suscipit orci. Etiam vehicula dui id arcu maximus, at maximus mi viverra. Nulla facilisi.",
+    content: "Papaya grows naturally in Sri Lanka's tropical climate, thriving in warm, sunny conditions with well-drained, fertile soil. The plant is usually propagated from seeds, and once planted, it grows quickly, often bearing fruit within a year. Papaya trees prefer a steady supply of moisture but can tolerate dry spells. These trees typically need a lot of space for optimal growth, as their broad leaves and large fruits require plenty of sunlight and airflow. The fruit, with its sweet, orange flesh, is widely consumed fresh, used in salads, or processed into juices, making it a key tropical crop in Sri Lanka.",
   },
   {
     images: [Watermelon1, Watermelon2],
     title: "Watermelon",
     video: [WatermelonVideo],
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, mauris nec dictum cursus, nisl elit vehicula lorem, sed volutpat orci nunc id purus. Curabitur ut augue vel nulla laoreet tincidunt. Morbi maximus, eros sit amet pharetra feugiat, leo felis tincidunt velit, non tincidunt odio mi eget leo. Quisque in venenatis turpis. Sed malesuada urna et nisi mollis, nec convallis neque feugiat. Sed nec suscipit orci. Etiam vehicula dui id arcu maximus, at maximus mi viverra. Nulla facilisi.",
+    content: "Watermelon grows naturally in Sri Lanka's tropical climate, thriving in warm temperatures and well-drained, sandy soils. The plant requires plenty of sunlight and moderate rainfall for optimal growth. It is typically propagated from seeds and prefers a sunny, open area with enough space for the vines to spread. Watermelon plants need consistent moisture, especially during the fruit's development, but they are drought-tolerant once established. The large, round fruits, with their sweet, juicy, red flesh, are popular during the hot season and are commonly enjoyed fresh or in refreshing beverages, making them a favorite tropical fruit in Sri Lanka.",
   },
 ];
 
