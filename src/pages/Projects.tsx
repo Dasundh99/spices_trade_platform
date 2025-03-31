@@ -114,18 +114,18 @@ const Projects: React.FC = () => {
       `}</style>
       <section
         id="projects"
-        className="min-h-screen py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50"
+        className="min-h-screen py-8 lg:py-24 bg-green-100"
       >
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
             <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight lg:pt-5 md:pt-15 pt-15 "
               style={{ color: "black" }}
             >
               Our Projects
             </h1>
             <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
-              Explore our innovative solutions and cutting-edge designs
+            Promoting sustainable farming and expanding global food exports.
             </p>
           </div>
 
