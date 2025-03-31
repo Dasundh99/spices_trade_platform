@@ -10,14 +10,14 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <section id="about" className="w-full bg-green-100 font-lato ">
+    <section id="about" className="w-full bg-green-100 font-lato">
       {/* Main Content Wrapper */}
-      <div className="container mx-auto px-6 p-10 pt-15 md:pt-20 lg:pt-20 md:px-6 lg:px-8 flex flex-col md:flex-row gap-14">
+      <div className="container mx-auto px-6 p-10 pt-15 md:pt-20 lg:pt-20 md:px-6 lg:px-8 flex flex-col items-center gap-14">
         {/* Left Side: Text Content */}
-        <div className="w-full space-y-5">
+        <div className="w-full max-w-3xl space-y-5 flex flex-col items-center">
           {/* Separate Title Section */}
-          <div className="w-full flex justify-center pb-4">
-            <h2 className="text-4xl md:text-6xl text-black tracking-wide font-Semibold  lg:pt-9 pt-5">
+          <div className="w-full text-center pb-4">
+            <h2 className="text-4xl md:text-6xl text-black tracking-wide font-Semibold lg:pt-9 pt-5">
               About Us
             </h2>
           </div>
@@ -26,21 +26,21 @@ const About: React.FC = () => {
               <span className="font-semibold text-green-600">GSGreen</span>, a Sri Lankan company, connects rural farmers’ produce to global markets while preserving traditional agriculture.
             </p>
             <p className="text-md sm:text-md text-black leading-relaxed">
-            Generations of farming roots have transformed into the organized cultivation of tropical fruits, vegetables, and spices over the past few years, further expanding into the processing and exporting of Ceylon-origin fruits, vegetables, spices, tea, and coconut products. We ensure high-quality, sustainable exports by fostering trust with farmers and clients.
+              Generations of farming roots have transformed into the organized cultivation of tropical fruits, vegetables, and spices over the past few years, further expanding into the processing and exporting of Ceylon-origin fruits, vegetables, spices, tea, and coconut products. We ensure high-quality, sustainable exports by fostering trust with farmers and clients.
             </p>
             <p className="text-md sm:text-md text-black leading-relaxed">
-            Sri Lanka’s diverse landscape enables year-round cultivation, giving us a competitive edge globally. Our hearts are always with the sweat and tears of the small-scale farmer community across the country, generating high value for their products.
+              Sri Lanka’s diverse landscape enables year-round cultivation, giving us a competitive edge globally. Our hearts are always with the sweat and tears of the small-scale farmer community across the country, generating high value for their products.
             </p>
             <p className="text-md sm:text-md text-black leading-relaxed">
-            At GSGreen, we prioritize quality, reliability, and integrity in every step, ensuring trust in all that we do.
+              At GSGreen, we prioritize quality, reliability, and integrity in every step, ensuring trust in all that we do.
             </p>
           </div>
 
           {/* Divider Line */}
-          <hr className="border-t border-gray-300 my-6 mx-auto w-1/2" />
+          <hr className="border-t border-gray-300 my-6 w-1/2" />
 
           {/* Icons Section */}
-          <div className="flex justify-center md:justify-center gap-12 pt-10">
+          <div className="flex justify-center gap-12 pt-10">
             {/* Quality Icon */}
             <div className="flex flex-col items-center">
               <FaCheckCircle className="text-green-600 text-3xl" />
@@ -55,22 +55,11 @@ const About: React.FC = () => {
 
             {/* Integrity Icon */}
             <div className="flex flex-col items-center">
-              <FaShieldAlt className="text-green-600 text-3xl " />
+              <FaShieldAlt className="text-green-600 text-3xl" />
               <span className="text-green-600 text-xs pt-2">Integrity</span>
             </div>
           </div>
         </div>
-
-        {/* Right Side: Image with 1:1 Aspect Ratio */}
-        {/* <div className="w-full md:w-3/4 flex justify-center pt-10">
-          <div className="w-full max-w-screen-md aspect-square overflow-hidden">
-            <img
-              src={aboutImage}
-              alt="About Us"
-              className="w-full h-full object-cover transform transition duration-300 hover:scale-105 hover:contrast-110"
-            />
-          </div>
-        </div> */}
       </div>
     </section>
   );
