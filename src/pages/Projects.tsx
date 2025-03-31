@@ -4,9 +4,7 @@ import mangoImage1 from "../assets/Projects/Mango/image.png";
 import mangoImage2 from "../assets/Projects/Mango/image copy.png";
 import mangoImage3 from "../assets/Projects/Mango/image copy 2.png";
 
-
 import ManiocImage1 from "../assets/Projects/Manioc/image.png";
-import ManiocImage2 from "../assets/Projects/Manioc/image copy.png";
 import ManiocImage3 from "../assets/Projects/Manioc/image copy 3.png";
 import ManiocImage4 from "../assets/Projects/Manioc/image copy 2.png";
 
@@ -19,11 +17,12 @@ import PapayaImage7 from "../assets/Projects/Papaya/image.png";
 
 import Soursoap1 from "../assets/Projects/Soursoap/image copy 2.png";
 import Soursoap2 from "../assets/Projects/Soursoap/image copy 3.png";
-import Soursoap3 from "../assets/Projects/Soursoap/image copy.png";
 import Soursoap4 from "../assets/Projects/Soursoap/image.png";
+import SoursoapVideo from "../assets/Projects/Soursoap/WhatsApp Video 2025-03-15 at 16.27.55.mp4";
 
 import Watermelon1 from "../assets/Projects/Watermelon/image copy.png";
 import Watermelon2 from "../assets/Projects/Watermelon/image.png";
+import WatermelonVideo from "../assets/Projects/Watermelon/WhatsApp Video 2025-03-15 at 16.35.38.mp4";
 
 const colors = {
   deepGreen: "#22C55E",
@@ -40,9 +39,15 @@ const projectList = [
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, mauris nec dictum cursus, nisl elit vehicula lorem, sed volutpat orci nunc id purus. Curabitur ut augue vel nulla laoreet tincidunt. Morbi maximus, eros sit amet pharetra feugiat, leo felis tincidunt velit, non tincidunt odio mi eget leo. Quisque in venenatis turpis. Sed malesuada urna et nisi mollis, nec convallis neque feugiat. Sed nec suscipit orci. Etiam vehicula dui id arcu maximus, at maximus mi viverra. Nulla facilisi.",
   },
   {
-    images: [ManiocImage1, ManiocImage2, ManiocImage3, ManiocImage4],
+    images: [Soursoap1, Soursoap2, Soursoap4],
+    title: "Soursoap",
+    video: [SoursoapVideo],
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, mauris nec dictum cursus, nisl elit vehicula lorem, sed volutpat orci nunc id purus. Curabitur ut augue vel nulla laoreet tincidunt. Morbi maximus, eros sit amet pharetra feugiat, leo felis tincidunt velit, non tincidunt odio mi eget leo. Quisque in venenatis turpis. Sed malesuada urna et nisi mollis, nec convallis neque feugiat. Sed nec suscipit orci. Etiam vehicula dui id arcu maximus, at maximus mi viverra. Nulla facilisi.",
+  },
+  {
+    images: [ManiocImage1, ManiocImage3, ManiocImage4],
     title: "Manioc",
-    video: "https://drive.google.com/uc?export=download&id=YOUR_VIDEO_ID",
+    video: "",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, mauris nec dictum cursus, nisl elit vehicula lorem, sed volutpat orci nunc id purus. Curabitur ut augue vel nulla laoreet tincidunt. Morbi maximus, eros sit amet pharetra feugiat, leo felis tincidunt velit, non tincidunt odio mi eget leo. Quisque in venenatis turpis. Sed malesuada urna et nisi mollis, nec convallis neque feugiat. Sed nec suscipit orci. Etiam vehicula dui id arcu maximus, at maximus mi viverra. Nulla facilisi.",
   },
   {
@@ -52,18 +57,11 @@ const projectList = [
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, mauris nec dictum cursus, nisl elit vehicula lorem, sed volutpat orci nunc id purus. Curabitur ut augue vel nulla laoreet tincidunt. Morbi maximus, eros sit amet pharetra feugiat, leo felis tincidunt velit, non tincidunt odio mi eget leo. Quisque in venenatis turpis. Sed malesuada urna et nisi mollis, nec convallis neque feugiat. Sed nec suscipit orci. Etiam vehicula dui id arcu maximus, at maximus mi viverra. Nulla facilisi.",
   },
   {
-    images: [Soursoap1, Soursoap2, Soursoap3, Soursoap4],
-    title: "Soursoap",
-    video: "https://drive.google.com/uc?export=download&id=YOUR_VIDEO_ID",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, mauris nec dictum cursus, nisl elit vehicula lorem, sed volutpat orci nunc id purus. Curabitur ut augue vel nulla laoreet tincidunt. Morbi maximus, eros sit amet pharetra feugiat, leo felis tincidunt velit, non tincidunt odio mi eget leo. Quisque in venenatis turpis. Sed malesuada urna et nisi mollis, nec convallis neque feugiat. Sed nec suscipit orci. Etiam vehicula dui id arcu maximus, at maximus mi viverra. Nulla facilisi.",
-  },
-  {
     images: [Watermelon1, Watermelon2],
     title: "Watermelon",
-    video: "https://drive.google.com/uc?export=download&id=YOUR_VIDEO_ID",
+    video: [WatermelonVideo],
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, mauris nec dictum cursus, nisl elit vehicula lorem, sed volutpat orci nunc id purus. Curabitur ut augue vel nulla laoreet tincidunt. Morbi maximus, eros sit amet pharetra feugiat, leo felis tincidunt velit, non tincidunt odio mi eget leo. Quisque in venenatis turpis. Sed malesuada urna et nisi mollis, nec convallis neque feugiat. Sed nec suscipit orci. Etiam vehicula dui id arcu maximus, at maximus mi viverra. Nulla facilisi.",
   },
-  
 ];
 
 const Projects: React.FC = () => {
@@ -89,6 +87,13 @@ const Projects: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  const getVideoSource = (video: string | string[]) => {
+    if (Array.isArray(video)) {
+      return video[0]; // Take the first video if it's an array
+    }
+    return video;
+  };
+
   return (
     <>
       <style>{`
@@ -102,12 +107,17 @@ const Projects: React.FC = () => {
         .image-container {
           position: relative;
           width: 100%;
-          padding-bottom: 100%; /* This creates the 1:1 aspect ratio */
+          padding-bottom: 100%;
         }
         .image-container img {
           position: absolute;
           top: 0;
           left: 0;
+          width: 100%;
+          height: 100%;
+        }
+        .video-container {
+          position: relative;
           width: 100%;
           height: 100%;
         }
@@ -119,13 +129,13 @@ const Projects: React.FC = () => {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
             <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight lg:pt-5 md:pt-15 pt-15 "
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight lg:pt-5 md:pt-15 pt-15"
               style={{ color: "black" }}
             >
               Our Projects
             </h1>
             <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
-            Promoting sustainable farming and expanding global food exports.
+              Promoting sustainable farming and expanding global food exports.
             </p>
           </div>
 
@@ -135,7 +145,6 @@ const Projects: React.FC = () => {
                 key={index}
                 className="group bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-300"
               >
-                {/* Top Div: Description and Video (if provided) */}
                 <div
                   className={`p-6 border-b border-gray-100 ${
                     project.video ? "grid md:grid-cols-2 gap-6" : ""
@@ -151,15 +160,23 @@ const Projects: React.FC = () => {
                     <p className="mt-2 text-gray-600">{project.content}</p>
                   </div>
                   {project.video && (
-                    <div className="relative">
+                    <div className="video-container">
                       <video
                         autoPlay
                         muted
                         loop
                         playsInline
-                        className="w-full h-full object-cover rounded-lg"
+                        className="w-full h-64 object-cover rounded-lg"
+                        onError={() => {
+                          console.error(
+                            `Failed to load video: ${getVideoSource(project.video)}`
+                          );
+                        }}
                       >
-                        <source src={project.video} type="video/mp4" />
+                        <source
+                          src={getVideoSource(project.video)}
+                          type="video/mp4"
+                        />
                         Your browser does not support the video tag.
                       </video>
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg" />
@@ -167,7 +184,6 @@ const Projects: React.FC = () => {
                   )}
                 </div>
 
-                {/* Bottom Div: All Images */}
                 <div className="p-6">
                   <div className="grid md:grid-cols-3 gap-4">
                     {project.images.map((image, imgIndex) => (
