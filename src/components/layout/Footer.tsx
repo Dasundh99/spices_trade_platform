@@ -16,9 +16,9 @@ const Footer = () => {
                   alt="Logo"
                   style={{ width: "100px", height: "auto" }}
                 />
-                {/* <p className="mt-4 text-xs">
-                  Simply about what you do!
-                </p> */}
+                <p className="mt-4 text-xs text-black font-bold">
+                  Way of Life.. Profession of Hope..
+                </p>
                 <div className="mt-4 text-xs space-y-2">
                   <p className="flex items-center text-[10px] hover:text-gray-300 text-gray-600">
                     <FaMapMarkerAlt className="mr-2 text-xs hover:text-gray-300 text-gray-400" />

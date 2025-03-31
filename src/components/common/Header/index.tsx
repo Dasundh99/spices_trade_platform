@@ -108,9 +108,9 @@ const Header = () => {
                     <HashLink
                         smooth
                         to="/#home"
-                        className="flex flex-col items-center justify-center text-center space-y-1"
+                        className="flex flex-col items-center justify-center text-center"
                     >
-                        <span className="text-lg sm:text-xl md:text-2xl">GSGreen Lanka</span>
+                        <span className="font-Semibold text-lg sm:text-xl md:text-2xl">GSGreen Lanka</span>
                         <span className="text-xs sm:text-xs md:text-xs">Private Limited</span>
                     </HashLink>
 
