@@ -1,35 +1,76 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+"use client";
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Lenis from '@studio-freight/lenis'
+import { useEffect } from 'react';
+import 'lenis/dist/lenis.css'
+
+import Hero from './pages/Home';
+import About from './pages/About';
+import Exports from './pages/Exports';
+import Clients from './pages/OurClients';
+import ContactUs from './pages/ContactUs';
+import Footer from './components/layout/Footer';
+import TropicalFruits from './pages/TropicalFruits';
+import TropicalVegetables from './pages/TropicalVegetables';
+import Spices from './pages/Spices';
+import Coconut from './pages/Coconut';
+import ProductDetails from './pages/ProductDetails';
+import Header from './components/common/Header';
+import Projects from './pages/Projects';
 
 function App() {
-  const [count, setCount] = useState(0)
+    useEffect(() => {
+        const lenis = new Lenis({
+            duration: 2.0,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            orientation: 'vertical',
+            gestureOrientation: 'vertical',
+            smoothWheel: true,
+            touchMultiplier: 2,
+        });
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+        function raf(time: number) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        return () => {
+            lenis.destroy();
+        };
+    }, []);
+
+    return (
+        <BrowserRouter>
+            <>
+                <Header />
+                <Routes>
+                    <Route path='/' element={
+                        <main>
+                            <Hero />
+                            <Exports />
+                            <Clients />
+                        </main>
+                    } />
+                    <Route path='/about' element={<About />} />
+                    <Route path='/projects' element={<Projects />} />
+                    <Route path='/contact' element={<ContactUs />} />
+                    <Route path='/fruits' element={<TropicalFruits />} />
+                    <Route path='/vegetables' element={<TropicalVegetables />} />
+                    <Route path='/spices' element={<Spices />} />
+                    <Route path='/coconut' element={<Coconut/>}/>
+                    <Route path="/fruit/:name" Component={ProductDetails} />
+                    <Route path="/vegetable/:name" Component={ProductDetails} />
+                    <Route path="/spices/:name" Component={ProductDetails} />
+                    {/* <Route path="/tea/:name" Component={ProductDetails} /> */}
+                    <Route path="/coconut/:name" Component={ProductDetails} />
+                </Routes>
+                <Footer />
+            </>
+        </BrowserRouter>
+    );
 }
 
-export default App
+export default App;

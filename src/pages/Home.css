@@ -1,0 +1,31 @@
+@layer utilities {
+  /* Slide-in with subtle rotation animation */
+  .animate-slide-rotate {
+    animation: slideRotate 1.5s ease-in-out forwards;
+  }
+  
+  .delay-150 {
+    animation-delay: 150ms;
+  }
+
+  @keyframes slideRotate {
+    from {
+      opacity: 0;
+      transform: translateX(-30px) rotate(-2deg);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) rotate(0deg);
+    }
+  }
+
+  /* Smooth background and scale transitions */
+  .transition-bg-scale {
+    transition-property: background-color, transform;
+    transition-timing-function: ease-out;
+  }
+  
+  .duration-500 {
+    transition-duration: 500ms;
+  }
+}
