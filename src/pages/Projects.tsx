@@ -25,10 +25,10 @@ import Watermelon2 from "../assets/Projects/Watermelon/image.png";
 import WatermelonVideo from "../assets/Projects/Watermelon/WhatsApp Video 2025-03-15 at 16.35.38.mp4";
 
 const colors = {
-  deepGreen: "#22C55E",
-  sageGreen: "#DCFCE7",
-  mutedGreen: "#F5FBF5",
-  accentGreen: "#8CC089",
+  spiceRed: "#C41E3A",
+  spiceRedLight: "#FFF0F0",
+  ceylonGreen: "#228B22",
+  cream: "#FFF8F0",
 };
 
 const projectList = [
@@ -98,11 +98,11 @@ const Projects: React.FC = () => {
     <>
       <style>{`
         .learn-more-btn {
-          background-color: ${colors.deepGreen};
+          background-color: ${colors.spiceRed};
           transition: background-color 0.2s ease-in-out;
         }
         .learn-more-btn:hover {
-          background-color: ${colors.accentGreen};
+          background-color: ${colors.ceylonGreen};
         }
         .image-container {
           position: relative;
@@ -124,7 +124,7 @@ const Projects: React.FC = () => {
       `}</style>
       <section
         id="projects"
-        className="min-h-screen py-8 lg:py-24 bg-green-100"
+        className="min-h-screen pt-20 md:pt-24 lg:pt-28 pb-8 lg:pb-24 bg-cream"
       >
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">

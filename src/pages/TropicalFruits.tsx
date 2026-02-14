@@ -14,12 +14,12 @@ import Rambutan from "../assets/Fruits/Rambutan.png"
 import Banana from "../assets/Fruits/Banana.png"
 import JackFruit from "../assets/Fruits/JackFruit.png"
 
-// Refined Greenish Color Palette
+// Brand Color Palette
 const colors = {
-  deepGreen: "#22C55E",    // A lively, lighter deep green for text and accents
-  sageGreen: "#DCFCE7",    // A bright, cheerful sage green for backgrounds and highlights
-  mutedGreen: "#F5FBF5",   // An ultra-light, almost glowing green for section backgrounds
-  accentGreen: "#8CC089",  // A vivid yet soft green for hover states and accents
+  spiceRed: "#C41E3A",
+  cream: "#FFF8F0",
+  ceylonGreen: "#228B22",
+  charcoal: "#1A1A1A",
 };
 
 // Gallery data
@@ -110,8 +110,8 @@ const TropicalFruits: React.FC = () => {
   return (
     <section
       id="fruit"
-      className="min-h-screen lg:pt-20 md:pt-15 pt-10 pb-16 overflow-hidden font-lato"
-      style={{ backgroundColor: colors.mutedGreen }}
+      className="min-h-screen pt-20 md:pt-24 lg:pt-28 pb-16 overflow-hidden font-lato"
+      style={{ backgroundColor: colors.cream }}
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-20 mt-[40px]">
         <ExportNavigator />

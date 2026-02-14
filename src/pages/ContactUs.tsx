@@ -28,8 +28,8 @@ const ContactUs: React.FC = () => {
   }, []);
 
   const contactInfo = [
-    { icon: <FaMapMarkerAlt className="text-green-600 text-lg" />, label: "Address", value: "38/18, Sri Bimbarama Road, Kolamunna, Piliyandala, Sri Lanka." },
-    { icon: <FaEnvelope className="text-green-600 text-lg" />, label: "Email", value: "gsgreenlanka@gmail.com" },
+    { icon: <FaMapMarkerAlt className="text-spice-red text-lg" />, label: "Address", value: "38/18, Sri Bimbarama Road, Kolamunna, Piliyandala, Sri Lanka." },
+    { icon: <FaEnvelope className="text-spice-red text-lg" />, label: "Email", value: "gsgreenlanka@gmail.com" },
   ];
 
   const formFields = [
@@ -82,12 +82,12 @@ const ContactUs: React.FC = () => {
     });
   };
 
-  const inputStyles = "w-full mt-1 p-2 bg-green-50 text-gray-800 border border-green-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition duration-200";
-  const sectionStyles = "py-8 px-4 sm:px-6 lg:px-8 bg-green-100 font-lato ";
+  const inputStyles = "w-full mt-1 p-2 bg-spice-red-light text-gray-800 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-spice-red focus:border-spice-red transition duration-200";
+  const sectionStyles = "py-8 px-4 sm:px-6 lg:px-8 bg-cream font-lato pt-20 md:pt-24 lg:pt-28";
 
   return (
     <section id="contact" className={sectionStyles}>
-      <div className="max-w-7xl mx-auto lg:pt-18 md:pt-15  sm:pt-15 pt-12">
+      <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 ">
           {/* Contact Information Section */}
           <div className="bg-white p-6">
@@ -97,7 +97,7 @@ const ContactUs: React.FC = () => {
             <div className="space-y-5">
               {contactInfo.map((item, index) => (
                 <div key={index} className="flex items-center space-x-4">
-                  <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-green-100 rounded-full">
+                  <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-spice-red-light rounded-full">
                     {item.icon}
                   </div>
                   <div>

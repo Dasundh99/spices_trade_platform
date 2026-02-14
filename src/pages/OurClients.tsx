@@ -43,7 +43,7 @@ const ExportSection = () => {
     return (
         <section 
             id="clients" 
-            className="bg-gray-100 pt-10 overflow-hidden font-lato relative"
+            className="bg-spice-red-light pt-10 overflow-hidden font-lato relative"
             style={{
                 borderTopLeftRadius: '50% 10%',
                 borderTopRightRadius: '50% 10%',
@@ -52,7 +52,7 @@ const ExportSection = () => {
             }}
         >
             <div className="container mx-auto px-2 text-center">
-                <h2 className="text-4xl md:text-6xl text-black font-Semibold tracking-wide font-lato">
+                <h2 className="text-4xl md:text-6xl text-charcoal font-Semibold tracking-wide font-lato">
                     Our Global Clients
                 </h2>
                 <p className="text-lg sm:text-lg md:text-xl text-black opacity-40 mb-4 pt-2 pb-4">
@@ -86,18 +86,18 @@ const ExportSection = () => {
                                 onMouseLeave={() => setHoveredLocation(null)}
                             >
                                 <FaMapMarkerAlt 
-                                    className="w-3 sm:w-4 md:w-7 h-5 sm:h-6 md:h-7 text-green-400 animate-bounce transition-transform duration-200 group-hover:scale-125 z-10" 
+                                    className="w-3 sm:w-4 md:w-7 h-5 sm:h-6 md:h-7 text-spice-red animate-bounce transition-transform duration-200 group-hover:scale-125 z-10" 
                                 />
 
                                 {hoveredLocation === location.name && (
                                     <div
                                         className="absolute left-full top-1/2 transform -translate-y-1/2 ml-2
-                                        bg-white p-3 rounded-lg shadow-lg border-l-4 border-green-500
+                                        bg-white p-3 rounded-lg shadow-lg border-l-4 border-spice-red
                                         flex items-center space-x-2 transition-all duration-300 
                                         opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 text-sm z-20"
                                     >
                                         <svg
-                                            className="w-5 h-5 text-green-500"
+                                            className="w-5 h-5 text-spice-red"
                                             fill="none"
                                             stroke="currentColor"
                                             viewBox="0 0 24 24"
@@ -125,19 +125,19 @@ const ExportSection = () => {
                         );
                     })}
                     {/* Responsive Legend */}
-                    <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 bg-white p-2 sm:p-3 rounded-lg shadow-lg border-t-2 sm:border-t-4 border-green-500 w-24 sm:w-auto max-w-[40%] sm:max-w-none">
+                    <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 bg-white p-2 sm:p-3 rounded-lg shadow-lg border-t-2 sm:border-t-4 border-spice-red w-24 sm:w-auto max-w-[40%] sm:max-w-none">
                         <h3 className="text-xs sm:text-sm font-bold text-gray-800 mb-1 sm:mb-2">Clients</h3>
                         <div className="flex flex-col space-y-1 sm:space-y-2">
                             <div className="flex items-center space-x-1 sm:space-x-2">
-                                <FaMapMarkerAlt className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-green-500 rounded-full p-0.5" />
+                                <FaMapMarkerAlt className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-spice-red rounded-full p-0.5" />
                                 <span className="text-[8px] sm:text-xs text-gray-700">Maldives</span>
                             </div>
                             <div className="flex items-center space-x-1 sm:space-x-2">
-                                <FaMapMarkerAlt className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-green-500 rounded-full p-0.5" />
+                                <FaMapMarkerAlt className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-spice-red rounded-full p-0.5" />
                                 <span className="text-[8px] sm:text-xs text-gray-700">India</span>
                             </div>
                             <div className="flex items-center space-x-1 sm:space-x-2">
-                                <FaMapMarkerAlt className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-green-500 rounded-full p-0.5" />
+                                <FaMapMarkerAlt className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-spice-red rounded-full p-0.5" />
                                 <span className="text-[8px] sm:text-xs text-gray-700">Germany</span>
                             </div>
                         </div>

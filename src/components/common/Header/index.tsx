@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
 import { useLocation } from 'react-router-dom';
 import Magnetic from '../Magnetic';
-// import Logo from "../../../assets/GSGreenLogo.png"
+import Logo from '../../../assets/atigala_logo.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,17 +37,10 @@ const Header = () => {
             if (st > 100) {
                 setScrolled(true);
                 setIsInHomeSection(false);
-                if (st > lastScrollTop) {
-                    gsap.to(headerRef.current, { y: -100, duration: 0.3 });
-                } else {
-                    gsap.to(headerRef.current, { y: 0, duration: 0.3 });
-                }
             } else {
                 setScrolled(false);
                 setIsInHomeSection(location.pathname === '/' && st <= 100);
-                gsap.to(headerRef.current, { y: 0, duration: 0.3 });
             }
-            lastScrollTop = st <= 0 ? 0 : st;
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -84,12 +77,14 @@ const Header = () => {
         if (isInHomeSection && !scrolled) {
             return {
                 background: 'transparent',
-                textColor: 'text-white'
+                textColor: 'text-white',
+                dotColor: 'bg-white'
             };
         }
         return {
-            background: 'bg-white',
-            textColor: 'text-black'
+            background: 'bg-cream shadow-md',
+            textColor: 'text-charcoal',
+            dotColor: 'bg-spice-red'
         };
     };
 
@@ -104,16 +99,14 @@ const Header = () => {
             {/* Reduced padding from py-3 to py-2 */}
             <div className="container mx-auto px-4 xl:px-20 py-2 flex justify-between items-center">
                 {/* Reduced text size from xl to md, sm:text-sm to sm:text-xs, md:text-xl to md:text-base */}
-                <div className={`${headerStyles.textColor} text-md sm:text-md md:text-base`}>
-                    <HashLink
-                        smooth
-                        to="/#home"
-                        className="flex flex-col items-center justify-center text-center"
-                    >
-                        <span className="font-Semibold text-lg sm:text-xl md:text-2xl">GSGreen Lanka</span>
-                        <span className="text-xs sm:text-xs md:text-xs">Private Limited</span>
+                <div className={`${headerStyles.textColor}`}>
+                    <HashLink smooth to="/#home">
+                        <img
+                            src={Logo}
+                            alt="GSGreen Lanka Logo"
+                            className="h-10 sm:h-12 md:h-30 w-auto"
+                        />
                     </HashLink>
-
                 </div>
 
                 {/* Desktop Navigation - reduced text size from md:text-2xl to md:text-lg */}
@@ -123,7 +116,7 @@ const Header = () => {
                             <HashLink smooth to="/#home" className={headerStyles.textColor}>
                                 Home
                             </HashLink>
-                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${isInHomeSection && !scrolled ? 'bg-white' : 'bg-black'}`}></div>
+                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${headerStyles.dotColor}`}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
@@ -131,7 +124,7 @@ const Header = () => {
                             <HashLink smooth to="/about" className={headerStyles.textColor}>
                                 About
                             </HashLink>
-                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${isInHomeSection && !scrolled ? 'bg-white' : 'bg-black'}`}></div>
+                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${headerStyles.dotColor}`}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
@@ -139,7 +132,7 @@ const Header = () => {
                             <HashLink smooth to="/#exports" className={headerStyles.textColor}>
                                 Exports
                             </HashLink>
-                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${isInHomeSection && !scrolled ? 'bg-white' : 'bg-black'}`}></div>
+                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${headerStyles.dotColor}`}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
@@ -147,7 +140,7 @@ const Header = () => {
                             <HashLink smooth to="/projects" className={headerStyles.textColor}>
                                 Projects
                             </HashLink>
-                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${isInHomeSection && !scrolled ? 'bg-white' : 'bg-black'}`}></div>
+                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${headerStyles.dotColor}`}></div>
                         </div>
                     </Magnetic>
                    
@@ -156,7 +149,7 @@ const Header = () => {
                             <HashLink smooth to="/#clients" className={headerStyles.textColor}>
                                 Clients
                             </HashLink>
-                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${isInHomeSection && !scrolled ? 'bg-white' : 'bg-black'}`}></div>
+                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${headerStyles.dotColor}`}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
@@ -164,7 +157,7 @@ const Header = () => {
                             <HashLink smooth to="/contact" className={headerStyles.textColor}>
                                 Contact
                             </HashLink>
-                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${isInHomeSection && !scrolled ? 'bg-white' : 'bg-black'}`}></div>
+                            <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${headerStyles.dotColor}`}></div>
                         </div>
                     </Magnetic>
                 </nav>
@@ -195,7 +188,7 @@ const Header = () => {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        className="fixed min-h-[100vh] w-full top-0 right-0 bottom-0 bg-white z-40 md:hidden overflow-y-auto font-lato"
+                        className="fixed min-h-[100vh] w-full top-0 right-0 bottom-0 bg-cream z-40 md:hidden overflow-y-auto font-lato"
                         initial="initial"
                         animate="animate"
                         exit="exit"
@@ -203,7 +196,7 @@ const Header = () => {
                     >
                         <div className="flex justify-end p-4">
                             <button
-                                className="text-black focus:outline-none bg-gray-100 p-2 rounded-full hover:bg-gray-200 transition-colors"
+                                className="text-charcoal focus:outline-none bg-spice-red-light p-2 rounded-full hover:bg-spice-red/20 transition-colors"
                                 onClick={toggleMenu}
                                 aria-label="Close menu"
                             >

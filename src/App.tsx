@@ -8,6 +8,7 @@ import 'lenis/dist/lenis.css'
 import Hero from './pages/Home';
 import About from './pages/About';
 import Exports from './pages/Exports';
+import Gallery from './components/Gallery';
 import Clients from './pages/OurClients';
 import ContactUs from './pages/ContactUs';
 import Footer from './components/layout/Footer';
@@ -51,6 +52,7 @@ function App() {
                         <main>
                             <Hero />
                             <Exports />
+                            <Gallery />
                             <Clients />
                         </main>
                     } />
