@@ -3,10 +3,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 @import "tailwindcss";
 
-
-/* @theme {
+@theme {
+  /* Brand Colors from Artigala Logo */
+  --color-spice-red: #C41E3A;
+  --color-spice-red-light: #FFF0F0;
+  --color-spice-red-dark: #9A1830;
+  
+  --color-ceylon-green: #228B22;
+  --color-ceylon-green-light: #F0FFF4;
+  --color-ceylon-green-dark: #1A6B1A;
+  
+  --color-charcoal: #1A1A1A;
+  --color-cream: #FFF8F0;
+  --color-warm-gray: #2D2D2D;
+  
   --font-lato: "Lato", sans-serif;
-} */
+}
 
 h1 {
   font-family: "Oswald", sans-serif;

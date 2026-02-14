@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
         <div className="space-y-4" key={currentIndex}>
           <h1 
             className="
-              text-green-100 
+              text-cream 
               font-Semibold
               text-3xl 
               sm:text-4xl 
@@ -127,7 +127,7 @@ const Hero: React.FC = () => {
             className="
               mx-auto
               max-w-2xl 
-              text-green-50
+              text-spice-red-light
               text-base 
               md:text-lg 
               leading-relaxed 

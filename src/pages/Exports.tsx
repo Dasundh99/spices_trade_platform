@@ -55,7 +55,7 @@ const ExportCard: React.FC<ExportItem> = ({ src, text, path }) => {
     <h3 className="text-lg mb-1 tracking-tight">{text}</h3>
 </div>
 
-      <div className="absolute inset-0 border-2 border-green-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none" />
+      <div className="absolute inset-0 border-2 border-spice-red opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none" />
     </article>
   );
 };
@@ -65,12 +65,12 @@ const Exports: React.FC = () => {
   return (
     <section
       id="exports"
-      className="min-h-[60vh] py-8 bg-white overflow-hidden font-lato"
+      className="min-h-[60vh] py-8 bg-cream overflow-hidden font-lato"
       aria-label="Product Exports Section"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
         <header className="text-center mb-12">
-          <h2 className="text-4xl md:text-6xl text-black font-Semibold tracking-wide">
+          <h2 className="text-4xl md:text-6xl text-charcoal font-Semibold tracking-wide">
             Exports
           </h2>
         </header>

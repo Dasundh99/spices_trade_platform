@@ -1,32 +1,32 @@
-import img4 from "../../assets/GSGreenLogo.png";
+import img4 from "../../assets/atigala_logo.jpg";
 import { FaMapMarkerAlt, FaEnvelope, FaInstagram, FaTiktok, FaFacebook, FaGlobe } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-gray-300 p-10 text-black">
-      <div className="flex flex-wrap gap-10 text-black">
+    <footer className="bg-charcoal text-gray-300 p-10">
+      <div className="flex flex-wrap gap-10">
         <div className="flex-1 w-full sm:w-auto">
           <div className="flex gap-5">
             <div className="flex-1">
               <div>
                 <img
-                  className=""
+                  className="rounded"
                   src={img4}
                   alt="Logo"
                   style={{ width: "100px", height: "auto" }}
                 />
-                <p className="mt-4 text-xs text-black font-bold">
+                <p className="mt-4 text-xs text-spice-red font-bold">
                   Way of Life.. Profession of Hope..
                 </p>
                 <div className="mt-4 text-xs space-y-2">
-                  <p className="flex items-center text-[10px] hover:text-gray-300 text-gray-600">
-                    <FaMapMarkerAlt className="mr-2 text-xs hover:text-gray-300 text-gray-400" />
+                  <p className="flex items-center text-[10px] hover:text-spice-red text-gray-400">
+                    <FaMapMarkerAlt className="mr-2 text-xs text-spice-red" />
                     38/18, Sri Bimbarama Road, Kolamunna, Piliyandala.
                   </p>
                   
-                  <p className="flex items-center text-[10px] hover:text-gray-300 text-gray-600">
-                    <FaEnvelope className="mr-2 text-xs hover:text-gray-300 text-gray-400" />
+                  <p className="flex items-center text-[10px] hover:text-spice-red text-gray-400">
+                    <FaEnvelope className="mr-2 text-xs text-spice-red" />
                     gsgreenlanka@gmail.com
                   </p>
                 </div>
@@ -34,12 +34,12 @@ const Footer = () => {
             </div>
             <div className="flex-1">
               <div className="pl-8">
-                <h3 className="text-[18px] text-black">Top Clients</h3>
+                <h3 className="text-[18px] text-white">Top Clients</h3>
                 <div className="flex gap-x-5 mt-3 w-full ">
                   <ul className="flex flex-col space-y-2 text-xs">
-                    <li><a href="#" className="hover:text-gray-300 text-gray-500">Germany</a></li>
-                    <li><a href="#" className="hover:text-gray-300 text-gray-500">India</a></li>
-                    <li><a href="#" className="hover:text-gray-300 text-gray-500">Maldives</a></li>
+                    <li><a href="#" className="hover:text-spice-red text-gray-400">Germany</a></li>
+                    <li><a href="#" className="hover:text-spice-red text-gray-400">India</a></li>
+                    <li><a href="#" className="hover:text-spice-red text-gray-400">Maldives</a></li>
                   </ul>
                   <ul className="flex flex-col space-y-2 text-xs">
                     {/* <li><a href="#" className="hover:text-gray-300 text-gray-400">Africa</a></li> */}
@@ -54,15 +54,15 @@ const Footer = () => {
           <div className="flex gap-5">
             <div className="flex-1">
               <div className="">
-                <h3 className="text-[18px] text-black">Information</h3>
+                <h3 className="text-[18px] text-white">Information</h3>
                 <ul className="mt-3 space-y-2 text-xs">
                   <li>
-                    <a href="/about" className="hover:text-gray-300 text-gray-500">
+                    <a href="/about" className="hover:text-spice-red text-gray-400">
                       About Us
                     </a>
                   </li>
                   <li>
-                    <a href="/contact" className="hover:text-gray-300 text-gray-500">
+                    <a href="/contact" className="hover:text-spice-red text-gray-400">
                       Contact Us
                     </a>
                   </li>
@@ -73,7 +73,7 @@ const Footer = () => {
               <div className="h-full pl-10">
                 <div className="flex flex-col gap-y-2">
                   <div className="flex-1">
-                    <h3 className="text-[18px] text-black">Follow Us</h3>
+                    <h3 className="text-[18px] text-white">Follow Us</h3>
                     <div className="flex gap-2 mt-3">
                       <FaInstagram size={20} />
                       <FaTiktok size={20} />
@@ -90,7 +90,7 @@ const Footer = () => {
                     </div> */}
                   </div>
                   <div className="flex">
-                    <div className="flex items-center text-black border border-black px-2 py-2 rounded-lg gap-2">
+                    <div className="flex items-center text-gray-400 border border-gray-600 px-2 py-2 rounded-lg gap-2 hover:border-spice-red hover:text-spice-red transition-colors">
                       <FaGlobe className="text-[10px] lg:text-[12px]" />
                       <h3 className="text-[8px] lg:text-[12px]">English | USD</h3>
                     </div>
@@ -102,7 +102,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-8 border-t border-gray-700 pt-4 text-center text-xs">
-        <p className="text-black">
+        <p className="text-gray-400">
           Copyright © {new Date().getFullYear()} GSGreen Lanka. All Rights Reserved.
         </p>
       </div>

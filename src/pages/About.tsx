@@ -10,20 +10,20 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <section id="about" className="w-full bg-green-100 font-lato">
+    <section id="about" className="w-full bg-cream font-lato pt-20 md:pt-24 lg:pt-28">
       {/* Main Content Wrapper */}
-      <div className="container mx-auto px-6 p-10 pt-15 md:pt-20 lg:pt-20 md:px-6 lg:px-8 flex flex-col items-center gap-14">
+      <div className="container mx-auto px-6 p-10 md:px-6 lg:px-8 flex flex-col items-center gap-14">
         {/* Left Side: Text Content */}
         <div className="w-full max-w-3xl space-y-5 flex flex-col items-center">
           {/* Separate Title Section */}
           <div className="w-full text-center pb-4">
-            <h2 className="text-4xl md:text-6xl text-black tracking-wide font-Semibold lg:pt-9 pt-5">
+            <h2 className="text-4xl md:text-6xl text-charcoal tracking-wide font-Semibold">
               About Us
             </h2>
           </div>
           <div className="w-full text-center space-y-2">
             <p className="text-md sm:text-md text-black leading-relaxed">
-              <span className="font-semibold text-green-600">GSGreen</span>, a Sri Lankan company, connects rural farmers’ produce to global markets while preserving traditional agriculture.
+              <span className="font-semibold text-spice-red">GSGreen</span>, a Sri Lankan company, connects rural farmers' produce to global markets while preserving traditional agriculture.
             </p>
             <p className="text-md sm:text-md text-black leading-relaxed">
               Generations of farming roots have transformed into the organized cultivation of tropical fruits, vegetables, and spices over the past few years, further expanding into the processing and exporting of Ceylon-origin fruits, vegetables, spices, tea, and coconut products. We ensure high-quality, sustainable exports by fostering trust with farmers and clients.
@@ -43,20 +43,20 @@ const About: React.FC = () => {
           <div className="flex justify-center gap-12 pt-10">
             {/* Quality Icon */}
             <div className="flex flex-col items-center">
-              <FaCheckCircle className="text-green-600 text-3xl" />
-              <span className="text-green-600 text-xs pt-2">Quality</span>
+              <FaCheckCircle className="text-spice-red text-3xl" />
+              <span className="text-spice-red text-xs pt-2">Quality</span>
             </div>
 
             {/* Reliability Icon */}
             <div className="flex flex-col items-center">
-              <FaHandshake className="text-green-600 text-3xl" />
-              <span className="text-green-600 text-xs pt-2">Reliability</span>
+              <FaHandshake className="text-spice-red text-3xl" />
+              <span className="text-spice-red text-xs pt-2">Reliability</span>
             </div>
 
             {/* Integrity Icon */}
             <div className="flex flex-col items-center">
-              <FaShieldAlt className="text-green-600 text-3xl" />
-              <span className="text-green-600 text-xs pt-2">Integrity</span>
+              <FaShieldAlt className="text-spice-red text-3xl" />
+              <span className="text-spice-red text-xs pt-2">Integrity</span>
             </div>
           </div>
         </div>
