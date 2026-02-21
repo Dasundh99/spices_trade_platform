@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold">
-          <a href="/">GSGreen</a>
+          <a href="/">Artigala Spices</a>
         </div>
 
         {/* Desktop Menu */}
