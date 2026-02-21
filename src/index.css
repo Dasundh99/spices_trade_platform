@@ -48,3 +48,13 @@ body {
   font-style: normal; 
 }
 
+:root {
+  /* default header height fallback */
+  --header-height: 64px;
+}
+
+/* ensure anchor/hash scrolling accounts for the fixed header */
+html {
+  scroll-padding-top: var(--header-height);
+}
+

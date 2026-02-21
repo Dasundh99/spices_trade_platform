@@ -9,6 +9,7 @@ import Hero from './pages/Home';
 import About from './pages/About';
 import Exports from './pages/Exports';
 import Gallery from './components/Gallery';
+import OrderNowForm from './components/OrderNowForm';
 import Clients from './pages/OurClients';
 import ContactUs from './pages/ContactUs';
 import Footer from './components/layout/Footer';
@@ -53,6 +54,7 @@ function App() {
                             <Hero />
                             <Exports />
                             <Gallery />
+                            <OrderNowForm />
                             <Clients />
                         </main>
                     } />

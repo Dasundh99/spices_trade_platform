@@ -11,10 +11,9 @@ const Footer = () => {
             <div className="flex-1">
               <div>
                 <img
-                  className="rounded"
+                  className="rounded w-[100px] h-auto"
                   src={img4}
                   alt="Logo"
-                  style={{ width: "100px", height: "auto" }}
                 />
                 <p className="mt-4 text-xs text-spice-red font-bold">
                   Way of Life.. Profession of Hope..
@@ -27,7 +26,7 @@ const Footer = () => {
                   
                   <p className="flex items-center text-[10px] hover:text-spice-red text-gray-400">
                     <FaEnvelope className="mr-2 text-xs text-spice-red" />
-                    gsgreenlanka@gmail.com
+                    artigalaspices@gmail.com
                   </p>
                 </div>
               </div>
@@ -103,7 +102,7 @@ const Footer = () => {
       </div>
       <div className="mt-8 border-t border-gray-700 pt-4 text-center text-xs">
         <p className="text-gray-400">
-          Copyright © {new Date().getFullYear()} GSGreen Lanka. All Rights Reserved.
+          Copyright © {new Date().getFullYear()} Artigala Spices. All Rights Reserved.
         </p>
       </div>
     </footer>

@@ -5,7 +5,7 @@ import { slideUp, opacity } from './animation';
 import Rounded from '../RoundedButton';
 export default function index() {
 
-    const phrase = "GSGreen , a truly Sri Lankan company from a deep-rooted farmer family, works to bring agricultural products from the hard-earned efforts of rural farmers to the international market.";
+    const phrase = "Artigala Spices , a truly Sri Lankan company from a deep-rooted farmer family, works to bring agricultural products from the hard-earned efforts of rural farmers to the international market.";
     const description = useRef(null);
     const isInView = useInView(description)
     return (

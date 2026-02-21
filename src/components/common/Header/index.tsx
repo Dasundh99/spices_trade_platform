@@ -14,7 +14,7 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [isInHomeSection, setIsInHomeSection] = useState(true);
-    const headerRef = useRef(null);
+    const headerRef = useRef<HTMLElement | null>(null);
     const location = useLocation();
 
     useEffect(() => {
@@ -30,25 +30,40 @@ const Header = () => {
 
         requestAnimationFrame(raf);
 
-        let lastScrollTop = 0;
 
         const handleScroll = () => {
             const st = window.scrollY || document.documentElement.scrollTop;
-            if (st > 100) {
+            // consider any scroll > 0 as scrolled so header appears when user scrolls
+            if (st > 0) {
                 setScrolled(true);
                 setIsInHomeSection(false);
             } else {
                 setScrolled(false);
-                setIsInHomeSection(location.pathname === '/' && st <= 100);
+                setIsInHomeSection(location.pathname === '/' && st <= 0);
             }
         };
 
         window.addEventListener('scroll', handleScroll);
 
-        setIsInHomeSection(location.pathname === '/' && (window.scrollY || document.documentElement.scrollTop) <= 100);
+        setIsInHomeSection(location.pathname === '/' && (window.scrollY || document.documentElement.scrollTop) <= 0);
+
+        // set CSS variable for header height so anchors don't get hidden under the fixed header
+        const setHeaderHeightVar = () => {
+            const el = headerRef.current as HTMLElement | null;
+            if (el) {
+                const h = el.offsetHeight;
+                document.documentElement.style.setProperty('--header-height', `${h}px`);
+            }
+        };
+
+        // initial set and on resize
+        setHeaderHeightVar();
+        const handleResize = () => setHeaderHeightVar();
+        window.addEventListener('resize', handleResize);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleResize);
         };
     }, [location.pathname]);
 
@@ -103,7 +118,7 @@ const Header = () => {
                     <HashLink smooth to="/#home">
                         <img
                             src={Logo}
-                            alt="GSGreen Lanka Logo"
+                            alt="Artigala Spices Logo"
                             className="h-10 sm:h-12 md:h-30 w-auto"
                         />
                     </HashLink>

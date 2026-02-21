@@ -7,7 +7,7 @@ const Preloader = () => {
     const [index, setIndex] = useState(0);
     const [dimension, setDimension] = useState({width: 0, height:0});
 
-    const words = ["GSGreen Lanka (Pvt) Ltd"];
+    const words = ["Artigala Spices (Pvt) Ltd"];
     const opacity = {
         initial: { opacity: 0 },
         enter: { opacity: 1, transition: { duration: 1 } }

@@ -23,7 +23,7 @@ const About: React.FC = () => {
           </div>
           <div className="w-full text-center space-y-2">
             <p className="text-md sm:text-md text-black leading-relaxed">
-              <span className="font-semibold text-spice-red">GSGreen</span>, a Sri Lankan company, connects rural farmers' produce to global markets while preserving traditional agriculture.
+              <span className="font-semibold text-spice-red">Artigala Spices</span>, a Sri Lankan company, connects rural farmers' produce to global markets while preserving traditional agriculture.
             </p>
             <p className="text-md sm:text-md text-black leading-relaxed">
               Generations of farming roots have transformed into the organized cultivation of tropical fruits, vegetables, and spices over the past few years, further expanding into the processing and exporting of Ceylon-origin fruits, vegetables, spices, tea, and coconut products. We ensure high-quality, sustainable exports by fostering trust with farmers and clients.
@@ -32,7 +32,7 @@ const About: React.FC = () => {
               Sri Lanka’s diverse landscape enables year-round cultivation, giving us a competitive edge globally. Our hearts are always with the sweat and tears of the small-scale farmer community across the country, generating high value for their products.
             </p>
             <p className="text-md sm:text-md text-black leading-relaxed">
-              At GSGreen, we prioritize quality, reliability, and integrity in every step, ensuring trust in all that we do.
+              At Artigala Spices, we prioritize quality, reliability, and integrity in every step, ensuring trust in all that we do.
             </p>
           </div>
 
