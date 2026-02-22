@@ -12,22 +12,31 @@ interface ExportItem {
   src: string;
   text: string;
   path: string;
+  describe: string;
 }
 
 // Move to a separate constants file (e.g., `exportData.ts`)
 const exportItems: ExportItem[] = [
-  { id: 1, src: img1, text: "Cinnamon", path: "/spices" },
-  { id: 2, src: img2, text: "Black Pepper", path: "/spices" },
-  { id: 3, src: img3, text: "Goraka", path: "/spices" },
+  { id: 1, src: img1, text: "Cinnamon", path: "/spices/cinnamon", describe: "Cinnamon, derived from the inner bark of Cinnamomum trees, is a fragrant spice widely used in Sri Lankan cuisine. Its warm, sweet aroma enhances both savory and dessert dishes. Known for its anti-inflammatory properties, it is also used in traditional medicine." },
+  { id: 2, src: img2, text: "Black Pepper", path: "/spices/black-pepper", describe: "Black pepper, often called the 'King of Spices,' comes from the dried berries of the Piper nigrum plant. It adds pungency and depth to Sri Lankan dishes. Rich in antioxidants, it boosts digestion and metabolism." },
+  { id: 3, src: img3, text: "Goraka", path: "/spices/goraka", describe: "Garcinia cambogia, commonly known as Goraka, is a tropical fruit native to South Asia. It is a vital souring agent in Sri Lankan curries, especially seafood. It's highly valued for its health benefits, including supporting weight management and digestion." },
 ];
 
 // Reusable Card Component
-const ExportCard: React.FC<ExportItem> = ({ src, text, path }) => {
+const ExportCard: React.FC<ExportItem> = ({ src, text }) => {
   const navigate = useNavigate();
 
-  const handleNavigation = () => navigate(path);
+  // Map product names to IDs used in SpicesToggle
+  const getSpiceId = (name: string) => {
+    if (name === "Cinnamon") return "cinnamon";
+    if (name === "Black Pepper") return "black-pepper";
+    if (name === "Goraka") return "goraka";
+    return "cinnamon";
+  };
+
+  const handleNavigation = () => navigate("/spices", { state: { activeTab: getSpiceId(text) } });
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter" || e.key === " ") navigate(path);
+    if (e.key === "Enter" || e.key === " ") handleNavigation();
   };
 
   return (
@@ -39,21 +48,24 @@ const ExportCard: React.FC<ExportItem> = ({ src, text, path }) => {
       tabIndex={0}
       aria-label={`Navigate to ${text} page`}
     >
-      <div className="relative w-full h-64 md:h-45 lg:h-50"> {/* Customizable height */}
+      <div className="relative w-full h-64 md:h-45 lg:h-50 overflow-hidden"> {/* Customizable height */}
         <img
           src={src}
           alt={text}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           loading="lazy"
         />
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        {/* Hover Overlay */}
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <span className="bg-ceylon-green text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+            View More
+          </span>
+        </div>
       </div>
 
       <div className="p-2 text-black bg-gray-100 text-center">
-    <h3 className="text-lg mb-1 tracking-tight">{text}</h3>
-</div>
-
-      <div className="absolute inset-0 border-2 border-spice-red opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none" />
+        <h3 className="text-lg mb-1 tracking-tight">{text}</h3>
+      </div>
     </article>
   );
 };
