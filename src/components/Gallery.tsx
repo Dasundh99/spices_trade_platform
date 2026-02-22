@@ -31,7 +31,7 @@ const Gallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
   return (
-    <section id="gallery" className="py-16 lg:py-24 bg-cream">
+    <section id="gallery" className="py-16 lg:py-24 bg-white">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal tracking-tight">

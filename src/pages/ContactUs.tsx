@@ -138,7 +138,7 @@ const ContactUs: React.FC = () => {
                       className="block text-sm text-black mb-1"
                     >
                       {field.label}
-                      {field.required && <span className="text-red-500">*</span>}
+                      {field.required && <span className="text-spice-red">*</span>}
                     </label>
                     <input
                       type={field.type}
@@ -160,7 +160,7 @@ const ContactUs: React.FC = () => {
                     className="block text-sm text-black mb-1"
                   >
                     {field.label}
-                    {field.required && <span className="text-red-500">*</span>}
+                    {field.required && <span className="text-spice-red">*</span>}
                   </label>
                   {field.type === "textarea" ? (
                     <textarea
@@ -189,7 +189,7 @@ const ContactUs: React.FC = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className={`w-full py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-300 ${
+                className={`w-full py-2 bg-ceylon-green text-white rounded-lg hover:bg-ceylon-green-dark focus:outline-none focus:ring-2 focus:ring-ceylon-green-light focus:ring-offset-2 transition duration-300 ${
                   loading ? 'opacity-50 cursor-not-allowed' : ''
                 }`}
               >
