@@ -25,9 +25,9 @@ import Watermelon2 from "../assets/Projects/Watermelon/image.png";
 import WatermelonVideo from "../assets/Projects/Watermelon/WhatsApp Video 2025-03-15 at 16.35.38.mp4";
 
 const colors = {
-  spiceRed: "#C41E3A",
-  spiceRedLight: "#FFF0F0",
-  ceylonGreen: "#228B22",
+  spiceRed: "#8B2626",
+  spiceRedLight: "#F6EBEB",
+  ceylonGreen: "#2B5B2E",
   cream: "#FFF8F0",
 };
 

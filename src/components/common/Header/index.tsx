@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
 import { useLocation } from 'react-router-dom';
 import Magnetic from '../Magnetic';
-import Logo from '../../../assets/atigala_logo.jpg';
+import Logo from '../../../assets/atigala_logo.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -145,7 +145,7 @@ const Header = () => {
                     <Magnetic>
                         <div className="group flex flex-col relative z-[1] p-[15px] cursor-pointer">
                             <HashLink smooth to="/#exports" className={headerStyles.textColor}>
-                                Exports
+                                Products
                             </HashLink>
                             <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${headerStyles.dotColor}`}></div>
                         </div>
@@ -256,7 +256,7 @@ const Header = () => {
                                     }}
                                     className="flex items-center justify-between w-full text-black text-2xl mb-2"
                                 >
-                                    Export
+                                    Products
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         className="h-6 w-6 ml-1 transition-transform duration-200"

@@ -2,10 +2,9 @@
 import { useNavigate } from "react-router-dom";
 
 // Image Imports (Consider converting to WebP for performance)
-import img1 from "../assets/fruit.png";
-import img2 from "../assets/vegetable.png";
-import img3 from "../assets/spice.png";
-import img4 from "../assets/coconut.png";
+import img1 from "../assets/products/cinnamon.jpg";
+import img2 from "../assets/products/BlackPepper.png";
+import img3 from "../assets/products/goraka.jpg";
 
 // Define TypeScript interface for image items
 interface ExportItem {
@@ -17,10 +16,9 @@ interface ExportItem {
 
 // Move to a separate constants file (e.g., `exportData.ts`)
 const exportItems: ExportItem[] = [
-  { id: 1, src: img1, text: "Tropical Fruits", path: "/fruits" },
-  { id: 2, src: img2, text: "Tropical Vegetables", path: "/vegetables" },
-  { id: 3, src: img3, text: "Spices and Essential Oils", path: "/spices" },
-  { id: 4, src: img4, text: "Coconut Products", path: "/coconut" },
+  { id: 1, src: img1, text: "Cinnamon", path: "/spices" },
+  { id: 2, src: img2, text: "Black Pepper", path: "/spices" },
+  { id: 3, src: img3, text: "Goraka", path: "/spices" },
 ];
 
 // Reusable Card Component
@@ -71,11 +69,11 @@ const Exports: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
         <header className="text-center mb-12">
           <h2 className="text-4xl md:text-6xl text-charcoal font-Semibold tracking-wide">
-            Exports
+            Products
           </h2>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mx-auto">
           {/* Customize width with max-w-* or w-* */}
           {exportItems.map((item) => (
             <ExportCard key={item.id} {...item} />

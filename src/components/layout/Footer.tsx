@@ -1,4 +1,4 @@
-import img4 from "../../assets/atigala_logo.jpg";
+import img4 from "../../assets/atigala_logo.webp";
 import { FaMapMarkerAlt, FaEnvelope, FaInstagram, FaTiktok, FaFacebook, FaGlobe } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 

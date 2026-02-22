@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="text-green-700 p-4 w-full top-0 z-10">
+    <nav className="text-ceylon-green p-4 w-full top-0 z-10">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold">
@@ -15,11 +15,11 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
-          <a href="#home" className="hover:text-green-200 transition">Home</a>
-          <a href="#about" className="hover:text-green-200 transition">About</a>
-          <a href="#exports" className="hover:text-green-200 transition">Exports</a>
-          <a href="#ourClients" className="hover:text-green-200 transition">Our Clients</a>
-          <a href="#contactUs" className="hover:text-green-200 transition">Contact Us</a>
+          <a href="#home" className="hover:text-accent-green transition">Home</a>
+          <a href="#about" className="hover:text-accent-green transition">About</a>
+          <a href="#exports" className="hover:text-accent-green transition">Products</a>
+          <a href="#ourClients" className="hover:text-accent-green transition">Our Clients</a>
+          <a href="#contactUs" className="hover:text-accent-green transition">Contact Us</a>
         </div>
 
         {/* Mobile Hamburger */}
@@ -42,11 +42,11 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden mt-4 flex flex-col space-y-4">
-          <a href="#home" className="hover:text-green-200 transition" onClick={toggleMenu}>Home</a>
-          <a href="#about" className="hover:text-green-200 transition" onClick={toggleMenu}>About</a>
-          <a href="#products" className="hover:text-green-200 transition" onClick={toggleMenu}>Products</a>
-          <a href="#ourClients" className="hover:text-green-200 transition" onClick={toggleMenu}>Our Clients</a>
-          <a href="#contactUs" className="hover:text-green-200 transition" onClick={toggleMenu}>Contact</a>
+          <a href="#home" className="hover:text-accent-green transition" onClick={toggleMenu}>Home</a>
+          <a href="#about" className="hover:text-accent-green transition" onClick={toggleMenu}>About</a>
+          <a href="#products" className="hover:text-accent-green transition" onClick={toggleMenu}>Products</a>
+          <a href="#ourClients" className="hover:text-accent-green transition" onClick={toggleMenu}>Our Clients</a>
+          <a href="#contactUs" className="hover:text-accent-green transition" onClick={toggleMenu}>Contact</a>
         </div>
       )}
     </nav>

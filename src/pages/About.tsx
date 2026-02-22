@@ -21,19 +21,29 @@ const About: React.FC = () => {
               About Us
             </h2>
           </div>
-          <div className="w-full text-center space-y-2">
+          <div className="w-full text-center space-y-4">
             <p className="text-md sm:text-md text-black leading-relaxed">
-              <span className="font-semibold text-spice-red">Artigala Spices</span>, a Sri Lankan company, connects rural farmers' produce to global markets while preserving traditional agriculture.
+              <span className="font-semibold text-spice-red">Artigala Spices</span> is a Sri Lankan enterprise dedicated to bridging the gap between the rich harvests of rural farmers and the demands of the global market. With deep-rooted generations of farming heritage, we have evolved into a dynamic force in the processing and exporting of authentic Ceylon-origin products.
             </p>
             <p className="text-md sm:text-md text-black leading-relaxed">
-              Generations of farming roots have transformed into the organized cultivation of tropical fruits, vegetables, and spices over the past few years, further expanding into the processing and exporting of Ceylon-origin fruits, vegetables, spices, tea, and coconut products. We ensure high-quality, sustainable exports by fostering trust with farmers and clients.
+              While our expertise spans a diverse range of tropical produce, our core specialties lie in the finest Cinnamon, Black Pepper, and Garcinia (Goraka). We operate through both physical and online business channels, ensuring that our premium spices are accessible to local kitchens and international clients alike.
             </p>
-            <p className="text-md sm:text-md text-black leading-relaxed">
-              Sri Lanka’s diverse landscape enables year-round cultivation, giving us a competitive edge globally. Our hearts are always with the sweat and tears of the small-scale farmer community across the country, generating high value for their products.
-            </p>
-            <p className="text-md sm:text-md text-black leading-relaxed">
-              At Artigala Spices, we prioritize quality, reliability, and integrity in every step, ensuring trust in all that we do.
-            </p>
+            
+            <div className="pt-4 text-left">
+              <h3 className="text-xl font-semibold text-charcoal mb-4 text-center">Our Approach</h3>
+              <ul className="text-md sm:text-md text-black leading-relaxed space-y-2 list-none">
+                <li><span className="font-medium text-spice-red">Empowering Farmers:</span> We sell a curated selection of our own crops alongside high-quality produce sourced directly from our network of small-scale farmers.</li>
+                <li><span className="font-medium text-spice-red">Traditional Preservation:</span> Our mission is to preserve traditional Sri Lankan agricultural methods while bringing them into the modern, organized export sector.</li>
+                <li><span className="font-medium text-spice-red">Global Competitive Edge:</span> By leveraging Sri Lanka’s unique landscape and year-round cultivation capabilities, we provide consistent, high-value products to the world.</li>
+              </ul>
+            </div>
+
+            <div className="pt-4">
+              <h3 className="text-xl font-semibold text-charcoal mb-2">Our Promise</h3>
+              <p className="text-md sm:text-md text-black leading-relaxed">
+                At the heart of Artigala Spices is a profound respect for the "sweat and tears" of the small-scale farmer community. We strive to generate maximum value for their hard work by upholding three core pillars in every transaction: <span className="font-medium">Quality, Reliability, and Integrity.</span> We ensure absolute trust in everything we do, from the soil to the final shipment.
+              </p>
+            </div>
           </div>
 
           {/* Divider Line */}

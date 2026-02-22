@@ -16,9 +16,9 @@ import JackFruit from "../assets/Fruits/JackFruit.png"
 
 // Brand Color Palette
 const colors = {
-  spiceRed: "#C41E3A",
+  spiceRed: "#8B2626",
   cream: "#FFF8F0",
-  ceylonGreen: "#228B22",
+  ceylonGreen: "#2B5B2E",
   charcoal: "#1A1A1A",
 };
 

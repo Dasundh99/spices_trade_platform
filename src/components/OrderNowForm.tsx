@@ -72,12 +72,12 @@ const OrderNowForm: React.FC = () => {
         <h2 className="text-2xl font-semibold mb-4">Order Now</h2>
         <form onSubmit={handleSubmit} className="max-w-xl">
           {error && (
-            <div className="mb-4 p-3 bg-red-100 text-red-700 rounded">
+            <div className="mb-4 p-3 bg-spice-red-light text-spice-red-dark rounded">
               {error}
             </div>
           )}
           {success && (
-            <div className="mb-4 p-3 bg-green-100 text-green-700 rounded">
+            <div className="mb-4 p-3 bg-ceylon-green-light text-ceylon-green-dark rounded">
               Order submitted successfully!
             </div>
           )}
@@ -135,7 +135,7 @@ const OrderNowForm: React.FC = () => {
           <button
             type="submit"
             disabled={loading}
-            className="bg-black text-white px-6 py-2 rounded hover:opacity-95 disabled:opacity-50"
+            className="bg-spice-red text-white px-6 py-2 rounded hover:bg-spice-red-dark transition-colors duration-300 disabled:opacity-50"
           >
             {loading ? 'Submitting...' : 'Order Now'}
           </button>
