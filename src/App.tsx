@@ -15,7 +15,7 @@ import ContactUs from './pages/ContactUs';
 import Footer from './components/layout/Footer';
 import TropicalFruits from './pages/TropicalFruits';
 import TropicalVegetables from './pages/TropicalVegetables';
-import Spices from './pages/Spices';
+import Spices from './pages/SpicesToggle';
 import Coconut from './pages/Coconut';
 import ProductDetails from './pages/ProductDetails';
 import Header from './components/common/Header';
@@ -67,7 +67,8 @@ function App() {
                     <Route path='/coconut' element={<Coconut/>}/>
                     <Route path="/fruit/:name" Component={ProductDetails} />
                     <Route path="/vegetable/:name" Component={ProductDetails} />
-                    <Route path="/spices/:name" Component={ProductDetails} />
+                    {/* Individual spice routes removed in favor of SpicesToggle */}
+                    {/* <Route path="/spices/:name" Component={ProductDetails} /> */}
                     {/* <Route path="/tea/:name" Component={ProductDetails} /> */}
                     <Route path="/coconut/:name" Component={ProductDetails} />
                 </Routes>
