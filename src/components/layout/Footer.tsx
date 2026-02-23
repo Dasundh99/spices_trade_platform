@@ -10,11 +10,13 @@ const Footer = () => {
           <div className="flex gap-5">
             <div className="flex-1">
               <div>
-                <img
-                  className="rounded w-[100px] h-auto"
-                  src={img4}
-                  alt="Logo"
-                />
+                <div className="w-[100px] h-16 overflow-hidden flex items-center rounded">
+  <img
+    src={img4}
+    alt="Logo"
+    className="w-[100px]"
+  />
+</div>
                 <p className="mt-4 text-xs text-spice-red font-bold">
                   Way of Life.. Profession of Hope..
                 </p>
