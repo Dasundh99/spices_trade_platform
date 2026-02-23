@@ -115,12 +115,14 @@ const Header = () => {
             <div className="container mx-auto px-4 xl:px-20 py-2 flex justify-between items-center">
                 {/* Reduced text size from xl to md, sm:text-sm to sm:text-xs, md:text-xl to md:text-base */}
                 <div className={`${headerStyles.textColor}`}>
-                    <HashLink smooth to="/#home">
-                        <img
-                            src={Logo}
-                            alt="Artigala Spices Logo"
-                            className="h-10 sm:h-12 md:h-30 w-auto"
-                        />
+                    <HashLink smooth to="/#home" className="flex items-center">
+                        <div className="h-12 overflow-hidden flex items-center">
+                            <img
+                                src={Logo}
+                                alt="Artigala Spices Logo"
+                                className="w-25 h-auto object-contain transition-transform duration-300 hover:scale-102"
+                            />
+                        </div>
                     </HashLink>
                 </div>
 
@@ -158,7 +160,7 @@ const Header = () => {
                             <div className={`absolute w-2.5 h-2.5 top-[55px] left-1/2 rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100 ${headerStyles.dotColor}`}></div>
                         </div>
                     </Magnetic>
-                   
+
                     <Magnetic>
                         <div className="group flex flex-col relative z-[1] p-[15px] cursor-pointer">
                             <HashLink smooth to="/#clients" className={headerStyles.textColor}>
@@ -319,7 +321,7 @@ const Header = () => {
                             >
                                 Clients
                             </HashLink>
-                            
+
                             <HashLink
                                 smooth
                                 to="/contact"
