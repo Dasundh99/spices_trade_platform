@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 interface GalleryImage {
   src: string;
   alt: string;
 }
 
-// Load ALL images dynamically from folder (Vite)
 const images = import.meta.glob('../assets/gallery/*.{png,jpg,jpeg,webp}', {
   eager: true,
   import: 'default'
@@ -20,39 +19,57 @@ const galleryImages: GalleryImage[] = Object.entries(images).map(([path, src]) =
   };
 });
 
+const INITIAL_COUNT = 8;
+
 const Gallery: React.FC = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleImages = showAll
+    ? galleryImages
+    : galleryImages.slice(0, INITIAL_COUNT);
+
   return (
-    <section id="gallery" className="py-16 lg:py-24 bg-white">
-      <div className="container mx-auto px-4 max-w-7xl">
+    <section id="gallery" className="py-20 bg-cream">
+      <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal tracking-tight">
-            Our Gallery
+        <div className="mb-14 text-center">
+          <h2 className="text-4xl md:text-5xl font-semibold text-gray-900">
+            Gallery
           </h2>
-          <p className="mt-4 text-warm-gray text-lg max-w-2xl mx-auto">
-            Explore our collection
+          <p className="mt-3 text-gray-500">
+            A collection of our recent work
           </p>
         </div>
 
-        {/* Masonry Layout */}
-        <div className="columns-2 sm:columns-3 lg:columns-4 gap-4 space-y-4">
-
-          {galleryImages.map((image, index) => (
+        {/* Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 transition-all duration-500">
+          {visibleImages.map((image, index) => (
             <div
               key={index}
-              className="break-inside-avoid overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition"
+              className="overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-md transition"
             >
               <img
                 src={image.src}
                 alt={image.alt}
                 loading="lazy"
-                className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+                className="w-full h-64 object-cover hover:scale-105 transition duration-500"
               />
             </div>
           ))}
-
         </div>
+
+        {/* Button */}
+        {galleryImages.length > INITIAL_COUNT && (
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-7 py-3 rounded-lg border border-gray-300 bg-white hover:bg-gray-100 text-gray-800 font-medium transition"
+            >
+              {showAll ? 'Show Less' : 'View All Photos'}
+            </button>
+          </div>
+        )}
 
       </div>
     </section>
