@@ -29,7 +29,7 @@ const Gallery: React.FC = () => {
     : galleryImages.slice(0, INITIAL_COUNT);
 
   return (
-    <section id="gallery" className="py-20 bg-cream">
+    <section id="gallery" className="pb-10 bg-cream">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
