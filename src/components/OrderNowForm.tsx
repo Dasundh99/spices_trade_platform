@@ -61,7 +61,7 @@ const OrderNowForm: React.FC = () => {
   return (
     <section id="order-now" className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-8 text-center tracking-tight">
+        <h2 className="py-5 text-2xl md:text-3xl font-semibold text-gray-900 text-center">
           Order Now
         </h2>
 

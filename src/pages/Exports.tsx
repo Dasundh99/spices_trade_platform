@@ -80,7 +80,7 @@ const Exports: React.FC = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
         <header className="text-center mb-12">
-          <h2 className="text-4xl md:text-6xl text-charcoal font-Semibold tracking-wide font-lato">
+          <h2 className="text-4xl md:text-5xl font-semibold text-gray-900">
             Products
           </h2>
         </header>
