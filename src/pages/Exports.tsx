@@ -48,11 +48,11 @@ const ExportCard: React.FC<ExportItem> = ({ src, text }) => {
       tabIndex={0}
       aria-label={`Navigate to ${text} page`}
     >
-      <div className="relative w-full h-64 md:h-45 lg:h-50 overflow-hidden"> {/* Customizable height */}
+      <div className="relative w-full h-64 md:h-45 lg:h-64 overflow-hidden"> {/* Customizable height */}
         <img
           src={src}
           alt={text}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
         />
         {/* Hover Overlay */}
@@ -80,7 +80,7 @@ const Exports: React.FC = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
         <header className="text-center mb-12">
-          <h2 className="text-4xl md:text-6xl text-charcoal font-Semibold tracking-wide">
+          <h2 className="text-4xl md:text-6xl text-charcoal font-Semibold tracking-wide font-lato">
             Products
           </h2>
         </header>

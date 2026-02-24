@@ -2,13 +2,7 @@ import React, { useState } from 'react';
 import { addDoc, collection, Timestamp } from 'firebase/firestore';
 import { db } from '../config/firebase';
 
-const products = [
-  'Cinnamon',
-  'Cardamom',
-  'Cloves',
-  'Turmeric',
-  'Ginger',
-];
+const products = ['Cinnamon', 'Cardamom', 'Cloves', 'Turmeric', 'Ginger'];
 
 const OrderNowForm: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -34,7 +28,7 @@ const OrderNowForm: React.FC = () => {
     };
 
     try {
-      // Try Firestore first
+      // Firestore
       try {
         await addDoc(collection(db, 'orders'), {
           ...orderData,
@@ -42,7 +36,6 @@ const OrderNowForm: React.FC = () => {
         });
         console.log('Order saved to Firestore');
       } catch (firestoreErr) {
-        // Fallback to localStorage if Firestore fails
         console.warn('Firestore error, saving to localStorage:', firestoreErr);
         const existingOrders = JSON.parse(localStorage.getItem('orders') || '[]');
         existingOrders.push(orderData);
@@ -50,7 +43,6 @@ const OrderNowForm: React.FC = () => {
         console.log('Order saved to localStorage');
       }
 
-      // Clear form and show success
       setEmail('');
       setPhone('');
       setProduct(products[0]);
@@ -67,75 +59,85 @@ const OrderNowForm: React.FC = () => {
   };
 
   return (
-    <section id="order-now" className="py-12 lg:py-16 bg-white">
+    <section id="order-now" className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-semibold mb-4">Order Now</h2>
-        <form onSubmit={handleSubmit} className="max-w-xl">
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-8 text-center tracking-tight">
+          Order Now
+        </h2>
+
+        <form
+          onSubmit={handleSubmit}
+          className="max-w-lg mx-auto bg-white shadow-lg rounded-2xl p-8 md:p-12 border border-gray-200"
+        >
           {error && (
-            <div className="mb-4 p-3 bg-spice-red-light text-spice-red-dark rounded">
+            <div className="mb-6 p-4 bg-red-100 text-red-700 rounded-lg shadow-sm text-center">
               {error}
             </div>
           )}
           {success && (
-            <div className="mb-4 p-3 bg-ceylon-green-light text-ceylon-green-dark rounded">
+            <div className="mb-6 p-4 bg-green-100 text-green-700 rounded-lg shadow-sm text-center">
               Order submitted successfully!
             </div>
           )}
 
-          <div className="mb-3">
-            <label className="block text-sm font-medium mb-1">Email</label>
+          <div className="mb-5">
+            <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
             <input
               type="email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full border rounded px-3 py-2"
               placeholder="you@example.com"
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-spice-red focus:border-spice-red transition-all duration-300 shadow-sm"
             />
           </div>
 
-          <div className="mb-3">
-            <label className="block text-sm font-medium mb-1">Phone Number</label>
+          <div className="mb-5">
+            <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
             <input
               type="tel"
               required
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className="w-full border rounded px-3 py-2"
               placeholder="+1 555 555 5555"
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-spice-red focus:border-spice-red transition-all duration-300 shadow-sm"
             />
           </div>
 
-          <div className="mb-3">
-            <label htmlFor="product" className="block text-sm font-medium mb-1">Product</label>
+          <div className="mb-5">
+            <label htmlFor="product" className="block text-sm font-medium text-gray-700 mb-2">
+              Product
+            </label>
             <select
               id="product"
               value={product}
               onChange={(e) => setProduct(e.target.value)}
-              className="w-full border rounded px-3 py-2"
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-spice-red focus:border-spice-red transition-all duration-300 shadow-sm"
             >
               {products.map((p) => (
-                <option key={p} value={p}>{p}</option>
+                <option key={p} value={p}>
+                  {p}
+                </option>
               ))}
             </select>
           </div>
 
-          <div className="mb-4">
-            <label className="block text-sm font-medium mb-1">Weight (kg)</label>
+          <div className="mb-6">
+            <label className="block text-sm font-medium text-gray-700 mb-2">Weight (kg)</label>
             <input
               type="text"
               required
               value={weight}
               onChange={(e) => setWeight(e.target.value)}
-              className="w-full border rounded px-3 py-2"
               placeholder="e.g. 1, 5, 10"
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-spice-red focus:border-spice-red transition-all duration-300 shadow-sm"
             />
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className="bg-spice-red text-white px-6 py-2 rounded hover:bg-spice-red-dark transition-colors duration-300 disabled:opacity-50"
+            className="w-full bg-spice-red text-white font-medium text-lg py-3 rounded-xl hover:bg-spice-red-dark transition-colors duration-300 shadow-md disabled:opacity-50"
           >
             {loading ? 'Submitting...' : 'Order Now'}
           </button>
